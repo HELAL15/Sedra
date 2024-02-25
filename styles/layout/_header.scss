@@ -1,0 +1,110 @@
+header{
+  height: 20vh;
+  background-color: $header;
+  @extend %flex_center;
+  position: relative;
+  .page-name{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50% , -50%) ;
+    color: $main;
+  }
+  .back{
+    @extend %flex;
+    gap: .5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    .btn{
+      @include circle($size:35px,$font:16px,$color:$main,$bg:$white,$bx_sh:0);
+      padding: 0;
+    }
+    span{
+      font-size: 1.2rem;
+    }
+  }
+}
+header.header-home{
+  background-color: $header;
+  // margin-top: 7.5rem;
+  height: calc(100vh - 122px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 2rem;
+  // @extend %header_top;
+
+  .background-img{
+    background: url("/images/fav.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;right: 50%;
+    transform: translate(50%,-50%);
+    opacity: .08;
+    z-index: 1;
+  }
+  .hero-title{
+    @extend %flex;
+    gap: .5rem;
+    background-color: $backp;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: .3rem .5rem;
+    border-radius: $brad;
+    .hero-name{
+      background-color: $secondary;
+      padding: .1rem 1rem;
+      border-radius: $brad;
+      color: $white;
+    }
+    p{
+      font-weight: 500;
+    }
+  }
+  .hero-desc{
+    font-size: 1rem;
+    font-weight: 500;
+    color: $headP;
+    margin: 1.2rem 0;
+    -webkit-padding-end: 10rem;
+            padding-inline-end: 10rem;
+  }
+}
+
+.owl-carousel{
+  position: unset !important;
+}
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  position: absolute;
+  right: 50%;
+  bottom: -25%;
+  transform: translate(50%, -50%) rotate(180deg);
+}
+ .owl-dots .owl-dot span{
+    display: inline-block;
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $main;
+}
+
+
+
+  @media($s_med){
+    .hero-desc{
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $headP;
+      margin: 1.2rem 0;
+      -webkit-padding-end: 1rem;
+              padding-inline-end: 1rem !important;
+    }
+  }

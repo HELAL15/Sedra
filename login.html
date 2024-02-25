@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEDRA</title>
+
+  <link rel="icon" href="images/fav.svg">
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Bootstrap link  -->
+  <!-- if lang == ar -->
+  <link rel="stylesheet" href="styles/plugin/bootstrap.rtl.min.css">
+  <!-- 
+      else
+      <link rel="stylesheet" href="styles/plugin/bootstrap.min.css">
+     -->
+  <link rel="stylesheet" href="styles/plugin/bootstrap-icons.min.css">
+  <!-- owl-carousel link -->
+  <link rel="stylesheet" href="styles/plugin/owl.theme.default.min.css">
+  <link rel="stylesheet" href="styles/plugin/owl.carousel.min.css">
+  <!-- animate link  -->
+  <link rel="stylesheet" href="styles/plugin/animate.css" />
+  <!-- nice-select link -->
+  <link rel="stylesheet" href="styles/plugin/nice-select.css">
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- -------- loading ----------- -->
+  <div id="loading">
+    <div class="loader">
+      <img src="images/loading.gif" alt="" />
+    </div>
+  </div>
+  <!------------- nav section -------------->
+  <div class="navs-container" id="nav">
+    <nav class="navbar top-nav">
+      <div class="container">
+        <div class="helper-pages">
+          <a href="policy.html">
+            <span>سياسة الخصوصية</span>
+          </a>
+          <a href="conditions.html">
+            <span>الشروط والأحكام</span>
+          </a>
+          <a href="help.html">
+            <span>المساعدة</span>
+          </a>
+        </div>
+
+        <ul class="icons m-0 d-flex">
+          <li>
+            <a href="compare.html">
+              <i class="bi bi-arrow-left-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="fav.html">
+              <i class="bi bi-heart"></i>
+            </a>
+          </li>
+          <li>
+            <a role="button" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart">
+              <i class="bi bi-bag"></i>
+            </a>
+          </li>
+          <!-- if auth -->
+          <li>
+            <a href="profile.html">
+              <i class="bi bi-person-check"></i>
+            </a>
+          </li>
+          <!-- 
+              else 
+              note: remove d-none
+            -->
+          <li class="d-none">
+            <a href="login.html">
+              <i class="bi bi-person-add"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar main-nav navbar-expand-lg navbar-light top-0">
+      <div class="container flex-nowrap">
+        <a class="navbar-brand m-0" href="index.html">
+          <img class="" src="images/logo.svg" alt="">
+        </a>
+        <div class="navbar-collapse justify-content-between
+            align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto  mb-lg-0">
+            <div class="nav-header-mobile  justify-content-between align-items-center">
+              <i class="fas fa-close" id="close"></i>
+              <div class="img">
+                <img src="images/logo.svg" alt="">
+              </div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">
+                من نحن ؟
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="book-store.html" class="nav-link">
+                متجر الكتب
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="posts.html" class="nav-link">
+                دور النشر
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">
+                تواصل معنا
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-actions m-0 d-flex align-items-center gap-3">
+          <a href="#" class="d-flex align-items-center gap-1">
+            <span>en</span>
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          <form action="" class="form-group">
+            <input type="text" class="form-control">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+        </div>
+        <div class="m-0 d-flex align-items-center">
+          <button class="navbar-toggler" id="nav-toggler">
+            <div class="fas fa-bars"></div>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- all canvas -->
+  <div class="offcanvas offcanvas-end cart" data-bs-backdrop="static" tabindex="-1" id="cart" aria-labelledby="cart">
+    <button type="button" class=" close-cart" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div class="offcanvas-body">
+      <h5 class="text-center cart-name">السلة</h5>
+      <div class="row gy-3">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/product.jpg" alt="">
+            </div>
+            <div class="card-content">
+              <div class="details">
+                <h4 class="title">A Novel Idea</h4>
+                <p class="desc">بواسطة ستيفن كينج</p>
+                <h5 class="price"><span>29</span><span>ريال سعودي</span></h5>
+              </div>
+              <div class="controls">
+                <button class="btn plus"><i class="fas fa-plus"></i></button>
+                <input class="result form-control " value="0" readonly type="number">
+                <button class="btn minus"><i class="fas fa-minus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/product.jpg" alt="">
+            </div>
+            <div class="card-content">
+              <div class="details">
+                <h5 class="title">A Novel Idea</h5>
+                <p class="desc">بواسطة ستيفن كينج</p>
+                <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+              </div>
+              <div class="controls">
+                <button class="btn plus"><i class="fas fa-plus"></i></button>
+                <input class="result form-control" value="0" readonly type="number">
+                <button class="btn minus"><i class="fas fa-minus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div>
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+        etc.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- header section -->
+  <header class="">
+    <div class="container  z-3 position-relative">
+      <a href="#" class="back"><button class="btn"><i class="fa-solid fa-share"></i></button><span>رجوع</span></a>
+      <h3 class="page-name text-center">تسجيل الدخول</h3>
+    </div>
+  </header>
+
+  <section class="login mt-5 pb-5">
+    <div class="container">
+      <div class="row login-content justify-content-between">
+        <div class="col-lg-6 px-md-5 wow animate__fadeInRight">
+          <div class="header-links">
+            <a href="Login.html" class="active"> تسجيل الدخول </a>
+            <a href="register.html"> إنشاء حساب </a>
+          </div>
+
+          <form>
+            <div class="my-4 package-input">
+              <span>
+                <i class="bi bi-envelope"></i>
+              </span>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="البريد الالكتروني" />
+            </div>
+            <div class="my-4 package-input">
+              <span>
+                <i class="bi bi-lock"></i>
+              </span>
+              <input type="password" class="form-control" placeholder="الرقم السرى " id="pass">
+              <button type="button" class="show-pass" toggle="#pass">
+
+                <i class="bi bi-eye-slash"></i>
+              </button>
+            </div>
+            <div>
+              <a href="forgetpassword.html" class="forget mb-4">هل نسيت كلمة المرور؟</a>
+            </div>
+            <button type="submit" class="btn-main w-100 mt-4">دخول</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="img">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- subscribe section -->
+  <section class="subscribe-mail">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row position-relative z-2 align-items-center gy-3">
+        <div class="col-md-6">
+          <div class="content">
+            <h4 class="title">يمكنكم الاشتراك في النشرة البريدية لمعرفة جديدنا</h4>
+            <form action="" class="subscribtion-form ">
+              <input type="email" class="form-control" name="" id="" placeholder="البريد الإلكتروني" />
+              <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img">
+            <img src="images/subscribe-mail.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer  -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="images/logo.svg" alt=""></a>
+      </div>
+      <!-- <div class="social"> -->
+      <ul class="social">
+
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-snapchat"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- </div> -->
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <div class="website-map">
+            <h5 class="ul-name">خريطة الموقع</h5>
+            <ul class="footer-links link1">
+              <li><a class="active" href="index.html">الرئيسية</a></li>
+              <li><a href="posts.html">دور النشر</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="offers.html">العروض</a></li>
+              <li><a href="book-store.html">متجر الكتب</a></li>
+              <li><a href="blog.html">المدونة</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="website-help">
+            <h5 class="ul-name">المساعدة</h5>
+            <ul class="footer-links link2">
+              <li><a href="contact.html">تواصل معنا</a></li>
+              <li><a href="faq.html">الأسئلة الشائعة</a></li>
+              <li><a href="rules.html">الشروط والأحكام</a></li>
+              <li><a href="policy.html">سياسة الخصوصية</a></li>
+              <li><a href="blocklist.html">أسباب التعرض للقائمة السوداء</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 contacts-col">
+          <div class="website-contact">
+            <h5 class="ul-name">معلومات التواصل</h5>
+            <ul class="footer-links link3">
+              <li>
+                <a href="tel:+201222810589">
+                  <span>رقم الجوال: </span>
+                  <span>+201222810589</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:1ahmedhelal1@gmail.com">
+                  <span>البريد الإلكتروني: </span>
+                  <span>1ahmedhelal1@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rights">
+      <div class="container position-relative">
+        <div class="d-flex justify-content-center gap-lg-2 gap-1 align-items-center flex-wrap-reverse">
+          <a href="https://smartvision4p.com/" class="link"> </a>
+          <p class="">جميع الحقوق حفوظة لموقع سمارت فيجن</p>
+          <div class="smart-logo ">
+            <img src="images/smart-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <!-- jQuery script -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- owl-carousel script -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- bootstrap script -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- wow script -->
+  <script src="js/wow.min.js"></script>
+  <!-- rateyo script -->
+  <!-- <script src="js/jquery.rateyo.min.js"></script> -->
+  <!-- nice select script -->
+  <script src="js/jquery.nice-select.min.js"></script>
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

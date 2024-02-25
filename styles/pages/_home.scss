@@ -1,0 +1,83 @@
+
+
+
+/*categories section*/
+.categories{
+  .owl-carousel .owl-stage {
+    margin: 5rem 0 ;
+  }
+  .card{
+    &:hover{
+      transform: translateY(-10px);
+    }
+    .card-name{
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .card-img{
+      width: 100%;
+      height: 100%;
+      .img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $white;
+        -o-object-fit: cover;
+           object-fit: cover;
+          position: relative;
+          margin: auto;
+          transition: .3s;
+          &:hover{
+            background-color: $main;
+          }
+          img{
+            width: 100%;
+            height: 250px;
+            position: absolute;
+            bottom: -4rem;
+            -o-object-fit: cover;
+               object-fit: cover;
+              margin-bottom: 4rem;
+          }
+      }
+    }
+  }
+}
+
+
+
+/* offcanvas */
+
+.offcanvas.cart{
+  width: 30% !important;
+  padding-top: 1.5rem;
+  .cart-name{
+    padding-bottom: 1.5rem;
+  }
+  .close-cart{
+    position: absolute;
+    right: -5%;
+    top: 3%;
+    transform: translate(5%, 3%);
+    @include circle($size:45px,$font:16px,$color:$main,$bg:$white,$bx_sh:1)
+  }
+  .card{
+    @include card();
+    .controls{
+      @extend %flex;
+      border: 1px solid $border !important;
+      border-radius: $brad !important;
+      padding: 0 .5rem;
+      width: 65%;
+      .form-control{
+        border: none;
+        padding: .5rem !important;
+        text-align: center;
+      }
+      .btn{
+        padding: .5rem;
+        @include circle($size:30px,$font:14px,$color:$main,$bg:$white,$bx_sh:0 )
+      }
+    }
+  }
+}

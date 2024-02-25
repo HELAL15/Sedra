@@ -1,6 +1,6 @@
 .show-pass {
   position: absolute;
-  left: 2px;
+  inset-inline-end: 2px;
   top: 0px;
   height: 100%;
   line-height: 40px;
@@ -96,7 +96,7 @@
           content: '';
           width: 10px;
           height: 10px;
-          left: -10%;
+          inset-inline-end: -10%;
           transform: rotate(312deg);
           top: 40%;
           background-color: $span;

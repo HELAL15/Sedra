@@ -128,3 +128,24 @@
         background-color: $bg;
     }
 }
+
+// $direction: rtl;
+
+// html[dir="ltr"] {
+//     $direction: ltr !global;
+// }
+
+
+// @mixin brdrz() {
+//     border-bottom-right-radius: 0;
+//     border-top-right-radius: 0;
+//     border-bottom-left-radius: $brad;
+//     border-top-left-radius: $brad;
+
+//     @if $direction ==ltr {
+//         border-bottom-right-radius: $brad;
+//         border-top-right-radius: $brad;
+//         border-bottom-left-radius: 0;
+//         border-top-left-radius: 0;
+//     }
+// }

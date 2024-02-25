@@ -1,8 +1,18 @@
 /*categories section*/
+
+html[dir=ltr] {
+  .owl-carousel.owl-rtl {
+    direction: ltr !important;
+  }
+}
+
 .categories {
+
   .owl-carousel .owl-stage {
     margin: 5rem 0;
   }
+
+
 
   .card {
     &:hover {
@@ -129,6 +139,10 @@
   width: 30% !important;
   padding-top: 1.5rem;
 
+  .form-control {
+    width: inherit;
+  }
+
   .cart-name {
     padding-bottom: 1.5rem;
   }
@@ -160,6 +174,103 @@
       .btn {
         padding: .5rem;
         @include circle($size: 30px, $font: 14px, $color: $main, $bg: $white, $bx_sh: 0)
+      }
+    }
+  }
+
+  .delete {
+    background-color: transparent;
+    color: red;
+  }
+
+  .offcanvas-footer {
+    padding: 2rem 2rem 1rem 2rem;
+
+    .discount {
+      padding: 1rem 0;
+      border-top: 1px solid $muted;
+    }
+
+    .title {
+      color: $muted;
+
+
+      i {
+        img {
+          @include size($size: 40px);
+        }
+      }
+    }
+
+    .group {
+      @extend %flex;
+      background-color: $white;
+
+      .form-control {
+        border-bottom-right-radius: $brad;
+        border-top-right-radius: $brad;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      .btn {
+        @include btn_color($color: $white, $bg: $secondary);
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $brad;
+        border-top-left-radius: $brad;
+        padding: .5rem 2rem;
+      }
+    }
+
+    .total {
+      color: $black;
+      font-weight: bold;
+      padding: 1rem 0;
+      border-top: 1px solid $muted;
+    }
+
+    .pay {
+      padding: 1rem 0;
+      border-top: 1px solid $muted;
+
+      .btn {
+        @include btn_color($color: $white, $bg: $main);
+      }
+
+      .to-cart {
+        color: $muted;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+html[dir=ltr] {
+  .offcanvas.cart {
+
+    .cart-name {
+      padding-bottom: 1.5rem;
+    }
+
+    .offcanvas-footer {
+
+      .group {
+
+        .form-control {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $brad;
+          border-top-left-radius: $brad;
+        }
+
+        .btn {
+          border-bottom-right-radius: $brad;
+          border-top-right-radius: $brad;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          padding: .5rem 2rem;
+        }
       }
     }
   }

@@ -52,6 +52,28 @@
     border-radius: 50%;
 }
 
+@mixin size($size: 18px) {
+    width: $size;
+    height: $size;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+@mixin user_img($size: 50px) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+
+    img {
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+}
+
 @mixin card($dir: row, $gap: 1rem, $border: 1, $rad: 13px, $width: 150px, $height: 160px, $size: 150px) {
     @extend %flex;
     gap: $gap;

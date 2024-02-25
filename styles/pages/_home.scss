@@ -59,7 +59,7 @@
     border-radius: 25px;
 
     .img {
-      margin-top: -2rem;
+      margin-top: -6rem;
     }
 
     .text {
@@ -175,6 +175,31 @@
       p {
         font-size: 1.5rem;
         width: 100%;
+      }
+    }
+  }
+
+  .discover-offers.one {
+    .content {
+      background: url("/images/disscover-one.png");
+      @extend %background_fit;
+      border-radius: 25px;
+
+      .img {
+        margin-top: -3rem;
+      }
+
+      .text {
+        padding: 2rem 1rem;
+
+        span {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
       }
     }
   }

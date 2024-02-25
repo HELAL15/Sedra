@@ -274,6 +274,11 @@ img {
   border: none;
   background-color: transparent;
   transition: .3s;
+
+  .card-header {
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .btn {

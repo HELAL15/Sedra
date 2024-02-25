@@ -1,7 +1,4 @@
-
-
-
-.navs-container{
+.navs-container {
     position: relative;
     width: 100%;
     top: 0;
@@ -14,112 +11,138 @@
 
 
 
-.top-nav{
+.top-nav {
     background: $nav;
-    .helper-pages{
+
+    .helper-pages {
         @include h_center;
-        a{
+
+        a {
             color: $white !important;
             font-size: 14px;
             text-decoration: underline;
         }
     }
-    .icons{
-        @include h_center($gap:10px);
-        a{
-            @include circle($size:35px,$font:1rem,);
+
+    .icons {
+        @include h_center($gap: 10px);
+
+        a {
+            @include circle($size: 35px, $font: 1rem, );
             line-height: 0;
+
+            img {
+                @include size();
+            }
         }
     }
 }
 
 
 
-.navbar.main-nav{
+.navbar.main-nav {
     background-color: $white;
-.navbar-brand{
-    width: 75px;
-    height: 75px;
-}
 
-.navbar-toggler , #close{
-    box-shadow: none;
-    border: none;
-    outline: none;
-    color: $main;
-    font-size: 1.5rem;
-}
-
-
-.navbar-nav{
-    @include h_center;
-    .nav-header-mobile{
-        display: none;
+    .navbar-brand {
+        width: 75px;
+        height: 75px;
     }
-    .nav-item{
-        a.nav-link{
-            font-size: 1rem;
-            padding: 0 .9rem;
-            font-weight: bold;
+
+    .navbar-toggler,
+    #close {
+        box-shadow: none;
+        border: none;
+        outline: none;
+        color: $main;
+        font-size: 1.5rem;
+    }
+
+
+    .navbar-nav {
+        @include h_center;
+
+        .nav-header-mobile {
+            display: none;
         }
-    }
-}
 
-.nav-actions{
-    @include h_center($gap:10px);
-    a{
-        font-size: 1.2rem;
-    }
-  
-    .form-group{
-        position: relative;
-        i{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 20px;
-            cursor: pointer;
-            z-index: 2;
+        .nav-item {
+            a.nav-link {
+                font-size: 1rem;
+                padding: 0 .9rem;
+                font-weight: bold;
+            }
         }
     }
 
+    .nav-actions {
+        @include h_center($gap: 10px);
+
+        a {
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+                cursor: pointer;
+                z-index: 2;
+            }
+        }
+
+
+    }
+
 
 }
 
-
-}
-.navs-container.active{
+.navs-container.active {
     position: fixed;
-            -webkit-animation: nav .3s ease;
-                    animation: nav .3s ease;
+    -webkit-animation: nav .3s ease;
+    animation: nav .3s ease;
 }
 
 
 
 @-webkit-keyframes nav {
-    0%{top: -100%;}
+    0% {
+        top: -100%;
+    }
+
     // 50%{top: -10%}
-    100%{top: 0}
+    100% {
+        top: 0
+    }
 }
 
 
 
 @keyframes nav {
-    0%{top: -100%;}
+    0% {
+        top: -100%;
+    }
+
     // 50%{top: -10%}
-    100%{top: 0}
+    100% {
+        top: 0
+    }
 }
 
 
 
 
 
-@media($s_med){
-    .navbar-brand{
+@media($s_med) {
+    .navbar-brand {
         width: 70px;
         height: 50px !important;
     }
-    .navbar-collapse{
+
+    .navbar-collapse {
         position: fixed;
         top: 0;
         inset-inline-end: -100%;
@@ -131,12 +154,14 @@
         background-color: $white;
         z-index: 2222;
     }
-    .navbar-collapse.active{
+
+    .navbar-collapse.active {
         position: fixed;
         top: 0;
         inset-inline-end: 0;
     }
-    .navbar-collapse::after{
+
+    .navbar-collapse::after {
         content: '';
         position: absolute;
         top: 0;
@@ -148,21 +173,25 @@
         transition: .3s;
         z-index: 5;
     }
-    .navbar-collapse.active::after{
+
+    .navbar-collapse.active::after {
         opacity: .5;
     }
-    
-    .navbar-nav{
+
+    .navbar-nav {
         z-index: 22;
         background-color: $white;
-        width: 100%; height: 100%;
+        width: 100%;
+        height: 100%;
         justify-content: center;
+
         .nav-header-mobile {
             display: flex !important;
             width: 80%;
             position: absolute;
             top: 5%;
-            .img{
+
+            .img {
                 width: 60px;
             }
         }
@@ -172,18 +201,20 @@
 
 
 
-@media($s_mob){
-    .top-nav{
-        .container{
+@media($s_mob) {
+    .top-nav {
+        .container {
             justify-content: center !important;
         }
     }
-    .navbar.main-nav{
+
+    .navbar.main-nav {
         .nav-actions {
             width: 50% !important;
         }
     }
-    .navbar-collapse{
+
+    .navbar-collapse {
         width: 85%;
     }
 }

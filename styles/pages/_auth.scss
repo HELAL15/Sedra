@@ -1,0 +1,159 @@
+.show-pass {
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  height: 100%;
+  line-height: 40px;
+  padding: 0;
+  border: 0;
+  background-color: #f7f8f9;
+  width: 40px;
+  border-radius: 5px;
+  font-size: 19px;
+  color: #8d8d8d;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form input {
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 22px;
+  border: solid 1px rgb(238, 236, 236) !important;
+  box-shadow: 0 0 5px rgb(233, 232, 232) inset !important;
+  outline: none;
+  height: 40px;
+  width: 45px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+
+#form input:focus {
+  border-color: $main !important;
+}
+
+.login {
+  .verify {
+    direction: ltr !important;
+  }
+
+  .login-content {
+    background-color: $white;
+    border-radius: 20px;
+
+    .header-links {
+      border-bottom: 1px solid #DBDBDB;
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 22px;
+
+      a {
+        color: rgba(46, 46, 46, 0.521);
+      }
+
+      .active {
+        color: $secondary;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background: $secondary;
+          bottom: -16px;
+          right: 0;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .package-input {
+      position: relative;
+      background: $package;
+      display: flex;
+      border-radius: 5px;
+
+      span {
+        background: $span;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: -ms-grid;
+        display: grid;
+        place-items: center;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 10px;
+          height: 10px;
+          left: -10%;
+          transform: rotate(312deg);
+          top: 40%;
+          background-color: $span;
+        }
+
+        i {
+          color: #909090;
+          font-size: 20px;
+        }
+      }
+
+      input {
+        border: none;
+        background: transparent;
+        color: $input;
+        border-radius: 6px;
+
+        &::-webkit-input-placeholder {
+          color: $input;
+        }
+
+        &::-moz-placeholder {
+          color: $input;
+        }
+
+        &:-ms-input-placeholder {
+          color: $input;
+        }
+
+        &::-ms-input-placeholder {
+          color: $input;
+        }
+
+        &::placeholder {
+          color: $input;
+        }
+      }
+
+
+    }
+  }
+
+  p {
+    color: $muted;
+  }
+
+  .btn {
+    @include btn_color($color: black, $bg: $main);
+    border: none;
+  }
+
+  .forget {
+    font-weight: bold;
+    color: black;
+  }
+
+  .title {
+    color: $secondary
+  }
+}

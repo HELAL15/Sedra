@@ -1,42 +1,58 @@
 @use "sass:math";
+
 /*extend*/
-%flex_center{
+%flex_center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-%flex{
+
+%flex {
     display: flex;
     align-items: center;
 }
-%header_top{
+
+%header_top {
     margin-top: 4rem;
 }
+
+%background_fit {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+}
+
 /*mixin*/
-@mixin link ($ind:1) {
+@mixin link ($ind: 1) {
     position: absolute;
     inset: 0;
     z-index: $ind;
 }
-@mixin h_center ($gap:18px) {
+
+@mixin h_center ($gap: 18px) {
     display: flex;
     align-items: center;
     gap: $gap;
 }
-@mixin circle($size:30px,$font:14px,$color:$main,$bg:$white,$bx_sh:1){
+
+@mixin circle($size: 30px, $font: 14px, $color: $main, $bg: $white, $bx_sh: 1) {
     @extend %flex_center;
     width: $size;
     height: $size;
     color: $color;
     background: $bg;
     font-size: $font;
-    @if( $bx_sh == 1 ){
+
+    @if($bx_sh ==1) {
         box-shadow: 0px 0px 15px #00000029;
     }
+
     border-radius: 50%;
 }
 
-@mixin card($dir: row , $gap: 1rem , $border:1 , $rad: 13px , $width: 150px, $height: 160px, $size:150px){
+@mixin card($dir: row, $gap: 1rem, $border: 1, $rad: 13px, $width: 150px, $height: 160px, $size: 150px) {
     @extend %flex;
     gap: $gap;
     width: 100%;
@@ -44,32 +60,49 @@
     flex-direction: $dir;
     padding: .5rem 1.5rem;
     border-radius: $rad !important;
-    .card-img{
+
+    .card-img {
         max-height: $height;
         height: $height;
         min-height: $height;
         width: $width;
         -o-object-fit: cover;
-           object-fit: cover;
-        img{
+        object-fit: cover;
+
+        img {
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
         }
     }
-    .title{
+
+    .title {
         color: black;
         font-weight: bold;
     }
-    .desc{
+
+    .desc {
         color: $muted;
     }
-    .price{
+
+    .price {
         color: $secondary;
         font-weight: 500;
     }
-    @if($border == 1){
+
+    @if($border ==1) {
         border: 1px solid #E6E6E6 !important;
     }
+
     border-radius: $brad;
 
+}
+
+@mixin btn_color($color: $white, $bg: $main) {
+    border-color: $bg;
+    color: $color;
+    background-color: $bg;
+
+    &:focus {
+        background-color: $bg;
+    }
 }

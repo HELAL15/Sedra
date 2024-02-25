@@ -1,44 +1,165 @@
-
-
-
 /*categories section*/
-.categories{
+.categories {
   .owl-carousel .owl-stage {
-    margin: 5rem 0 ;
+    margin: 5rem 0;
   }
-  .card{
-    &:hover{
+
+  .card {
+    &:hover {
       transform: translateY(-10px);
     }
-    .card-name{
+
+    .card-name {
       text-align: center;
       margin-top: 1rem;
     }
-    .card-img{
+
+    .card-img {
       width: 100%;
       height: 100%;
-      .img{
+
+      .img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         background-color: $white;
         -o-object-fit: cover;
-           object-fit: cover;
-          position: relative;
-          margin: auto;
-          transition: .3s;
-          &:hover{
-            background-color: $main;
-          }
-          img{
-            width: 100%;
-            height: 250px;
-            position: absolute;
-            bottom: -4rem;
-            -o-object-fit: cover;
-               object-fit: cover;
-              margin-bottom: 4rem;
-          }
+        object-fit: cover;
+        position: relative;
+        margin: auto;
+        transition: .3s;
+
+        &:hover {
+          background-color: $main;
+        }
+
+        img {
+          width: 100%;
+          height: 250px;
+          position: absolute;
+          bottom: -4rem;
+          -o-object-fit: cover;
+          object-fit: cover;
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+}
+
+
+/*discover offers*/
+
+
+/*one*/
+.discover-offers.one {
+  .content {
+    background: url("/images/disscover-one.png");
+    @extend %background_fit;
+    border-radius: 25px;
+
+    .img {
+      margin-top: -2rem;
+    }
+
+    .text {
+      text-align: center;
+      padding: 2rem;
+      color: $black;
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: .7rem 0;
+      }
+
+      .btn {
+        @include btn_color($color: $main , $bg: $white, )
+      }
+    }
+  }
+}
+
+/*two*/
+.discover-offers.two {
+  position: relative;
+
+  .content {
+    background: url("/images/discover-two.png");
+    @extend %background_fit;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6rem 3rem;
+    color: $white;
+    text-align: center;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: 2rem;
+      width: 70%;
+    }
+
+    .btn {
+      @include btn_color();
+    }
+  }
+
+
+}
+
+
+
+
+
+/* offcanvas */
+
+.offcanvas.cart {
+  width: 30% !important;
+  padding-top: 1.5rem;
+
+  .cart-name {
+    padding-bottom: 1.5rem;
+  }
+
+  .close-cart {
+    position: absolute;
+    right: -5%;
+    top: 3%;
+    transform: translate(5%, 3%);
+    @include circle($size: 45px, $font: 16px, $color: $main, $bg: $white, $bx_sh: 1)
+  }
+
+  .card {
+    @include card();
+
+    .controls {
+      @extend %flex;
+      border: 1px solid $border !important;
+      border-radius: $brad !important;
+      padding: 0 .5rem;
+      width: 65%;
+
+      .form-control {
+        border: none;
+        padding: .5rem !important;
+        text-align: center;
+      }
+
+      .btn {
+        padding: .5rem;
+        @include circle($size: 30px, $font: 14px, $color: $main, $bg: $white, $bx_sh: 0)
       }
     }
   }
@@ -46,37 +167,14 @@
 
 
 
-/* offcanvas */
+@media($s_med) {
+  .discover-offers.two {
+    .content {
+      padding: 2rem 1rem;
 
-.offcanvas.cart{
-  width: 30% !important;
-  padding-top: 1.5rem;
-  .cart-name{
-    padding-bottom: 1.5rem;
-  }
-  .close-cart{
-    position: absolute;
-    right: -5%;
-    top: 3%;
-    transform: translate(5%, 3%);
-    @include circle($size:45px,$font:16px,$color:$main,$bg:$white,$bx_sh:1)
-  }
-  .card{
-    @include card();
-    .controls{
-      @extend %flex;
-      border: 1px solid $border !important;
-      border-radius: $brad !important;
-      padding: 0 .5rem;
-      width: 65%;
-      .form-control{
-        border: none;
-        padding: .5rem !important;
-        text-align: center;
-      }
-      .btn{
-        padding: .5rem;
-        @include circle($size:30px,$font:14px,$color:$main,$bg:$white,$bx_sh:0 )
+      p {
+        font-size: 1.5rem;
+        width: 100%;
       }
     }
   }

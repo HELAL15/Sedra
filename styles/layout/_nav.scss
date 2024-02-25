@@ -27,7 +27,7 @@
     .icons{
         @include h_center($gap:10px);
         a{
-            @include circle;
+            @include circle($size:35px,$font:1rem,);
             line-height: 0;
         }
     }
@@ -38,8 +38,8 @@
 .navbar.main-nav{
     background-color: $white;
 .navbar-brand{
-    width: 70px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
 }
 
 .navbar-toggler , #close{

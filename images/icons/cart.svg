@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.447" height="23.777" viewBox="0 0 23.447 23.777">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#99d19f"/>
+      <stop offset="1" stop-color="#8abb8f"/>
+    </radialGradient>
+  </defs>
+  <g id="svgexport-17_56_" data-name="svgexport-17 (56)" transform="translate(-2.2 -2)">
+    <path id="Path_19" data-name="Path 19" d="M20.543,25.777H7.3a5.11,5.11,0,0,1-5.1-5.1v-.17L2.71,6.925A5.075,5.075,0,0,1,7.8,2H20.033a5.075,5.075,0,0,1,5.1,4.925l.51,13.587a4.914,4.914,0,0,1-1.359,3.652,4.836,4.836,0,0,1-3.567,1.613ZM7.8,3.7a3.375,3.375,0,0,0-3.4,3.227L3.9,20.682a3.407,3.407,0,0,0,3.4,3.4H20.712a3.16,3.16,0,0,0,2.378-1.1,3.7,3.7,0,0,0,.934-2.463l-.51-13.587a3.317,3.317,0,0,0-3.4-3.227Z" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+    <path id="Path_20" data-name="Path 20" d="M14.944,12.794A5.908,5.908,0,0,1,9,6.849a.849.849,0,1,1,1.7,0,4.246,4.246,0,1,0,8.492,0,.849.849,0,1,1,1.7,0A5.908,5.908,0,0,1,14.944,12.794Z" transform="translate(-1.026 -0.603)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

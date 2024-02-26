@@ -308,7 +308,7 @@ img {
 }
 
 section {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 .offcanvas {
@@ -316,20 +316,25 @@ section {
 }
 
 
+.main-btn {
+  @include btn_color($color: $white, $bg: $main)
+}
+
+
+
 .sec-title {
   display: flex;
-  gap: .8rem;
+  gap: 1rem;
   justify-content: space-between;
   align-items: center;
 
   .line {
     height: 1.3px;
-    width: 75%;
-    background-color: $border;
+    flex-grow: 1;
+    background-color: #E6E6E6;
   }
-
-
 }
+
 
 
 @media($s_mob) {
@@ -441,7 +446,7 @@ section {
   }
 
 
-  @include card($dir: column, $gap: .5rem, $border: 0, $rad: 10px, $width: 100%, $height: 270px, $img_brdr: 1);
+  @include card($dir: column, $gap: .5rem, $border: 0, $rad: 10px, $width: 100%, $height: 245px, $img_brdr: 1);
   padding: .5rem;
 
 
@@ -478,6 +483,11 @@ section {
         padding: 0;
         @include circle($size: 35px, $font: 18px);
       }
+
+      .btn.fav-btn.active {
+        color: red;
+        border: none;
+      }
     }
 
 
@@ -491,6 +501,10 @@ section {
 
   .card-body {
     position: relative;
+
+    .desc {
+      margin-bottom: .5rem;
+    }
   }
 
 
@@ -512,4 +526,54 @@ section {
       }
     }
   }
+}
+
+
+
+
+/*  add style to current page by body ID and Nav ID
+----------------------------------------  */
+#range-slider {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#slider-range {
+  background-color: #D4D4D4;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  background-color: #6798BD;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  background: #fff !important;
+  border: 1px solid #cccccc !important;
+}
+
+.ui-slider .ui-slider-handle {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.20);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+#amount {
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 1.6875em;
+  color: #6798BD;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
 }

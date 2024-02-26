@@ -1,0 +1,80 @@
+.offcanvas.filter-canvas {
+
+  .offcanvas-header {
+
+    position: relative;
+
+    .group {
+      position: relative;
+      width: 75%;
+
+      .form-control {
+        -webkit-padding-start: 2rem;
+        padding-inline-start: 2rem;
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        inset-inline-start: 5%;
+        transform: translate(-5%, -50%);
+        color: $main;
+      }
+    }
+
+    .close-filter {
+      @include circle($size: 45px, $font: 16px);
+      @include btn_color($color: $main, $bg: $white);
+      position: absolute;
+      left: -5%;
+      top: 3%;
+      transform: translate(5%, 3%);
+    }
+  }
+
+  .offcanvas-body {
+
+    .title {
+      color: $accordion;
+    }
+
+    .price {
+      margin: .5rem 0;
+      padding: 1rem 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
+
+    .accordion {
+      .accordion-item {
+        border: none;
+        box-shadow: none;
+
+        .accordion-button {
+          border: none;
+          box-shadow: none;
+          background-color: unset;
+
+          &:not(.collapsed)::after {
+            -webkit-filter: brightness(4);
+            filter: brightness(4);
+          }
+        }
+
+
+        .form-check-input {
+          &:checked {
+            background-color: $main;
+            border-color: $main;
+          }
+
+          &:focus {
+            box-shadow: unset;
+            border-color: $main;
+          }
+        }
+
+      }
+    }
+  }
+}

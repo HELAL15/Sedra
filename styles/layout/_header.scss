@@ -112,12 +112,13 @@ header.header-home {
   }
 
   .hero-desc {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
     font-weight: 500;
-    color: $headP;
-    margin: 1.2rem 0;
-    -webkit-padding-end: 10rem;
-    padding-inline-end: 10rem;
+    text-wrap: balance;
+    color: #646464;
+    margin: 1.5rem 0;
+    margin-bottom: 2rem;
   }
 }
 

@@ -88,12 +88,11 @@ html[dir=ltr] {
 
         img {
           width: 100%;
-          // height: 250px;
+          height: calc(100% + 1rem);
           position: absolute;
-          bottom: -4rem;
+          bottom: 1rem;
           -o-object-fit: cover;
           object-fit: cover;
-          margin-bottom: 4rem;
         }
       }
     }
@@ -198,7 +197,6 @@ html[dir=ltr] {
 /* offcanvas */
 
 .offcanvas.cart {
-  width: 30% !important;
   padding-top: 1.5rem;
 
   .form-control {
@@ -406,9 +404,110 @@ html[dir=ltr] {
 
 
 
+//===== books =====//
+
+
+.books {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17%, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+
+
+/*===== top seller =====*/
+
+
+.top-seller,
+.bokor-prize {
+
+  .tops-cont {
+
+
+    border-radius: $brad;
+    border: 1px solid $border;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    .side-cards {
+      .card {
+        @include card($border: 0, $width: 120px, $height: 150px);
+        padding: .5rem;
+        border-radius: 0 !important;
+
+      }
+
+      .card.brdr {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $border;
+        border-top: 1px solid $border;
+      }
+
+      .row {
+        .col-md-12:nth-child(2) .card {
+          padding: 1.5rem 0;
+          border-bottom: 1px solid $border;
+          border-top: 1px solid $border;
+        }
+      }
+
+    }
+
+    .center {
+      padding: 0 .5rem;
+      border-right: 1px solid $border;
+      border-left: 1px solid $border;
+      // margin: 2.8rem 0 1.2rem 0;
+
+      .product-card {
+        .card-img {
+          max-height: unset;
+          min-height: auto;
+          height: auto;
+        }
+      }
+    }
+
+
+
+
+
+
+  }
+}
+
+.bokor-prize {
+  .tops-cont {
+    border: none;
+
+    .side-cards {
+      .card {
+        @include card($border: 0, $width: 170px, $height: 200px);
+        border: none !important;
+      }
+
+      .row {
+        .col-md-12:nth-child(2) .card {
+          padding: .5rem 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 @media($s_med) {
+
+
+  .books {
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    }
+  }
 
 
 
@@ -459,6 +558,15 @@ html[dir=ltr] {
 }
 
 @media($s_mob) {
+
+
+  .books {
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+  }
+
+
   .categories {
     .owl-carousel .owl-nav button.owl-next {
       position: unset;

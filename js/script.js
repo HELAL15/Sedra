@@ -8,6 +8,25 @@ $(document).ready(function(){
     else{
       dirAr = false
     }
+
+
+
+    function fixedNav() {
+      let scroll = window.scrollY;
+      let isNavTop = scroll < 50;
+      let nav = document.getElementById('nav');
+      if ( isNavTop) {
+        nav.classList.remove('active');
+      } else {
+        nav.classList.add('active');
+      }
+    }
+    let nav = document.getElementById('nav');
+    if(nav != null){
+      window.addEventListener('scroll', fixedNav);
+    }
+
+    
     
     // loader
     $('#loading').fadeOut(500);
@@ -136,7 +155,7 @@ $(document).ready(function(){
       rtl: dirAr,
       loop:false,
       margin:10,
-      autoplay:true,
+      autoplay:false,
       navText:["<i class='fa-solid fa-arrow-right mx-2'></i>", "<i class='fa-solid fa-arrow-left mx-2'></i>"],
       nav:false,
       dots: false,
@@ -178,57 +197,51 @@ for (let i = 0; i < dots.length; i++) {
   })
 
 
-// increment & decrement
 
-document.querySelectorAll(".controls").forEach(control => {
-  let plus = control.querySelector(".plus");
-  let minus = control.querySelector(".minus");
-  let result = control.querySelector(".result");
 
-  let count = 0;
+// add fav -----
 
-  plus.addEventListener("click", () => {
-    count++;
-    updateResult();
-  });
-
-  minus.addEventListener("click", () => {
-    if (count > 0) {
-      count--;
-      updateResult();
-    }
-  });
-
-  const updateResult = () => {
-    result.value = count
-  };
+$(".fav-btn").click(function() {
+  $(this).toggleClass("active");
 });
 
 
 
 
 
-    function fixedNav() {
-      let scroll = window.scrollY;
-      let isNavTop = scroll < 50;
-      let nav = document.getElementById('nav');
-      if ( isNavTop) {
-        nav.classList.remove('active');
-      } else {
-        nav.classList.add('active');
+// increment & decrement
+let plus = document.querySelectorAll(".plus");
+if(plus !== null){
+  document.querySelectorAll(".controls").forEach(control => {
+    let plus = control.querySelector(".plus");
+    let minus = control.querySelector(".minus");
+    let result = control.querySelector(".result");
+  
+    let count = 0;
+  
+    plus.addEventListener("click", () => {
+      count++;
+      updateResult();
+    });
+  
+    minus.addEventListener("click", () => {
+      if (count > 0) {
+        count--;
+        updateResult();
       }
-    }
-    let nav = document.getElementById('nav');
-    if(nav != null){
-      window.addEventListener('scroll', fixedNav);
-    }
+    });
+  
+    const updateResult = () => {
+      result.value = count
+    };
+  });
+}
 
 
 
 
-// $(".product-card .link").addEventListener("mouseLeave",()=>{
-//   $(this).addClass("active")
-// })
+
+
 
 
 

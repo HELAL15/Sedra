@@ -103,6 +103,7 @@ body {
   direction: rtl;
   line-height: 1.7;
   background-color: $body;
+  overflow: hidden;
 }
 
 html[dir="ltr"] body {
@@ -281,12 +282,14 @@ img {
   }
 }
 
+
 .btn {
-  padding: 0.4rem 2rem;
-  border-radius: $brad;
+  padding: 0.65rem 2.5rem;
+  border-radius: 35px;
   font-size: 1rem;
   font-weight: 500;
 }
+
 
 .main-btn {
   color: $white;
@@ -310,4 +313,203 @@ section {
 
 .offcanvas {
   z-index: 222222;
+}
+
+
+.sec-title {
+  display: flex;
+  gap: .8rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .line {
+    height: 1.3px;
+    width: 75%;
+    background-color: $border;
+  }
+
+
+}
+
+
+@media($s_mob) {
+  .sec-title {
+    gap: .5rem;
+
+    .line {
+      width: 35%;
+    }
+
+
+  }
+}
+
+.more-btn {
+  border: none;
+  overflow: hidden;
+  @include btn_color($color: $white, $bg: $secondary);
+  position: relative;
+  transition: .3s;
+
+  &:hover {
+    @include btn_color($color: $black, $bg: $main);
+  }
+
+  &:focus {
+    @include btn_color($color: $white, $bg: $secondary);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: $main;
+    border-radius: $brad;
+    color: $black;
+    transition: .3s;
+    height: 100%;
+    width: 0;
+    opacity: .5;
+  }
+
+  &::before {
+    left: 50%;
+  }
+
+  &::after {
+    right: 50%;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    -webkit-animation: hover 0.3s ease;
+    animation: hover 0.3s ease;
+  }
+}
+
+
+
+@-webkit-keyframes hover {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 15%;
+  }
+
+  50% {
+    width: 25%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+
+
+@keyframes hover {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 15%;
+  }
+
+  50% {
+    width: 25%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+
+
+.card.product-card {
+
+
+
+
+
+  .link {
+    z-index: 3;
+  }
+
+
+  @include card($dir: column, $gap: .5rem, $border: 0, $rad: 10px, $width: 100%, $height: 270px, $img_brdr: 1);
+  padding: .5rem;
+
+
+
+
+
+  .card-img {
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      opacity: 0;
+      transition: .2s;
+      z-index: 3;
+    }
+
+    .controls {
+      @extend %flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: .5rem;
+      position: absolute;
+      top: 50%;
+      inset-inline-start: -100%;
+      transform: translate(100%, -50%);
+      z-index: 4;
+      transition: .5s;
+
+      .btn {
+        padding: 0;
+        @include circle($size: 35px, $font: 18px);
+      }
+    }
+
+
+    .img-back {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      transition: .4s;
+    }
+  }
+
+  .card-body {
+    position: relative;
+  }
+
+
+
+  &:hover {
+    .card-img {
+      .overlay {
+        opacity: .5;
+      }
+
+      .controls {
+        inset-inline-start: 5%;
+        transform: translate(-5%, -50%);
+      }
+
+      .img-back {
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
 }

@@ -114,9 +114,10 @@ $(document).ready(function(){
 
     $('.categories .owl-carousel').owlCarousel({
       rtl: dirAr,
-      loop:true,
+      loop:false,
       margin:15,
-      nav:false,
+      navText:["<i class='fa-solid fa-arrow-right mx-2'></i>", "<i class='fa-solid fa-arrow-left mx-2'></i>"],
+      nav:true,
       dots: false,
       responsive:{
           0:{
@@ -131,7 +132,29 @@ $(document).ready(function(){
       }
     })
 
+    $('.offers .owl-carousel').owlCarousel({
+      rtl: dirAr,
+      loop:false,
+      margin:10,
+      autoplay:true,
+      navText:["<i class='fa-solid fa-arrow-right mx-2'></i>", "<i class='fa-solid fa-arrow-left mx-2'></i>"],
+      nav:false,
+      dots: false,
+      responsive:{
+          0:{
+              items:1.5
+          },
+          600:{
+              items:2.5
+          },
+          1000:{
+              items:3.5
+          }
+      }
+    })
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 
 const dots = document.querySelectorAll(".header-home .owl-carousel .owl-dots .owl-dot span");
@@ -140,9 +163,19 @@ for (let i = 0; i < dots.length; i++) {
   const margin = (Math.sin(angle * i) * 15) - 15;
   dots[i].style.marginBottom = `${margin}px`;
   if (i === 0 || i === dots.length - 1) {
-    dots[i].style.margin = '0 16px 16px 16px';
+    dots[i].style.margin = '0 6px 10px';
   }
 }
+
+
+  // make category-img circle 
+  var categoryWidth = $('.categories .img').width();
+  $('.categories .img').height(categoryWidth)
+  // -- responsive --
+  $(window).resize(function(){
+    var categoryWidth = $('.categories .img').width();
+  $('.categories .img').height(categoryWidth)
+  })
 
 
 // increment & decrement
@@ -193,7 +226,9 @@ document.querySelectorAll(".controls").forEach(control => {
 
 
 
-
+// $(".product-card .link").addEventListener("mouseLeave",()=>{
+//   $(this).addClass("active")
+// })
 
 
 

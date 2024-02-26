@@ -74,7 +74,7 @@
 
 }
 
-@mixin card($dir: row, $gap: 1rem, $border: 1, $rad: 13px, $width: 150px, $height: 160px, $size: 150px) {
+@mixin card($dir: row, $gap: 1rem, $border: 1, $rad: 13px, $width: 150px, $height: 160px, $img_brdr: 0) {
     @extend %flex;
     gap: $gap;
     width: 100%;
@@ -83,6 +83,13 @@
     padding: .5rem 1.5rem;
     border-radius: $rad !important;
 
+
+    @if($img_brdr ==1) {
+        .card-img {
+            border-radius: 10px;
+        }
+    }
+
     .card-img {
         max-height: $height;
         height: $height;
@@ -90,10 +97,21 @@
         width: $width;
         -o-object-fit: cover;
         object-fit: cover;
+        overflow: hidden;
 
         img {
             -o-object-fit: cover;
             object-fit: cover;
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+
+            img {
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
         }
     }
 

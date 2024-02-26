@@ -1,5 +1,5 @@
 header {
-  height: 35vh;
+  height: 200px;
   background-color: $header;
   @extend %flex_center;
   position: relative;
@@ -30,6 +30,9 @@ header {
   }
 }
 
+
+
+
 header.header-home {
   background-color: $header;
   // margin-top: 7.5rem;
@@ -40,6 +43,33 @@ header.header-home {
   align-items: center;
   // margin-top: 2rem;
   // @extend %header_top;
+
+
+
+  .owl-carousel {
+    position: unset !important;
+  }
+
+  .owl-theme .owl-dots,
+  .owl-theme .owl-nav {
+    position: absolute;
+    right: 50%;
+    bottom: -4rem;
+    transform: translate(50%, -50%) rotate(180deg);
+  }
+
+  .owl-dots .owl-dot span {
+    display: inline-block;
+    width: 12px !important;
+    height: 12px !important;
+    margin-right: 2px !important;
+    margin-left: 12px !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: $main;
+  }
 
   .background-img {
     background: url("/images/fav.svg");
@@ -58,23 +88,26 @@ header.header-home {
 
   .hero-title {
     @extend %flex;
-    gap: .5rem;
-    background-color: $backp;
+    gap: .85rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: .3rem .5rem;
     border-radius: $brad;
+    background-color: #bbbbbb20;
+    padding: 0.4rem 0.45rem;
+    -webkit-padding-end: 1.4rem;
+    padding-inline-end: 1.4rem;
 
     .hero-name {
       background-color: $secondary;
-      padding: .1rem 1rem;
       border-radius: $brad;
       color: $white;
+      padding: 0.23rem 1.5rem;
     }
 
     p {
-      font-weight: 500;
+      font-weight: bold;
+      font-size: 18px;
     }
   }
 
@@ -88,28 +121,7 @@ header.header-home {
   }
 }
 
-.owl-carousel {
-  position: unset !important;
-}
 
-.owl-theme .owl-dots,
-.owl-theme .owl-nav {
-  position: absolute;
-  right: 50%;
-  bottom: -25%;
-  transform: translate(50%, -50%) rotate(180deg);
-}
-
-.owl-dots .owl-dot span {
-  display: inline-block;
-  width: 12px !important;
-  height: 12px !important;
-}
-
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-  background: $main;
-}
 
 
 

@@ -4,17 +4,60 @@ html[dir=ltr] {
   .owl-carousel.owl-rtl {
     direction: ltr !important;
   }
+
+  .offers {
+    .content {
+      inset-inline-start: 1%;
+      transform: translate(1%, -35%);
+    }
+  }
 }
+
+
 
 .categories {
 
+  .container {
+    position: relative;
+  }
+
+  .owl-carousel .owl-nav button {
+    background-color: transparent;
+    color: $main;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: transparent;
+      color: $main;
+    }
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    inset-inline-end: -2.5rem;
+
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 50%;
+    inset-inline-start: -2.5rem;
+  }
+
   .owl-carousel .owl-stage {
-    margin: 5rem 0;
+    margin: 3rem 0 0 0;
   }
 
 
 
   .card {
+
+
+    .link:hover+.img {
+      background-color: $main;
+    }
+
     &:hover {
       transform: translateY(-10px);
     }
@@ -29,8 +72,8 @@ html[dir=ltr] {
       height: 100%;
 
       .img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        // height: 200px;
         border-radius: 50%;
         background-color: $white;
         -o-object-fit: cover;
@@ -45,7 +88,7 @@ html[dir=ltr] {
 
         img {
           width: 100%;
-          height: 250px;
+          // height: 250px;
           position: absolute;
           bottom: -4rem;
           -o-object-fit: cover;
@@ -69,7 +112,9 @@ html[dir=ltr] {
     border-radius: 25px;
 
     .img {
-      margin-top: -6rem;
+      margin-top: -8rem;
+      -webkit-margin-end: -5rem;
+      margin-inline-end: -5rem;
     }
 
     .text {
@@ -83,9 +128,9 @@ html[dir=ltr] {
       }
 
       p {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin: .7rem 0;
+        font-size: 1.25rem;
+        font-weight: 900;
+        margin: 0.85rem 0 1.5rem -3.5rem;
       }
 
       .btn {
@@ -93,6 +138,18 @@ html[dir=ltr] {
       }
     }
   }
+}
+
+
+
+
+
+
+
+.discover-offers.two .content p {
+  font-size: 1.76rem;
+  font-weight: 500;
+  text-wrap: balance;
 }
 
 /*two*/
@@ -103,13 +160,18 @@ html[dir=ltr] {
     background: url("/images/discover-two.png");
     @extend %background_fit;
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 6rem 3rem;
-    color: $white;
-    text-align: center;
+
+    .overlay {
+      background: transparent radial-gradient(closest-side at 50% 50%, #9AD1A146 0%, #86876E46 100%) 0% 0% no-repeat padding-box;
+      padding: 6rem 3rem;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+    }
 
     img {
       -o-object-fit: cover;
@@ -278,7 +340,87 @@ html[dir=ltr] {
 
 
 
+
+
+.offers {
+  .offers-main {
+    position: relative;
+
+    .img {
+      border-radius: $brad;
+      overflow: hidden;
+    }
+
+    .content {
+      position: absolute;
+      width: 50%;
+      top: 35%;
+      inset-inline-end: 1%;
+      transform: translate(-1%, -35%);
+      color: $black;
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      h4 {
+        font-weight: bold;
+        margin: .5rem 0;
+      }
+
+      p {}
+    }
+  }
+
+  .offers-body {
+    -webkit-margin-start: 8rem;
+    margin-inline-start: 8rem;
+
+    // .card {
+    //   position: relative;
+    //   @include card($dir: column, $gap: .5rem, $border: 0, $rad: 13px, $width: 100%, $height: 270px, $img_brdr: 1);
+
+    //   .card-img {
+    //   position: relative;
+
+    //   .controls {
+    //     @extend %flex;
+    //     justify-content: center;
+    //     flex-direction: column;
+    //     gap: .5rem;
+    //     position: absolute;
+    //     top: 50%;
+    //     inset-inline-start: 1%;
+    //     transform: translate(-1%, -50%);
+    //     background-color: red;
+    //     z-index: 4;
+    //   }
+
+    //   }
+    // }
+  }
+}
+
+
+
+
+
+
+
 @media($s_med) {
+
+
+
+  .offers {
+    .offers-body {
+      -webkit-margin-start: 0rem;
+      margin-inline-start: 0rem;
+    }
+  }
+
+
+
   .discover-offers.two {
     .content {
       padding: 2rem 1rem;
@@ -312,6 +454,19 @@ html[dir=ltr] {
         }
 
       }
+    }
+  }
+}
+
+@media($s_mob) {
+  .categories {
+    .owl-carousel .owl-nav button.owl-next {
+      position: unset;
+
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+      position: unset;
     }
   }
 }

@@ -1,5 +1,5 @@
 .subscribe-mail {
-  margin: 4rem 0;
+  margin: 4rem 0 0 0;
   background: url("/images/mail-back.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,8 @@
       @include h_center ($gap: 1rem);
 
       .form-control {
-        background-color: transparent;
+        width: calc(100% - 56px);
+        background-color: rgba(0, 0, 0, 0);
         border: none;
 
         &::-webkit-input-placeholder {
@@ -67,7 +68,7 @@
 
       .btn {
         @include circle($size: 40px, $font: 1rem, $color: $white, $bg: $main, $bx_sh: 0);
-        padding: 0 !important;
+        padding: 0.65rem .5rem;
       }
 
     }

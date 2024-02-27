@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+%flex_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 %header_top {
     margin-top: 4rem;
 }

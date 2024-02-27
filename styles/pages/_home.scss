@@ -1,6 +1,6 @@
 /*categories section*/
 
-html[dir=ltr] {
+html[dir='ltr'] {
   .owl-carousel.owl-rtl {
     direction: ltr !important;
   }
@@ -13,10 +13,7 @@ html[dir=ltr] {
   }
 }
 
-
-
 .categories {
-
   .container {
     position: relative;
   }
@@ -36,7 +33,6 @@ html[dir=ltr] {
     position: absolute;
     top: 50%;
     inset-inline-end: -2.5rem;
-
   }
 
   .owl-carousel .owl-nav button.owl-prev {
@@ -49,11 +45,7 @@ html[dir=ltr] {
     margin: 3rem 0 0 0;
   }
 
-
-
   .card {
-
-
     .link:hover+.img {
       background-color: $main;
     }
@@ -80,7 +72,7 @@ html[dir=ltr] {
         object-fit: cover;
         position: relative;
         margin: auto;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
           background-color: $main;
@@ -99,14 +91,12 @@ html[dir=ltr] {
   }
 }
 
-
 /*discover offers*/
-
 
 /*one*/
 .discover-offers.one {
   .content {
-    background: url("/images/disscover-one.png");
+    background: url('/images/disscover-one.png');
     @extend %background_fit;
     border-radius: 25px;
 
@@ -133,17 +123,11 @@ html[dir=ltr] {
       }
 
       .btn {
-        @include btn_color($color: $main , $bg: $white, )
+        @include btn_color($color: $main, $bg: $white);
       }
     }
   }
 }
-
-
-
-
-
-
 
 .discover-offers.two .content p {
   font-size: 1.76rem;
@@ -156,12 +140,16 @@ html[dir=ltr] {
   position: relative;
 
   .content {
-    background: url("/images/discover-two.png");
-    @extend %background_fit;
     border-radius: 25px;
+    position: relative;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
 
     .overlay {
-      background: transparent radial-gradient(closest-side at 50% 50%, #9AD1A146 0%, #86876E46 100%) 0% 0% no-repeat padding-box;
+      background: transparent radial-gradient(closest-side at 50% 50%, #9ad1a146 0%, #86876e46 100%) 0% 0% no-repeat padding-box;
       padding: 6rem 3rem;
       border-radius: 25px;
       display: flex;
@@ -170,6 +158,8 @@ html[dir=ltr] {
       flex-direction: column;
       color: #fff;
       text-align: center;
+      position: absolute;
+      inset: 0;
     }
 
     img {
@@ -179,20 +169,31 @@ html[dir=ltr] {
 
     p {
       font-size: 2rem;
-      width: 70%;
     }
 
     .btn {
       @include btn_color();
     }
   }
-
-
 }
 
+.has-offer {
+  position: absolute;
+  height: 35px;
+  width: 65px;
+  top: 5%;
+  inset-inline-start: 0;
+  z-index: 5;
 
-
-
+  span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    font-weight: bold;
+  }
+}
 
 /* offcanvas */
 
@@ -212,7 +213,11 @@ html[dir=ltr] {
     right: -5%;
     top: 3%;
     transform: translate(5%, 3%);
-    @include circle($size: 45px, $font: 16px, $color: $main, $bg: $white, $bx_sh: 1)
+    @include circle($size: 45px,
+      $font: 16px,
+      $color: $main,
+      $bg: $white,
+      $bx_sh: 1);
   }
 
   .card {
@@ -222,18 +227,22 @@ html[dir=ltr] {
       @extend %flex;
       border: 1px solid $border !important;
       border-radius: $brad !important;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       width: 65%;
 
       .form-control {
         border: none;
-        padding: .5rem !important;
+        padding: 0.5rem !important;
         text-align: center;
       }
 
       .btn {
-        padding: .5rem;
-        @include circle($size: 30px, $font: 14px, $color: $main, $bg: $white, $bx_sh: 0)
+        padding: 0.5rem;
+        @include circle($size: 30px,
+          $font: 14px,
+          $color: $main,
+          $bg: $white,
+          $bx_sh: 0);
       }
     }
   }
@@ -253,7 +262,6 @@ html[dir=ltr] {
 
     .title {
       color: $muted;
-
 
       i {
         img {
@@ -279,7 +287,7 @@ html[dir=ltr] {
         border-top-right-radius: 0;
         border-bottom-left-radius: $brad;
         border-top-left-radius: $brad;
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
       }
     }
 
@@ -306,17 +314,14 @@ html[dir=ltr] {
   }
 }
 
-html[dir=ltr] {
+html[dir='ltr'] {
   .offcanvas.cart {
-
     .cart-name {
       padding-bottom: 1.5rem;
     }
 
     .offcanvas-footer {
-
       .group {
-
         .form-control {
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
@@ -329,16 +334,12 @@ html[dir=ltr] {
           border-top-right-radius: $brad;
           border-bottom-left-radius: 0;
           border-top-left-radius: 0;
-          padding: .5rem 2rem;
+          padding: 0.5rem 2rem;
         }
       }
     }
   }
 }
-
-
-
-
 
 .offers {
   .offers-main {
@@ -364,7 +365,7 @@ html[dir=ltr] {
 
       h4 {
         font-weight: bold;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
       }
 
       p {}
@@ -400,32 +401,11 @@ html[dir=ltr] {
   }
 }
 
-
-
-
-
-//===== books =====//
-
-
-.books {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17%, 1fr));
-    grid-gap: 1rem;
-  }
-}
-
-
-
 /*===== top seller =====*/
-
 
 .top-seller,
 .bokor-prize {
-
   .tops-cont {
-
-
     border-radius: $brad;
     border: 1px solid $border;
     margin-top: 1rem;
@@ -434,9 +414,8 @@ html[dir=ltr] {
     .side-cards {
       .card {
         @include card($border: 0, $width: 120px, $height: 150px);
-        padding: .5rem;
+        padding: 0.5rem;
         border-radius: 0 !important;
-
       }
 
       .card.brdr {
@@ -452,11 +431,10 @@ html[dir=ltr] {
           border-top: 1px solid $border;
         }
       }
-
     }
 
     .center {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       border-right: 1px solid $border;
       border-left: 1px solid $border;
       // margin: 2.8rem 0 1.2rem 0;
@@ -469,12 +447,6 @@ html[dir=ltr] {
         }
       }
     }
-
-
-
-
-
-
   }
 }
 
@@ -486,39 +458,25 @@ html[dir=ltr] {
       .card {
         @include card($border: 0, $width: 170px, $height: 200px);
         border: none !important;
+        padding: 0.5rem;
       }
 
       .row {
         .col-md-12:nth-child(2) .card {
-          padding: .5rem 1.5rem;
+          padding: 0.5rem;
         }
       }
     }
   }
 }
 
-
-
-
-@media($s_med) {
-
-
-  .books {
-    .cards {
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    }
-  }
-
-
-
+@media ($s_med) {
   .offers {
     .offers-body {
       -webkit-margin-start: 0rem;
       margin-inline-start: 0rem;
     }
   }
-
-
 
   .discover-offers.two {
     .content {
@@ -533,7 +491,7 @@ html[dir=ltr] {
 
   .discover-offers.one {
     .content {
-      background: url("/images/disscover-one.png");
+      background: url('/images/disscover-one.png');
       @extend %background_fit;
       border-radius: 25px;
 
@@ -551,26 +509,31 @@ html[dir=ltr] {
         p {
           font-size: 1.2rem;
         }
-
       }
     }
   }
 }
 
-@media($s_mob) {
+@media ($s_mob) {
 
+  .discover-offers.one {
+    .content {
+      .img {
+        -webkit-margin-end: 0rem;
+        margin-inline-end: 0rem;
+      }
 
-  .books {
-    .cards {
-      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      .text p {
+        font-size: 1.25rem;
+        font-weight: 900;
+        margin: 0;
+      }
     }
   }
-
 
   .categories {
     .owl-carousel .owl-nav button.owl-next {
       position: unset;
-
     }
 
     .owl-carousel .owl-nav button.owl-prev {

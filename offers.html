@@ -58,12 +58,12 @@
 
         <ul class="icons m-0 d-flex">
           <li>
-            <a href="compare.html">
+            <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="compare">
               <img src="images/icons/compare.svg" alt="">
             </a>
           </li>
           <li>
-            <a href="fav.html">
+            <a href="fav.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="favorite">
               <img src="images/icons/fav.svg" alt="">
             </a>
           </li>
@@ -74,7 +74,7 @@
           </li>
           <!-- if auth -->
           <li>
-            <a href="profile.html">
+            <a href="profile.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="your profile">
               <img src="images/icons/profile.svg" alt="">
             </a>
           </li>
@@ -83,7 +83,7 @@
               note: remove d-none
             -->
           <li class="d-non">
-            <a href="login.html">
+            <a href="login.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="login page">
               <img src="images/icons/login.svg" alt="">
             </a>
           </li>
@@ -106,7 +106,7 @@
               </div>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">الرئيسية</a>
+              <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">
@@ -114,7 +114,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="book-store.html" class="nav-link active">
+              <a href="book-store.html" class="nav-link">
                 متجر الكتب
               </a>
             </li>
@@ -159,18 +159,24 @@
       <div class="row gy-3">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
+            <div class="d-flex flex-column gap-2">
+              <div class="card-img">
+                <img src="images/product.jpg" alt="">
+              </div>
+              <button class="delete">
+                <i class="fas fa-trash"></i>
+                <span>حذف من السلة</span>
+              </button>
             </div>
             <div class="card-content">
               <div class="details">
-                <h4 class="title">A Novel Idea</h4>
+                <h5 class="title">A Novel Idea</h5>
                 <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price"><span>29</span><span>ريال سعودي</span></h5>
+                <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
               </div>
               <div class="controls">
                 <button class="btn plus"><i class="fas fa-plus"></i></button>
-                <input class="result form-control " value="0" readonly type="number">
+                <input class="result form-control" value="0" readonly type="number">
                 <button class="btn minus"><i class="fas fa-minus"></i></button>
               </div>
             </div>
@@ -178,8 +184,14 @@
         </div>
         <div class="col-md-12">
           <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
+            <div class="d-flex flex-column gap-2">
+              <div class="card-img">
+                <img src="images/product.jpg" alt="">
+              </div>
+              <button class="delete">
+                <i class="fas fa-trash"></i>
+                <span>حذف من السلة</span>
+              </button>
             </div>
             <div class="card-content">
               <div class="details">
@@ -198,9 +210,30 @@
       </div>
     </div>
     <div class="offcanvas-footer">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-        etc.
+      <div class="discount-code">
+        <div class="discount">
+          <h5 class="title d-flex align-items-center gap-2 mb-3">
+            <i>
+              <img src="images/icons/discount.svg" alt="">
+            </i>
+            <span>إضافة كود الخصم</span>
+          </h5>
+          <div class="group mb-3">
+            <input type="text" class="form-control" placeholder="كود الخصم">
+            <button class="btn">تطبيق</button>
+          </div>
+        </div>
+        <div class="total d-flex justify-content-between align-items-center">
+          <span>الإجمالي</span>
+          <span>15 ريال سعودي</span>
+        </div>
+        <div class="pay d-flex flex-column gap-3 align-items-center">
+          <a href="" class="shipping btn">استكمال عملية الدفع</a>
+          <a href="" class="to-cart">
+            <span>الذهاب للسلة</span>
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -210,7 +243,7 @@
   <header class="">
     <div class="container  z-3 position-relative">
       <a href="#" class="back"><button class="btn"><i class="fa-solid fa-share"></i></button><span>رجوع</span></a>
-      <h3 class="page-name text-center">متجر الكتب</h3>
+      <h3 class="page-name text-center">العروض</h3>
     </div>
   </header>
 
@@ -280,26 +313,8 @@
         </div>
       </div>
 
-      <!-- <div class="price">
+      <div class="price">
         <h5 class="title mb-3 mx-3">السعر</h5>
-      </div> -->
-      <div class="middle price">
-        <h5 class="title mb-3 mx-3">السعر</h5>
-        <div class="multi-range-slider">
-          <input type="range" id="input-left" min="0" max="100" value="25">
-          <input type="range" id="input-right" min="0" max="100" value="75">
-
-          <div class="slider">
-            <div class="track"></div>
-            <div class="range"></div>
-            <div class="thumb left"></div>
-            <div class="thumb right"></div>
-          </div>
-        </div>
-        <div class="prices">
-          <span class="price-from">100 ريال سعودي</span>
-          <span class="price-to">400 ريال سعودي</span>
-        </div>
       </div>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -449,20 +464,108 @@
     </div>
   </form>
 
-
-
-  <!-- books section -->
-  <section class="books">
+  <!-- offers section -->
+  <section class="offers offers-page">
     <div class="container">
       <div class="sec-title mt-3 mb-4">
-        <h3 class="name">الكتب</h3>
+        <h3 class="name">العروض</h3>
         <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
           aria-controls="offcanvasExample">
           <i class="fa-solid fa-sliders mx-2"></i>
           <span>عرض التصفية</span>
         </a>
       </div>
-      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4">
+      <div class="row gy-4">
+        <div class="col-lg-5 ">
+          <div class="offers-main">
+            <div class="img">
+              <img src="images/offers.jpg" alt="">
+            </div>
+            <div class="content">
+              <span>خصم كبير</span>
+              <h4>خصم يصل حتى 50%</h4>
+              <p>استعد لرحلة القراءة مع عروضناالرائعة على مجموعة مختارة من الكتب اباأ مغامرتك الأن مع اسعار مذهلة</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 ">
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="#" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4 mt-4">
         <div class="col">
           <div class="card product-card">
             <div class="card-img">
@@ -706,6 +809,7 @@
       </div>
     </div>
   </section>
+
 
 
   <!-- subscribe section -->
@@ -768,11 +872,11 @@
           <div class="website-map">
             <h5 class="ul-name">خريطة الموقع</h5>
             <ul class="footer-links link1">
-              <li><a href="index.html">الرئيسية</a></li>
+              <li><a class="active" href="index.html">الرئيسية</a></li>
               <li><a href="posts.html">دور النشر</a></li>
               <li><a href="about.html">من نحن</a></li>
               <li><a href="offers.html">العروض</a></li>
-              <li><a class="active" href="book-store.html">متجر الكتب</a></li>
+              <li><a href="book-store.html">متجر الكتب</a></li>
               <li><a href="blog.html">المدونة</a></li>
             </ul>
           </div>

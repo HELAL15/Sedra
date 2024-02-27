@@ -1,0 +1,66 @@
+.about {
+  .who-we {
+    .start {
+      color: $main;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .intro {
+      font-weight: 500;
+      margin: 1.4rem 0;
+      line-height: 1.6;
+    }
+
+    .desc {
+      color: $desc;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-wrap: balance;
+    }
+
+    .img {
+      border-radius: $brad;
+      overflow: hidden;
+      height: 500px;
+
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media($s_med) {
+  .about {
+    .who-we {
+      .img {
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media($s_mob) {
+  .about {
+    .who-we {
+      .img {
+        height: 400px;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.profile {
+  .profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .main-links {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+
+      .link-btn {
+        @extend %flex;
+        gap: 1.3rem;
+
+        padding: .8rem .5rem;
+        border-radius: 10px;
+
+        span {
+          font-weight: 500;
+          color: $black;
+        }
+
+        i {
+          @include circle($size: 40px, $font: 16px);
+        }
+      }
+
+      .link-btn.active {
+        background-color: $main;
+
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .logout {
+      width: 100%;
+      border-top: 1px solid $border;
+
+      padding: 1.5rem .5rem;
+      color: red;
+
+      .logout-link {
+        color: red;
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+
+        span {
+          font-weight: 500;
+          color: red;
+        }
+
+        i {
+          @include circle($size: 40px, $font: 16px, $color: $white, $bg: red, $bx_sh: 0);
+        }
+      }
+    }
+  }
+
+  .user-info {
+    @extend %flex;
+    gap: 1.5rem;
+
+    .user-img {
+      @include size($size: 180px);
+      border-radius: 50%;
+      overflow: hidden;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .group {
+    position: relative;
+
+    .form-control {
+      -webkit-padding-end: 3rem;
+      padding-inline-end: 3rem;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      inset-inline-end: 5%;
+      transform: translate(-5%, -50%);
+    }
+  }
+}

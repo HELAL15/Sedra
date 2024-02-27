@@ -35,6 +35,37 @@ $(document).ready(function(){
     new WOW().init();
 
 
+    // increment & decrement
+
+let plus = $(".plus");
+let minus = $(".minus");
+let result = $(".result");
+
+let count = 0
+
+if(plus.length > 0){
+  plus.click(function(){
+    count++;
+    $(this).siblings(".result").val(count);
+  })
+  minus.click(function(){
+    if(count > 0){
+      count--;
+      $(this).siblings(".result").val(count);
+    }
+  })
+}
+
+
+
+
+
+console.log(plus , minus , result);
+
+
+
+
+
     $(".show-pass").click(function () {
       $(this).find('i').toggleClass("bi-eye-slash bi-eye");
       var input = $($(this).attr("toggle"));
@@ -300,33 +331,7 @@ if (inputLeft !== null) {
 
 
 
-// increment & decrement
-// let plus = document.querySelectorAll(".plus");
-// if(plus !== null){
-//   document.querySelectorAll(".controls").forEach(control => {
-//     let plus = control.querySelector(".plus");
-//     let minus = control.querySelector(".minus");
-//     let result = control.querySelector(".result");
-  
-//     let count = 0;
-  
-//     plus.addEventListener("click", () => {
-//       count++;
-//       updateResult();
-//     });
-  
-//     minus.addEventListener("click", () => {
-//       if (count > 0) {
-//         count--;
-//         updateResult();
-//       }
-//     });
-  
-//     const updateResult = () => {
-//       result.value = count
-//     };
-//   });
-// }
+
 
 
 

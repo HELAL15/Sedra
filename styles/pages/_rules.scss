@@ -1,0 +1,86 @@
+.rules {
+  .main-title {
+    @extend %flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    i {
+      @include circle($size: 55px, $font: 1.5rem, $color: $white, $bg: $main);
+    }
+  }
+
+  ul {
+    -webkit-margin-start: 3.5rem;
+    margin-inline-start: 3.5rem;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: -3.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: #C0D98B;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.faq {
+  .accordion {
+    .accordion-item {
+      border: 1px solid $border;
+      border-radius: 10px;
+      background-color: $white;
+      margin-bottom: 1rem;
+    }
+
+
+    .accordion-header {
+      margin: 1rem;
+
+      .accordion-button {
+        color: $main;
+        font-size: 1.1rem;
+        font-weight: bold;
+
+        &::after {
+          content: '+';
+          background-image: unset;
+          margin-right: auto;
+          transition: transform 0.3s;
+          font-size: 1.2rem;
+        }
+
+        &:not(.collapsed) {
+          color: $main;
+          background-color: $white;
+          box-shadow: unset;
+
+          &::after {
+            -webkit-filter: unset;
+            filter: unset;
+            content: "-" !important;
+            transform: unset;
+          }
+        }
+
+        &:focus {
+          z-index: 3;
+          border-color: unset;
+          outline: 0;
+          box-shadow: unset;
+        }
+      }
+    }
+
+    .accordion-body {
+      color: $muted;
+    }
+  }
+}

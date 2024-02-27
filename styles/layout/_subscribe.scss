@@ -1,5 +1,5 @@
 .subscribe-mail {
-  background: url("/images/mail-back.png");
+  background: url('/images/mail-back.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,13 +11,11 @@
     width: 100%;
     height: 100%;
     background-color: $main;
-    opacity: .5;
+    opacity: 0.5;
     z-index: 1;
-
   }
 
   .content {
-
     width: 70%;
 
     .title {
@@ -31,13 +29,13 @@
       background-color: $white;
       border-radius: $brad;
       border: 1px solid $white;
-      padding: .2rem;
+      padding: 0.2rem;
 
       &:focus {
         border-color: $main;
       }
 
-      @include h_center ($gap: 1rem);
+      @include h_center($gap: 1rem);
 
       .form-control {
         width: calc(100% - 56px);
@@ -66,16 +64,33 @@
       }
 
       .btn {
-        @include circle($size: 40px, $font: 1rem, $color: $white, $bg: $main, $bx_sh: 0);
-        padding: 0.65rem .5rem;
+        @include circle(
+          $size: 40px,
+          $font: 1rem,
+          $color: $white,
+          $bg: $main,
+          $bx_sh: 0
+        );
+        padding: 0.65rem 0.5rem;
       }
-
     }
   }
-
 
   .img {
     margin: 2rem 0 -5rem 0;
     width: 100%;
+  }
+}
+
+@media ($s_mob) {
+  .subscribe-mail {
+    .content {
+      padding-top: 1rem;
+      width: 100%;
+    }
+    .img {
+      margin: 2rem 0 -3rem 0;
+      width: 100%;
+    }
   }
 }

@@ -1,0 +1,109 @@
+.contact-us {
+  .container {
+    position: relative;
+
+    .map {
+      position: relative;
+      border-radius: $brad;
+      overflow: hidden;
+      height: 600px;
+      transition: .3s;
+      // margin-bottom: 20rem;
+
+      &:hover .overlay {
+        bottom: -100%;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      iframe {
+        height: 100%;
+      }
+    }
+
+
+    .contact-form {
+      z-index: 3;
+      position: relative;
+      background-color: $white;
+      padding: 3rem 2rem;
+      border-radius: $brad;
+      margin: -12rem 5rem 0 5rem;
+      box-shadow: 0px 15px 15px #00000014;
+
+      .content {
+        .intro {
+          span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $main;
+          }
+
+          .keep-touch {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: .5rem 0;
+            color: $secondary
+          }
+        }
+
+        .location-details {
+          h3 {
+            color: $black;
+          }
+
+          a {
+            color: $muted;
+          }
+        }
+
+        .contact {
+          margin-top: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          font-weight: bold;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+        }
+      }
+
+      .form-control {
+        border-radius: 10px;
+        padding: 1rem;
+      }
+    }
+  }
+
+}
+
+@media($s_med) {
+  .contact-us {
+    .container {
+      .contact-form {
+        padding: 2rem 1rem;
+        margin: -9rem 2rem 0 2rem;
+      }
+    }
+  }
+}
+
+@media($s_mob) {
+  .contact-us {
+    .container {
+      .contact-form {
+        padding: 2rem 1rem;
+        margin: -9rem .5rem 0 .5rem;
+      }
+    }
+  }
+}

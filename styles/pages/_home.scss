@@ -228,7 +228,7 @@ html[dir='ltr'] {
       border: 1px solid $border !important;
       border-radius: $brad !important;
       padding: 0 0.5rem;
-      width: 65%;
+      width: 100%;
 
       .form-control {
         border: none;
@@ -459,6 +459,12 @@ html[dir='ltr'] {
         @include card($border: 0, $width: 170px, $height: 200px);
         border: none !important;
         padding: 0.5rem;
+
+
+        @media($s_med) {
+          flex-direction: column;
+        }
+
       }
 
       .row {
@@ -471,6 +477,13 @@ html[dir='ltr'] {
 }
 
 @media ($s_med) {
+  .offers {
+    .offers-main {
+      -webkit-margin-end: 1rem;
+      margin-inline-end: 1rem;
+    }
+  }
+
   .offers {
     .offers-body {
       -webkit-margin-start: 0rem;
@@ -515,6 +528,8 @@ html[dir='ltr'] {
 }
 
 @media ($s_mob) {
+
+
 
   .discover-offers.one {
     .content {

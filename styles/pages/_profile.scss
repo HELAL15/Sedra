@@ -7,13 +7,13 @@
     .main-links {
       display: flex;
       flex-direction: column;
-      gap: .6rem;
+      gap: 0.6rem;
 
       .link-btn {
         @extend %flex;
         gap: 1.3rem;
 
-        padding: .8rem .5rem;
+        padding: 0.8rem 0.5rem;
         border-radius: 10px;
 
         span {
@@ -39,7 +39,7 @@
       width: 100%;
       border-top: 1px solid $border;
 
-      padding: 1.5rem .5rem;
+      padding: 1.5rem 0.5rem;
       color: red;
 
       .logout-link {
@@ -54,7 +54,13 @@
         }
 
         i {
-          @include circle($size: 40px, $font: 16px, $color: $white, $bg: red, $bx_sh: 0);
+          @include circle(
+            $size: 40px,
+            $font: 16px,
+            $color: $white,
+            $bg: red,
+            $bx_sh: 0
+          );
         }
       }
     }
@@ -64,10 +70,7 @@
     @extend %flex;
     gap: 1.5rem;
 
-
-
     .profile-pic {
-
       position: relative;
 
       .user-img {
@@ -81,9 +84,6 @@
         &:hover .overlay {
           opacity: 1;
         }
-
-
-
 
         .overlay {
           position: absolute;
@@ -129,7 +129,6 @@
   .group {
     position: relative;
 
-
     .form-control {
       -webkit-padding-end: 3rem;
       padding-inline-end: 3rem;
@@ -143,12 +142,7 @@
     }
   }
 
-
-
-
-
   //compare page//
-
 
   table.table {
     thead {
@@ -182,7 +176,8 @@
         }
 
         .img {
-          width: 250px;
+          border-radius: 15px;
+          overflow: hidden;
 
           img {
             aspect-ratio: 3 / 4;
@@ -193,20 +188,6 @@
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   //end//
 }

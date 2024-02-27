@@ -150,7 +150,7 @@
   </div>
 
   <!-- all canvas -->
-  <div class="offcanvas offcanvas-end cart" data-bs-backdrop="static" tabindex="-1" id="cart" aria-labelledby="cart">
+  <div class="offcanvas offcanvas-end cart" tabindex="-1" id="cart" aria-labelledby="cart">
     <button type="button" class=" close-cart" data-bs-dismiss="offcanvas" aria-label="Close">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
@@ -229,7 +229,7 @@
         </div>
         <div class="pay d-flex flex-column gap-3 align-items-center">
           <a href="" class="shipping btn">استكمال عملية الدفع</a>
-          <a href="" class="to-cart">
+          <a href="cart.html" class="to-cart">
             <span>الذهاب للسلة</span>
             <i class="fa-solid fa-chevron-left"></i>
           </a>
@@ -237,6 +237,7 @@
       </div>
     </div>
   </div>
+
 
 
   <!-- header section -->
@@ -460,7 +461,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -678,7 +680,7 @@
         </div>
       </div>
       <div class="col-lg-7 col-12">
-        <div class="owl-carousel owl-theme py-5">
+        <div class="owl-carousel owl-theme ">
           <div class="item">
             <div class="card product-card">
               <div class="card-img">
@@ -809,7 +811,7 @@
   </section>
 
   <!-- discover offers section one -->
-  <section class="discover-offers one">
+  <section class="discover-offers one pt-5">
     <div class="container">
       <div class="content">
         <div class="row gy-4 align-items-center">

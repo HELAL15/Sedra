@@ -86,10 +86,12 @@ $(document).ready(function(){
         const img = document.querySelector('#photo');
         const file = document.querySelector('#file');
         const uploadBtn = document.querySelector('#uploadBtn');
+        const confirm_btn = document.querySelector('#confirm-btn');
         
         //when we choose a pic to upload
         
         file.addEventListener('change', function(){
+          confirm_btn.style.display = 'flex';
           const choosedFile = this.files[0];
           if (choosedFile) {
             const reader = new FileReader(); 
@@ -208,16 +210,10 @@ $(".fav-btn").click(function() {
 
 
 let container_width = $('.container').width();
-
 let offers_body = $('.offers-body').width();
-
 let calc = (offers_body - container_width) - 29 ;
-
 $('.offers-body').css('margin-inline-start', calc);
 
-console.log(calc);
-
-console.log(  `container ${container_width} offers ${offers_body}`);
 
 
 

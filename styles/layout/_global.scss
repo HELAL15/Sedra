@@ -434,6 +434,24 @@ section {
 }
 
 
+.card.product-card.active {
+  .card-img {
+    .overlay {
+      opacity: .5;
+    }
+
+    .controls {
+      inset-inline-start: 5%;
+      transform: translate(-5%, -50%);
+    }
+
+    .img-back {
+      position: absolute;
+      bottom: 0%;
+    }
+  }
+
+}
 
 .card.product-card {
 

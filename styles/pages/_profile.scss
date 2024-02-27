@@ -64,22 +64,71 @@
     @extend %flex;
     gap: 1.5rem;
 
-    .user-img {
-      @include size($size: 180px);
-      border-radius: 50%;
-      overflow: hidden;
-      -o-object-fit: cover;
-      object-fit: cover;
 
-      img {
+
+    .profile-pic {
+
+      position: relative;
+
+      .user-img {
+        @include size($size: 180px);
+        border-radius: 50%;
+        overflow: hidden;
         -o-object-fit: cover;
         object-fit: cover;
+        position: relative;
+
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+
+
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+          @extend %flex_center;
+          background-color: #0000006e;
+          font-size: 2rem;
+          color: $main;
+        }
+
+        .form-control {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+        }
+
+        img {
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+
+      #confirm-btn {
+        position: absolute;
+        bottom: -2%;
+        inset-inline-end: 10%;
+        transform: translate(10%, -2%);
+        z-index: 3;
+        @include size($size: 40px);
+        padding: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
 
+  label {
+    color: $muted;
+  }
+
   .group {
     position: relative;
+
 
     .form-control {
       -webkit-padding-end: 3rem;
@@ -93,4 +142,71 @@
       transform: translate(-5%, -50%);
     }
   }
+
+
+
+
+
+  //compare page//
+
+
+  table.table {
+    thead {
+      tr {
+        text-align: center;
+      }
+    }
+
+    .book-details {
+      text-align: center;
+
+      td {
+        padding: 1rem;
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      td.book-price {
+        color: $secondary;
+      }
+
+      .book-img {
+        width: 250px;
+
+        .delete-btn {
+          padding: 0;
+          border: none;
+          margin-top: 1rem;
+          color: $secondary;
+        }
+
+        .img {
+          width: 250px;
+
+          img {
+            aspect-ratio: 3 / 4;
+            -o-object-fit: cover;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //end//
 }

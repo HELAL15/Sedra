@@ -1,7 +1,5 @@
 .offcanvas.filter-canvas {
-
   .offcanvas-header {
-
     position: relative;
 
     .group {
@@ -33,13 +31,12 @@
   }
 
   .offcanvas-body {
-
     .title {
       color: $accordion;
     }
 
     .price {
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       padding: 2rem 0;
       border-top: 1px solid $border;
       border-bottom: 1px solid $border;
@@ -107,7 +104,6 @@
     //   }
     // }
 
-
     .accordion {
       .accordion-item {
         border: none;
@@ -117,13 +113,13 @@
           border: none;
           box-shadow: none;
           background-color: unset;
+          padding: 0.7rem;
 
           &:not(.collapsed)::after {
             -webkit-filter: brightness(4);
             filter: brightness(4);
           }
         }
-
 
         .form-check-input {
           &:checked {
@@ -136,14 +132,10 @@
             border-color: $main;
           }
         }
-
       }
     }
   }
 }
-
-
-
 
 .middle {
   position: relative;
@@ -153,7 +145,6 @@
   .multi-range-slider {
     direction: ltr;
   }
-
 
   .slider {
     position: relative;
@@ -191,7 +182,7 @@
       background-color: $secondary;
       border-radius: 50%;
       // box-shadow: 0 0 0 0 rgba(98, 0, 238, .1);
-      transition: box-shadow .3s ease-in-out;
+      transition: box-shadow 0.3s ease-in-out;
     }
 
     .thumb.left {
@@ -211,12 +202,10 @@
     .thumb.active {
       box-shadow: 0 0 0 20px #9ad1a160;
     }
-
-
   }
 }
 
-input[type=range] {
+input[type='range'] {
   position: absolute;
   pointer-events: none;
   -webkit-appearance: none;
@@ -226,7 +215,7 @@ input[type=range] {
   opacity: 0;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   pointer-events: all;
   width: 30px;
   height: 30px;

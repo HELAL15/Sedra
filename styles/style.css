@@ -1874,6 +1874,7 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
   border: none;
   box-shadow: none;
   background-color: unset;
+  padding: 0.7rem;
 }
 .offcanvas.filter-canvas .offcanvas-body .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   filter: brightness(4);

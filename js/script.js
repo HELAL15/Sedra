@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     function fixedNav() {
       let scroll = window.scrollY;
-      let isNavTop = scroll < 50;
+      let isNavTop = scroll < 10;
       let nav = document.getElementById('nav');
       if ( isNavTop) {
         nav.classList.remove('active');
@@ -58,9 +58,37 @@ if(plus.length > 0){
 
 
 
+//      play and pause video       //
 
 
-console.log(plus , minus , result);
+let play = document.getElementById("play");
+let pause = document.getElementById("pause");
+let video = document.getElementById("video");
+let overlay = document.getElementById("overlay");
+
+
+if (play !== null) {
+    
+    pause.style.display = "none";
+
+    
+    play.addEventListener("click", function() {
+        
+        play.style.display = "none";
+        pause.style.display = "inline-block";
+        overlay.classList.add("active");
+        video.play();
+    });
+
+    pause.addEventListener("click", function() {
+        
+        pause.style.display = "none";
+        play.style.display = "inline-block";
+        overlay.classList.remove("active");
+        video.pause();
+    });
+}
+
 
 
 

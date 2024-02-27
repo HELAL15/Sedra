@@ -102,35 +102,33 @@
 
 .navs-container.active {
     position: fixed;
-    -webkit-animation: nav .3s ease;
-    animation: nav .3s ease;
 }
 
 
 
-@-webkit-keyframes nav {
-    0% {
-        top: -100%;
-    }
+// @-webkit-keyframes nav {
+//     0% {
+//         top: -100%;
+//     }
 
-    // 50%{top: -10%}
-    100% {
-        top: 0
-    }
-}
+//     // 50%{top: -10%}
+//     100% {
+//         top: 0
+//     }
+// }
 
 
 
-@keyframes nav {
-    0% {
-        top: -100%;
-    }
+// @keyframes nav {
+//     0% {
+//         top: -100%;
+//     }
 
-    // 50%{top: -10%}
-    100% {
-        top: 0
-    }
-}
+//     // 50%{top: -10%}
+//     100% {
+//         top: 0
+//     }
+// }
 
 
 

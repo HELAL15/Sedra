@@ -50,6 +50,8 @@
         .controls {
           width: 70%;
           margin: auto;
+          border: 1px solid #e6e6e6 !important;
+          border-radius: 35px !important;
 
 
         }
@@ -112,8 +114,7 @@
 
 
 .controls {
-  border: 1px solid #e6e6e6 !important;
-  border-radius: 35px !important;
+
   padding: 0 0.5rem;
   @extend %flex;
   padding: .5rem;

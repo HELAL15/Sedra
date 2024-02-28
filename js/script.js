@@ -1,3 +1,38 @@
+
+// const plusButtons = document.querySelectorAll('.plus');
+// const minusButtons = document.querySelectorAll('.minus');
+// const countConts = document.querySelectorAll('.result');
+// const single_prices = document.querySelectorAll(".book-price");
+// const total_prices = document.querySelectorAll(".book-total");
+
+
+// plusButtons.forEach((plusButton, i) => {
+//   const minusButton = minusButtons[i];
+//   const countCont = countConts[i];
+//   const single_price = single_prices[i];
+//   const total_price = total_prices[i];
+//   let countElement = 1;
+//   const price = parseInt(single_price.getAttribute('single-value'));
+
+//   const calcPrice = ()=>{
+//     countCont.value = countElement;
+//     const sum = price * countElement;
+//     total_price.textContent = sum + "$";
+//   }
+//   plusButton.onclick = () => {
+//     countElement++;
+//     calcPrice()
+
+//   };
+//   minusButton.onclick = () => {
+//     if (countElement > 1) {
+//       countElement--;
+//       calcPrice()
+//     }
+//   };
+// });
+
+
 $(document).ready(function(){
     // dir
     var bodyDir = $('body').css('direction')
@@ -35,26 +70,54 @@ $(document).ready(function(){
     new WOW().init();
 
 
-    // increment & decrement
 
-let plus = $(".plus");
-let minus = $(".minus");
-let result = $(".result");
+let finalPrice = 0
+let parent
+let $input
+let val = 1
 
-let count = 0
-
-if(plus.length > 0){
-  plus.click(function(){
-    count++;
-    $(this).siblings(".result").val(count);
-  })
-  minus.click(function(){
-    if(count > 0){
-      count--;
-      $(this).siblings(".result").val(count);
-    }
-  })
+$('.quantity').each(function (key) {
+  subTotal = Number($('.Subtotal')[0].innerHTML)
+    $(this).click(function(k){
+        let target = $(k.currentTarget)
+        finalPrice = 0
+        if(target.hasClass('qtyplus')){
+            parent = target.parents().find('.cart-product-item .book-total')[key/2]
+            const price = Number(($(parent)).attr('data-target'))
+            $input =  $(this).next('input.qty');
+            val = parseInt($input.val())+ 1;
+            parent.innerHTML = val * price
+            // parent.setAttribute('data-target', parent)
+            $input.val(val)
+        }
+        else{
+            parent = target.parents().find('.cart-product-item .book-total')[(key-1)/2]
+            const price = Number(($(parent)).attr('data-target'))
+            $input =  $(this).prev('input.qty');
+            if ($input.val() > 1) {
+                val = parseInt($input.val())- 1;
+                parent.innerHTML = val * price;
+                // parent.setAttribute('data-target', parent)
+                $input.val(val)
+            } 
+        }
+        calcTotal()
+    })
+})
+function calcTotal() {
+    $('.book-total').each(function(i){
+        finalPrice += Number($('.book-total')[i].innerHTML)
+        $('.Subtotal')[0].innerHTML = finalPrice
+    });
 }
+calcTotal()
+
+
+
+
+
+
+
 
 
 

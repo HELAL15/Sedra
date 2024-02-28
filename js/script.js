@@ -1,37 +1,4 @@
 
-// const plusButtons = document.querySelectorAll('.plus');
-// const minusButtons = document.querySelectorAll('.minus');
-// const countConts = document.querySelectorAll('.result');
-// const single_prices = document.querySelectorAll(".book-price");
-// const total_prices = document.querySelectorAll(".book-total");
-
-
-// plusButtons.forEach((plusButton, i) => {
-//   const minusButton = minusButtons[i];
-//   const countCont = countConts[i];
-//   const single_price = single_prices[i];
-//   const total_price = total_prices[i];
-//   let countElement = 1;
-//   const price = parseInt(single_price.getAttribute('single-value'));
-
-//   const calcPrice = ()=>{
-//     countCont.value = countElement;
-//     const sum = price * countElement;
-//     total_price.textContent = sum + "$";
-//   }
-//   plusButton.onclick = () => {
-//     countElement++;
-//     calcPrice()
-
-//   };
-//   minusButton.onclick = () => {
-//     if (countElement > 1) {
-//       countElement--;
-//       calcPrice()
-//     }
-//   };
-// });
-
 
 $(document).ready(function(){
     // dir
@@ -45,22 +12,6 @@ $(document).ready(function(){
     }
 
 
-
-
-    function fixedNav() {
-      let scroll = window.scrollY;
-      let isNavTop = scroll < 10;
-      let nav = document.getElementById('nav');
-      if ( isNavTop) {
-        nav.classList.remove('active');
-      } else {
-        nav.classList.add('active');
-      }
-    }
-    let nav = document.getElementById('nav');
-    if(nav != null){
-      window.addEventListener('scroll', fixedNav);
-    }
 
     
     
@@ -82,22 +33,20 @@ $('.quantity').each(function (key) {
         let target = $(k.currentTarget)
         finalPrice = 0
         if(target.hasClass('qtyplus')){
-            parent = target.parents().find('.cart-product-item .book-total')[key/2]
+            parent = target.parents().find('.cart-product-item .book-value')[key/2]
             const price = Number(($(parent)).attr('data-target'))
             $input =  $(this).next('input.qty');
             val = parseInt($input.val())+ 1;
             parent.innerHTML = val * price
-            // parent.setAttribute('data-target', parent)
             $input.val(val)
         }
         else{
-            parent = target.parents().find('.cart-product-item .book-total')[(key-1)/2]
+            parent = target.parents().find('.cart-product-item .book-value')[(key-1)/2]
             const price = Number(($(parent)).attr('data-target'))
             $input =  $(this).prev('input.qty');
             if ($input.val() > 1) {
                 val = parseInt($input.val())- 1;
                 parent.innerHTML = val * price;
-                // parent.setAttribute('data-target', parent)
                 $input.val(val)
             } 
         }
@@ -105,8 +54,8 @@ $('.quantity').each(function (key) {
     })
 })
 function calcTotal() {
-    $('.book-total').each(function(i){
-        finalPrice += Number($('.book-total')[i].innerHTML)
+    $('.book-value').each(function(i){
+        finalPrice += Number($('.book-value')[i].innerHTML)
         $('.Subtotal')[0].innerHTML = finalPrice
     });
 }
@@ -138,7 +87,7 @@ if (play !== null) {
     play.addEventListener("click", function() {
         
         play.style.display = "none";
-        pause.style.display = "inline-block";
+        pause.style.display = "flex";
         overlay.classList.add("active");
         video.play();
     });
@@ -146,7 +95,7 @@ if (play !== null) {
     pause.addEventListener("click", function() {
         
         pause.style.display = "none";
-        play.style.display = "inline-block";
+        play.style.display = "flex";
         overlay.classList.remove("active");
         video.pause();
     });

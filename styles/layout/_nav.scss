@@ -1,5 +1,6 @@
 .navs-container {
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;

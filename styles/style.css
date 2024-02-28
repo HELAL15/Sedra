@@ -129,7 +129,6 @@ body {
   direction: rtl;
   line-height: 1.7;
   background-color: #fafafa;
-  overflow: hidden;
 }
 
 html[dir=ltr] body {
@@ -323,6 +322,7 @@ img {
 
 section {
   margin-top: 6rem;
+  overflow: hidden;
 }
 
 .offcanvas {
@@ -354,8 +354,8 @@ section {
   .sec-title {
     gap: 0.5rem;
   }
-  .sec-title .line {
-    width: 35%;
+  .sec-title .name {
+    width: 30%;
   }
 }
 .more-btn {
@@ -604,8 +604,57 @@ section {
   color: red;
 }
 
+/* float icon */
+.float-icon {
+  background-color: var(--main);
+  position: absolute;
+  inset-inline-end: 50%;
+  z-index: 11;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.float-icon:before {
+  content: "";
+  position: absolute;
+  border: 6px solid rgba(238, 238, 238, 0.6470588235);
+  inset: -6px;
+  box-shadow: 0 0 0 6px rgba(238, 238, 238, 0.4078431373);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.float-icon:hover:before {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation: ripple-out 1s infinite;
+}
+
+/* Ripple Out */
+@keyframes ripple-out {
+  100% {
+    inset: -10px;
+    opacity: 0;
+  }
+}
+/*=========================================
+==========================================*/
 .navs-container {
-  position: relative;
+  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
@@ -812,7 +861,7 @@ header.header-home .owl-theme .owl-dots,
 header.header-home .owl-theme .owl-nav {
   position: absolute;
   right: 50%;
-  bottom: -40px;
+  bottom: -60px;
   transform: translate(50%, -50%) rotate(180deg);
 }
 header.header-home .owl-dots .owl-dot span {
@@ -1116,6 +1165,9 @@ html[dir=ltr] .offers .content {
 
 /*discover offers*/
 /*one*/
+.discover-offers.one {
+  padding-top: 7rem;
+}
 .discover-offers.one .content {
   background: url("/images/disscover-one.png");
   border-radius: 25px;
@@ -1160,6 +1212,10 @@ html[dir=ltr] .offers .content {
 .discover-offers.two .content {
   border-radius: 25px;
   position: relative;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: 350px;
 }
 .discover-offers.two .content img {
   -o-object-fit: cover;
@@ -1167,7 +1223,7 @@ html[dir=ltr] .offers .content {
 }
 .discover-offers.two .content .overlay {
   background: transparent radial-gradient(closest-side at 50% 50%, rgba(154, 209, 161, 0.2745098039) 0%, rgba(134, 135, 110, 0.2745098039) 100%) 0% 0% no-repeat padding-box;
-  padding: 6rem 3rem;
+  padding: 1rem 1rem;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -1339,7 +1395,7 @@ html[dir=ltr] .offers .content {
 .offcanvas.cart .offcanvas-footer .group .btn:focus {
   background-color: #86876e;
 }
-.offcanvas.cart .offcanvas-footer .total {
+.offcanvas.cart .offcanvas-footer .main-total {
   color: #000;
   font-weight: bold;
   padding: 1rem 0;
@@ -1579,6 +1635,9 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
   }
 }
 @media (max-width : 575.8px) {
+  .discover-offers.one {
+    padding-top: 3rem;
+  }
   .discover-offers.one .content .img {
     margin-inline-end: 0rem;
   }

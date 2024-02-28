@@ -20,13 +20,11 @@ header {
     width: fit-content;
 
     .btn {
-      @include circle(
-        $size: 35px,
+      @include circle($size: 35px,
         $font: 16px,
         $color: $main,
         $bg: $white,
-        $bx_sh: 0
-      );
+        $bx_sh: 0);
       padding: 0;
     }
 
@@ -55,7 +53,7 @@ header.header-home {
   .owl-theme .owl-nav {
     position: absolute;
     right: 50%;
-    bottom: -40px;
+    bottom: -60px;
     transform: translate(50%, -50%) rotate(180deg);
   }
 

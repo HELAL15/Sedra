@@ -103,7 +103,7 @@ body {
   direction: rtl;
   line-height: 1.7;
   background-color: $body;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 html[dir="ltr"] body {
@@ -329,7 +329,9 @@ img {
 
 section {
   margin-top: 6rem;
+  overflow: hidden;
 }
+
 
 .offcanvas {
   z-index: 222222;
@@ -361,8 +363,8 @@ section {
   .sec-title {
     gap: .5rem;
 
-    .line {
-      width: 35%;
+    .name {
+      width: 30%;
     }
 
 
@@ -634,3 +636,80 @@ section {
     color: red;
   }
 }
+
+
+
+
+/* float icon */
+.float-icon {
+  background-color: var(--main);
+  position: absolute;
+  inset-inline-end: 50%;
+  z-index: 11;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: 6px solid #eeeeeea5;
+    inset: -6px;
+    box-shadow: 0 0 0 6px #eeeeee68;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+  }
+
+
+
+
+  &:hover:before {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: ripple-out 1s infinite;
+    animation: ripple-out 1s infinite;
+  }
+
+
+
+
+
+}
+
+
+
+/* Ripple Out */
+@keyframes ripple-out {
+  100% {
+    inset: -10px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ripple-out {
+  100% {
+    inset: -10px;
+    opacity: 0;
+  }
+}
+
+/*=========================================
+==========================================*/

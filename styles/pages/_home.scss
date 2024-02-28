@@ -95,6 +95,8 @@ html[dir='ltr'] {
 
 /*one*/
 .discover-offers.one {
+  padding-top: 7rem;
+
   .content {
     background: url('/images/disscover-one.png');
     @extend %background_fit;
@@ -142,6 +144,10 @@ html[dir='ltr'] {
   .content {
     border-radius: 25px;
     position: relative;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 350px;
 
     img {
       -o-object-fit: cover;
@@ -150,7 +156,7 @@ html[dir='ltr'] {
 
     .overlay {
       background: transparent radial-gradient(closest-side at 50% 50%, #9ad1a146 0%, #86876e46 100%) 0% 0% no-repeat padding-box;
-      padding: 6rem 3rem;
+      padding: 1rem 1rem;
       border-radius: 25px;
       display: flex;
       justify-content: center;
@@ -291,7 +297,7 @@ html[dir='ltr'] {
       }
     }
 
-    .total {
+    .main-total {
       color: $black;
       font-weight: bold;
       padding: 1rem 0;
@@ -532,6 +538,8 @@ html[dir='ltr'] {
 
 
   .discover-offers.one {
+    padding-top: 3rem;
+
     .content {
       .img {
         -webkit-margin-end: 0rem;

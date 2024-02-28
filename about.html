@@ -150,57 +150,98 @@
   </div>
 
   <!-- all canvas -->
-  <div class="offcanvas offcanvas-end cart" data-bs-backdrop="static" tabindex="-1" id="cart" aria-labelledby="cart">
+  <div class="offcanvas offcanvas-end cart" tabindex="-1" id="cart" aria-labelledby="cart">
     <button type="button" class=" close-cart" data-bs-dismiss="offcanvas" aria-label="Close">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
-    <div class="offcanvas-body">
+    <div class="offcanvas-header justify-content-center">
       <h5 class="text-center cart-name">السلة</h5>
+    </div>
+    <div class="offcanvas-body">
       <div class="row gy-3">
         <div class="col-md-12">
-          <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
-            </div>
-            <div class="card-content">
-              <div class="details">
-                <h4 class="title">A Novel Idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price"><span>29</span><span>ريال سعودي</span></h5>
+          <div class="card cart-product-item">
+            <div class="d-flex flex-column gap-2">
+              <div class="card-img">
+                <img src="images/product.jpg" alt="">
               </div>
-              <div class="controls">
-                <button class="btn plus"><i class="fas fa-plus"></i></button>
-                <input class="result form-control " value="0" readonly type="number">
-                <button class="btn minus"><i class="fas fa-minus"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
+              <button class="delete">
+                <i class="fas fa-trash"></i>
+                <span>حذف من السلة</span>
+              </button>
             </div>
             <div class="card-content">
               <div class="details">
                 <h5 class="title">A Novel Idea</h5>
                 <p class="desc">بواسطة ستيفن كينج</p>
-                <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                <h5 class="price"><span data-target="25" class="book-value">25</span><span>ريال سعودي</span></h5>
               </div>
-              <div class="controls">
-                <button class="btn plus"><i class="fas fa-plus"></i></button>
-                <input class="result form-control" value="0" readonly type="number">
-                <button class="btn minus"><i class="fas fa-minus"></i></button>
-              </div>
+              <td class="book-amount">
+                <div class="controls product-quantity">
+                  <button class="btn plus qtyplus quantity"><i class="fas fa-plus"></i></button>
+                  <input class="result qty form-control" value='1' class='qty' readonly type="number">
+                  <button class="btn minus qtyminus quantity"><i class="fas fa-minus"></i></button>
+                </div>
+              </td>
             </div>
           </div>
         </div>
+
+        <div class="col-md-12">
+          <div class="card cart-product-item">
+            <div class="d-flex flex-column gap-2">
+              <div class="card-img">
+                <img src="images/product.jpg" alt="">
+              </div>
+              <button class="delete">
+                <i class="fas fa-trash"></i>
+                <span>حذف من السلة</span>
+              </button>
+            </div>
+            <div class="card-content">
+              <div class="details">
+                <h5 class="title">A Novel Idea</h5>
+                <p class="desc">بواسطة ستيفن كينج</p>
+                <h5 class="price"><span data-target="25" class="book-value">25</span><span>ريال سعودي</span></h5>
+              </div>
+              <td class="book-amount">
+                <div class="controls product-quantity">
+                  <button class="btn plus qtyplus quantity"><i class="fas fa-plus"></i></button>
+                  <input class="result qty form-control" value='1' class='qty' readonly type="number">
+                  <button class="btn minus qtyminus quantity"><i class="fas fa-minus"></i></button>
+                </div>
+              </td>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="offcanvas-footer">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-        etc.
+      <div class="discount-code">
+        <div class="discount">
+          <h5 class="title d-flex align-items-center gap-2 mb-3">
+            <i>
+              <img src="images/icons/discount.svg" alt="">
+            </i>
+            <span>إضافة كود الخصم</span>
+          </h5>
+          <div class="group mb-3">
+            <input type="text" class="form-control" placeholder="كود الخصم">
+            <button class="btn">تطبيق</button>
+          </div>
+        </div>
+        <div class="main-total d-flex justify-content-between align-items-center">
+          <span>الإجمالي</span>
+          <span><span class="Subtotal">15</span> ريال سعودي</span>
+        </div>
+        <div class="pay d-flex flex-column gap-3 align-items-center">
+          <a href="" class="shipping btn">استكمال عملية الدفع</a>
+          <a href="cart.html" class="to-cart">
+            <span>الذهاب للسلة</span>
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -244,10 +285,10 @@
       <div class="col-lg-6 col-md-12">
         <div class="video">
           <div class="overlay" id="overlay">
-            <button class="btn play" id="play">
+            <button class="btn play float-icon" id="play">
               <i class="fas fa-play"></i>
             </button>
-            <button class="btn pause" id="pause">
+            <button class="btn pause float-icon" id="pause">
               <i class="fas fa-pause"></i>
             </button>
           </div>

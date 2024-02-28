@@ -149,61 +149,6 @@
     </nav>
   </div>
 
-  <!-- all canvas -->
-  <div class="offcanvas offcanvas-end cart" data-bs-backdrop="static" tabindex="-1" id="cart" aria-labelledby="cart">
-    <button type="button" class=" close-cart" data-bs-dismiss="offcanvas" aria-label="Close">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-    <div class="offcanvas-body">
-      <h5 class="text-center cart-name">السلة</h5>
-      <div class="row gy-3">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
-            </div>
-            <div class="card-content">
-              <div class="details">
-                <h4 class="title">A Novel Idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price"><span>29</span><span>ريال سعودي</span></h5>
-              </div>
-              <div class="controls">
-                <button class="btn plus"><i class="fas fa-plus"></i></button>
-                <input class="result form-control " value="0" readonly type="number">
-                <button class="btn minus"><i class="fas fa-minus"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-img">
-              <img src="images/product.jpg" alt="">
-            </div>
-            <div class="card-content">
-              <div class="details">
-                <h5 class="title">A Novel Idea</h5>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-              </div>
-              <div class="controls">
-                <button class="btn plus"><i class="fas fa-plus"></i></button>
-                <input class="result form-control" value="0" readonly type="number">
-                <button class="btn minus"><i class="fas fa-minus"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="offcanvas-footer">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-        etc.
-      </div>
-    </div>
-  </div>
 
 
   <!-- header section -->
@@ -226,6 +171,7 @@
                   <th scope="col">السعر</th>
                   <th scope="col">الكمية</th>
                   <th scope="col">الإجمالي</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -236,7 +182,7 @@
                     </div>
                     <h5 class="img-name">a novel idea</h5>
                   </td>
-                  <td class="book-price" single-value="15">29 ريال سعودي</td>
+                  <td class="book-price"><span>29</span> ريال سعودي</td>
                   <td class="book-amount">
                     <div class="controls product-quantity">
                       <button class="btn plus qtyplus quantity"><i class="fas fa-plus"></i></button>
@@ -244,7 +190,7 @@
                       <button class="btn minus qtyminus quantity"><i class="fas fa-minus"></i></button>
                     </div>
                   </td>
-                  <td class="book-total " data-target="29">29 ريال سعودي</td>
+                  <td class="book-total "><span class="book-value" data-target="29">29</span> ريال سعودي</td>
                   <td class="delete-book">
                     <button class="btn delete delete-btn"><i class="fas fa-trash"></i></button>
                   </td>
@@ -265,7 +211,7 @@
                       <button class="btn minus qtyminus quantity"><i class="fas fa-minus"></i></button>
                     </div>
                   </td>
-                  <td class="book-total " data-target="29">29 ريال سعودي</td>
+                  <td class="book-total "><span class="book-value" data-target="29">29</span> ريال سعودي</td>
                   <td class="delete-book">
                     <button class="btn delete delete-btn"><i class="fas fa-trash"></i></button>
                   </td>
@@ -297,7 +243,7 @@
 
           <div class="total wow slideInLeft " data-wow-delay=".5s">
             <div class="title">الإجمالي</div>
-            <div class="price Subtotal">25 ريال سعودي</div>
+            <div class="price"><span class="Subtotal"></span> ريال سعودي</div>
             <div class="note">يحسب الشحن عند استكمال الدفع</div>
             <a href="pay.html" class="btn white-btn w-100 mt-4">التالي</a>
           </div>

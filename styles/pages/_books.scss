@@ -121,21 +121,11 @@
           }
         }
 
-        .form-check-input {
-          &:checked {
-            background-color: $main;
-            border-color: $main;
-          }
-
-          &:focus {
-            box-shadow: unset;
-            border-color: $main;
-          }
-        }
       }
     }
   }
 }
+
 
 .middle {
   position: relative;
@@ -223,4 +213,17 @@ input[type='range']::-webkit-slider-thumb {
   border: 0 none;
   background-color: red;
   -webkit-appearance: none;
+}
+
+
+.form-check-input {
+  &:checked {
+    background-color: $main;
+    border-color: $main;
+  }
+
+  &:focus {
+    box-shadow: unset;
+    border-color: $main;
+  }
 }

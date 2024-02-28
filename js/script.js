@@ -11,6 +11,23 @@ $(document).ready(function(){
       dirAr = false
     }
 
+    // $(".visacard-details").hide()
+
+ $(".online-pay").change(function() {
+        if ($(this).is(":checked")) {
+            $(".visacard-details").show(200);
+        } else {
+            $(".visacard-details").hide(200);
+        }
+    });
+
+    $(".on-hand").change(function() {
+      if ($(this).is(":checked")) {
+          $(".visacard-details").hide(200);
+      } else {
+          $(".visacard-details").show(200);
+      }
+  });
 
 
     

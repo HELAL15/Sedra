@@ -3,20 +3,20 @@
 /*max-width*/
 /*min-width*/
 /*extend*/
-.controls .btn, .rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
+.pay .collected-items .items .item .img .count, .controls .btn, .rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.controls, .main-cart .total, .rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
+.pay .collected-items .items .item, .pay .save-info, .controls, .main-cart .total, .rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
 .blog .card .content .details .comments, .top-seller .tops-cont .side-cards .card,
 .bokor-prize .tops-cont .side-cards .card, .offcanvas.cart .offcanvas-footer .group, .offcanvas.cart .card .controls, .offcanvas.cart .card, header.header-home .hero-title, header .back, .card.product-card .card-img .controls, .card.product-card {
   display: flex;
   align-items: center;
 }
 
-.offcanvas.filter-canvas .offcanvas-body .prices {
+.pay .collected-items .full-prices, .pay .collected-items .prices .shipping-price, .pay .collected-items .prices .total-price, .offcanvas.filter-canvas .offcanvas-body .prices {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1979,14 +1979,6 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
 .offcanvas.filter-canvas .offcanvas-body .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   filter: brightness(4);
 }
-.offcanvas.filter-canvas .offcanvas-body .accordion .accordion-item .form-check-input:checked {
-  background-color: #9ad1a1;
-  border-color: #9ad1a1;
-}
-.offcanvas.filter-canvas .offcanvas-body .accordion .accordion-item .form-check-input:focus {
-  box-shadow: unset;
-  border-color: #9ad1a1;
-}
 
 .middle {
   position: relative;
@@ -2063,6 +2055,15 @@ input[type=range]::-webkit-slider-thumb {
   border: 0 none;
   background-color: red;
   -webkit-appearance: none;
+}
+
+.form-check-input:checked {
+  background-color: #9ad1a1;
+  border-color: #9ad1a1;
+}
+.form-check-input:focus {
+  box-shadow: unset;
+  border-color: #9ad1a1;
 }
 
 .posts .card {
@@ -2623,4 +2624,118 @@ input[type=range]::-webkit-slider-thumb {
   width: 100%;
   text-align: center;
   background-color: transparent;
+}
+
+.pay .form-control {
+  padding: 0.8rem;
+}
+.pay .form-control::-moz-placeholder {
+  color: #979797;
+}
+.pay .form-control::placeholder {
+  color: #979797;
+}
+.pay .save-info {
+  font-weight: bold;
+  gap: 0.5rem;
+}
+.pay .save-info .form-check-input {
+  width: 20px;
+  height: 20px;
+}
+.pay .method-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #e6e6e6;
+  padding-inline-start: 0.8rem;
+}
+.pay .method-type .form-check {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.pay .method-type .form-check .form-check-input {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 2%;
+  transform: translateY(-50%);
+}
+.pay .method-type .form-check .form-check-input:checked + label {
+  background-color: rgba(153, 209, 159, 0.631372549);
+  border-color: rgba(153, 209, 159, 0.631372549);
+}
+.pay .method-type .form-check label {
+  font-weight: bold;
+  margin-bottom: 0;
+  border: 1px solid #b7b7b7;
+  padding: 0.8rem 0.5rem;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding-inline-start: 3rem;
+}
+.pay .method-type .form-check .visacard-details {
+  height: 0;
+}
+.pay .method-type .form-check .form-check-input.online-pay:checked + .visacard-details {
+  height: auto;
+}
+.pay .collected-items {
+  padding: 1rem;
+  border: 1px solid 26px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.pay .collected-items .items .item {
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.pay .collected-items .items .item .img {
+  width: 45%;
+  position: relative;
+}
+.pay .collected-items .items .item .img .count {
+  position: absolute;
+  top: 3%;
+  inset-inline-end: 3%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  color: #000;
+  background: #9ad1a1;
+  font-size: 1.1rem;
+  border-radius: 50%;
+}
+.pay .collected-items .items .item .img img {
+  aspect-ratio: 4/5;
+}
+.pay .collected-items .items .item .details .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.pay .collected-items .items .item .details .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #86876e;
+}
+.pay .collected-items .prices {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+  border-top: 1px solid rgba(153, 209, 159, 0.5333333333);
+  border-bottom: 1px solid rgba(153, 209, 159, 0.5333333333);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.pay .collected-items .full-prices {
+  font-weight: bold;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=style.css.map */

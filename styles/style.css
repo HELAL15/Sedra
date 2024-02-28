@@ -3,13 +3,13 @@
 /*max-width*/
 /*min-width*/
 /*extend*/
-.rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
+.controls .btn, .rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
+.controls, .main-cart .total, .rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
 .blog .card .content .details .comments, .top-seller .tops-cont .side-cards .card,
 .bokor-prize .tops-cont .side-cards .card, .offcanvas.cart .offcanvas-footer .group, .offcanvas.cart .card .controls, .offcanvas.cart .card, header.header-home .hero-title, header .back, .card.product-card .card-img .controls, .card.product-card {
   display: flex;
@@ -287,6 +287,24 @@ img {
   border-radius: 35px;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.secondary-btn {
+  background-color: #86876e;
+  color: #fff;
+}
+.secondary-btn:hover {
+  background-color: #86876e;
+  color: #fff;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: #9ad1a1;
+}
+.white-btn:hover {
+  background-color: #fff;
+  color: #9ad1a1;
 }
 
 .main-btn {
@@ -575,6 +593,15 @@ section {
   text-align: center;
   width: 100%;
   margin-top: 20px;
+}
+
+.delete-btn {
+  color: red;
+  padding: 0;
+  border: none;
+}
+.delete-btn:hover {
+  color: red;
 }
 
 .navs-container {
@@ -2433,4 +2460,108 @@ input[type=range]::-webkit-slider-thumb {
 }
 .faq .accordion .accordion-body {
   color: #a8a8a8;
+}
+
+.main-cart table.table thead tr th {
+  border-top: 1px solid #e6e6e6;
+  padding: 1rem 0;
+}
+.main-cart table.table tr {
+  text-align: center;
+}
+.main-cart table.table tr td {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.main-cart table.table .book-details {
+  vertical-align: middle;
+  text-align: center;
+}
+.main-cart table.table .book-details .book-img {
+  width: 180px;
+}
+.main-cart table.table .book-details .book-img .img-name {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.main-cart table.table .book-details .book-img .img {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.main-cart table.table .book-details .book-img .img img {
+  aspect-ratio: 3/4;
+}
+.main-cart table.table .book-details .book-price {
+  color: #86876e;
+}
+.main-cart table.table .book-details .book-amount .controls {
+  width: 70%;
+  margin: auto;
+}
+.main-cart table.table .book-details .delete-book {
+  padding: 0 2rem;
+}
+.main-cart .discount-code {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 26px;
+}
+.main-cart .discount-code .title {
+  color: #a8a8a8;
+}
+.main-cart .discount-code .title img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.main-cart .total {
+  background: #9ad1a1;
+  color: #000;
+  padding: 1rem;
+  border-radius: 26px;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.main-cart .total .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #a8a8a8;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.main-cart .total .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.main-cart .total .note {
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #91C898;
+  padding: 0.5rem;
+}
+
+.controls {
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 35px !important;
+  padding: 0 0.5rem;
+  padding: 0.5rem;
+}
+.controls .btn {
+  width: 30px;
+  height: 30px;
+  color: #9ad1a1;
+  background: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.controls .form-control {
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
 }/*# sourceMappingURL=style.css.map */

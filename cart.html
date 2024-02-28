@@ -210,16 +210,16 @@
   <header class="">
     <div class="container  z-3 position-relative">
       <a href="#" class="back"><button class="btn"><i class="fa-solid fa-share"></i></button><span>رجوع</span></a>
-      <h3 class="page-name text-center">الملف الشخصي</h3>
+      <h3 class="page-name text-center">السلة</h3>
     </div>
   </header>
 
-  <section class="cart">
+  <section class="main-cart">
     <div class="container">
-      <div class="row gy-4 align-items-center">
+      <div class="row gy-4 ">
         <div class="col-md-9">
           <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table wow slideInRight " data-wow-delay=".2s">
               <thead>
                 <tr>
                   <th scope="col">الكتاب</th>
@@ -237,15 +237,35 @@
                     <h5 class="img-name">a novel idea</h5>
                   </td>
                   <td class="book-price">29 ريال سعودي</td>
-                  <td class="book-year">
-                    <div class="controls">
+                  <td class="book-amount">
+                    <div class="controls ">
                       <button class="btn plus"><i class="fas fa-plus"></i></button>
                       <input class="result form-control" value="0" readonly type="number">
                       <button class="btn minus"><i class="fas fa-minus"></i></button>
                     </div>
                   </td>
-                  <td class="book-author">150 ريال سعودي</td>
-                  <td class="">
+                  <td class="book-total">150 ريال سعودي</td>
+                  <td class="delete-book">
+                    <button class="btn delete delete-btn"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr class="book-details">
+                  <td class="book-img">
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <h5 class="img-name">a novel idea</h5>
+                  </td>
+                  <td class="book-price">29 ريال سعودي</td>
+                  <td class="book-amount">
+                    <div class="controls ">
+                      <button class="btn plus"><i class="fas fa-plus"></i></button>
+                      <input class="result form-control" value="0" readonly type="number">
+                      <button class="btn minus"><i class="fas fa-minus"></i></button>
+                    </div>
+                  </td>
+                  <td class="book-total">150 ريال سعودي</td>
+                  <td class="delete-book">
                     <button class="btn delete delete-btn"><i class="fas fa-trash"></i></button>
                   </td>
                 </tr>
@@ -254,7 +274,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="discount-code">
+          <div class="discount-code wow slideInLeft " data-wow-delay=".3s">
             <h5 class="title d-flex align-items-center gap-2 mb-3">
               <i>
                 <img src="images/icons/discount.svg" alt="">
@@ -266,18 +286,18 @@
                 <div class="col-md-12">
                   <input type="text" class="form-control" placeholder="كود الخصم">
                 </div>
-                <div class="col-md-12">
-                  <button class="btn">تطبيق</button>
+                <div class="col-md-12  d-flex justify-content-center">
+                  <button class="btn secondary-btn">تطبيق</button>
                 </div>
               </div>
             </form>
+          </div>
 
-            <div class="total">
-              <div class="title"></div>
-              <div class="price"></div>
-              <div class="note"></div>
-              <a href="pay.html" class="btn">التالي</a>
-            </div>
+          <div class="total wow slideInLeft " data-wow-delay=".5s">
+            <div class="title">الإجمالي</div>
+            <div class="price">25 ريال سعودي</div>
+            <div class="note">يحسب الشحن عند استكمال الدفع</div>
+            <a href="pay.html" class="btn white-btn w-100 mt-4">التالي</a>
           </div>
         </div>
       </div>

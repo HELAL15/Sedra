@@ -1,0 +1,133 @@
+.main-cart {
+  table.table {
+    thead {
+      tr {
+        th {
+          border-top: 1px solid $border;
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    tr {
+      text-align: center;
+
+      td {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+
+    .book-details {
+      vertical-align: middle;
+      text-align: center;
+
+      .book-img {
+        width: 180px;
+
+        .img-name {
+          margin-top: 1rem;
+          font-weight: bold;
+        }
+
+        .img {
+          border-radius: 15px;
+          overflow: hidden;
+
+
+          img {
+            aspect-ratio: 3/4;
+          }
+        }
+
+      }
+
+      .book-price {
+        color: $secondary;
+      }
+
+      .book-amount {
+        .controls {
+          width: 70%;
+          margin: auto;
+
+
+        }
+      }
+
+      .delete-book {
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  .discount-code {
+    background-color: $white;
+    padding: 1rem;
+    border-radius: 26px;
+
+    .title {
+      img {
+        @include size($size: 40px);
+      }
+
+      color: $muted;
+    }
+
+  }
+
+  .total {
+    background: $main;
+    color: $black;
+    padding: 1rem;
+    border-radius: 26px;
+    text-align: center;
+    @extend %flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1.5rem;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-bottom: 1px solid $muted;
+      width: 100%;
+      padding-bottom: .5rem;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .note {
+      font-size: 1.1rem;
+      font-weight: 500;
+      background-color: #91C898;
+      padding: .5rem;
+
+    }
+  }
+}
+
+
+.controls {
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 35px !important;
+  padding: 0 0.5rem;
+  @extend %flex;
+  padding: .5rem;
+
+  .btn {
+    @include circle($bx_sh: 0, );
+    padding: .5rem;
+  }
+
+  .form-control {
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+  }
+}

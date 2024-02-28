@@ -103,7 +103,7 @@ body {
   direction: rtl;
   line-height: 1.7;
   background-color: $body;
-  // overflow: hidden;
+  overflow: clip;
 }
 
 html[dir="ltr"] body {
@@ -329,7 +329,6 @@ img {
 
 section {
   margin-top: 6rem;
-  overflow: hidden;
 }
 
 

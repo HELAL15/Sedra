@@ -195,7 +195,7 @@ ul {
   font-weight: 400;
   line-height: 1.5;
   color: #000;
-  border: 1px solid #b7b7b7;
+  border: 1px solid #D6D6D6;
   border-radius: 35px;
   transition: 0.15s ease-in-out;
   box-shadow: none !important;
@@ -289,11 +289,29 @@ img {
   font-weight: 500;
 }
 
+.cancle {
+  background-color: #EBEBEB;
+  color: red;
+}
+.cancle:hover {
+  background-color: #EBEBEB;
+  color: red;
+}
+
+.recieved {
+  padding: 0.65rem 2.5rem;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #9ad1a1;
+  color: #fff;
+}
+
 .secondary-btn {
   background-color: #86876e;
   color: #fff;
 }
-.secondary-btn:hover {
+.secondary-btn:hover, .secondary-btn:focus {
   background-color: #86876e;
   color: #fff;
 }
@@ -2738,4 +2756,115 @@ input[type=range]::-webkit-slider-thumb {
 .pay .collected-items .full-prices {
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.comming-soon {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.comming-soon .main-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.comming-soon .main-content .content {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin-inline-end: -5rem;
+}
+.comming-soon .main-content .content .logo {
+  margin: auto;
+  width: 65%;
+}
+.comming-soon .main-content .content h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #000;
+}
+.comming-soon .main-content .content p {
+  font-size: 1.5rem;
+  background-color: #86876e;
+  color: #fff;
+  padding: 0.65rem 2.5rem;
+  border-radius: 54px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.comming-soon.for-mobile {
+  display: none;
+}
+
+@media (max-width : 991.8px) {
+  .comming-soon {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  .comming-soon .main-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .comming-soon .main-content .content {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-inline-end: -5rem;
+  }
+  .comming-soon .main-content .content .logo {
+    margin: auto;
+    width: 65%;
+  }
+  .comming-soon .main-content .content h1 {
+    font-size: 1.3rem;
+    margin: 1.8rem 0;
+  }
+  .comming-soon .main-content .content p {
+    font-size: 1.3rem;
+    background-color: #86876e;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+  }
+}
+@media (max-width : 575.8px) {
+  .comming-soon.for-desktop {
+    display: none;
+    position: relative;
+  }
+  .comming-soon.for-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .comming-soon.for-mobile .content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 90%;
+  }
+  .comming-soon.for-mobile .content .logo {
+    width: 80%;
+    margin: auto;
+  }
+  .comming-soon.for-mobile .content h1 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .comming-soon.for-mobile .content p {
+    font-size: 1.3rem;
+    background-color: #86876e;
+    color: #fff;
+    padding: 0.55rem 2.5rem;
+    border-radius: 54px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

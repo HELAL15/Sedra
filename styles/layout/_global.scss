@@ -173,7 +173,7 @@ ul {
   font-weight: 400;
   line-height: 1.5;
   color: $black;
-  border: 1px solid $Fborder;
+  border: 1px solid $input-border;
   border-radius: 35px;
   transition: 0.15s ease-in-out;
   box-shadow: none !important;
@@ -290,11 +290,32 @@ img {
   font-weight: 500;
 }
 
+.cancle {
+  background-color: #EBEBEB;
+  color: red;
+
+  &:hover {
+    background-color: #EBEBEB;
+    color: red;
+
+  }
+}
+
+.recieved {
+  padding: 0.65rem 2.5rem;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: $main;
+  color: $white;
+}
+
 .secondary-btn {
   background-color: $secondary;
   color: $white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $secondary;
     color: $white;
   }

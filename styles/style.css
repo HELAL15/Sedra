@@ -307,6 +307,11 @@ img {
   color: #fff;
 }
 
+@media (max-width : 575.8px) {
+  .recieved {
+    padding: 0.65rem 1rem;
+  }
+}
 .secondary-btn {
   background-color: #86876e;
   color: #fff;
@@ -2290,6 +2295,9 @@ input[type=range]::-webkit-slider-thumb {
   font-size: 16px;
   border-radius: 50%;
 }
+.profile .btn-id {
+  border: none;
+}
 .profile .user-info {
   gap: 1.5rem;
 }
@@ -2389,6 +2397,34 @@ input[type=range]::-webkit-slider-thumb {
   aspect-ratio: 3/4;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.modal.products-modal {
+  --bs-modal-width: 70% !important;
+}
+.modal.products-modal .modal-content {
+  border-radius: 61px;
+  padding: 1rem 2rem;
+}
+.modal.products-modal .modal-header {
+  font-weight: bold;
+}
+.modal.products-modal .card {
+  text-align: center;
+}
+.modal.products-modal .card .desc {
+  color: #a8a8a8;
+  margin-bottom: 0.5rem;
+}
+.modal.products-modal .card .price {
+  color: #86876e;
+}
+.modal.products-modal .card .img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.modal.products-modal .card .img img {
+  aspect-ratio: 4/5;
 }
 
 .contact-us .container {

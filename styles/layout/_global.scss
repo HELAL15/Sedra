@@ -310,6 +310,14 @@ img {
   color: $white;
 }
 
+@media($s_mob) {
+
+
+  .recieved {
+    padding: 0.65rem 1rem;
+  }
+}
+
 .secondary-btn {
   background-color: $secondary;
   color: $white;

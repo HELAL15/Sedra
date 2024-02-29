@@ -54,17 +54,22 @@
         }
 
         i {
-          @include circle(
-            $size: 40px,
+          @include circle($size: 40px,
             $font: 16px,
             $color: $white,
             $bg: red,
-            $bx_sh: 0
-          );
+            $bx_sh: 0);
         }
       }
     }
   }
+
+
+  .btn-id {
+    border: none
+  }
+
+
 
   .user-info {
     @extend %flex;
@@ -190,4 +195,39 @@
   }
 
   //end//
+}
+
+.modal.products-modal {
+  --bs-modal-width: 70% !important;
+
+  .modal-content {
+    border-radius: 61px;
+    padding: 1rem 2rem;
+  }
+
+  .modal-header {
+    font-weight: bold;
+  }
+
+  .card {
+    text-align: center;
+
+    .desc {
+      color: $muted;
+      margin-bottom: .5rem;
+    }
+
+    .price {
+      color: $secondary;
+    }
+
+    .img {
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        aspect-ratio: 4/5;
+      }
+    }
+  }
 }

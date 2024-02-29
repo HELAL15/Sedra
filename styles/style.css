@@ -2803,6 +2803,7 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 37%;
 }
 .comming-soon .main-content .content {
   text-align: center;
@@ -2829,6 +2830,9 @@ input[type=range]::-webkit-slider-thumb {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+}
+.comming-soon .img {
+  height: 100vh;
 }
 
 .comming-soon.for-mobile {

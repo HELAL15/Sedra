@@ -1,0 +1,237 @@
+.single-book {
+
+
+  .owl-carousel {
+    .owl-dots {
+      margin-top: 1rem !important;
+
+      .owl-dot:nth-child(2) span {
+        margin-bottom: 1rem;
+      }
+
+      .owl-dot.active span {
+        background-color: $main;
+      }
+    }
+
+    .img {
+      width: 80%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        aspect-ratio: 3/4;
+      }
+    }
+  }
+
+
+
+  .content {
+    padding-top: 1rem;
+
+
+    -webkit-border-start: 1px solid $border;
+    border-inline-start: 1px solid $border;
+    border-top: 1px solid $border;
+
+
+    .content-header {
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      .heading {
+        @extend %flex_b;
+        gap: 1rem;
+        flex-direction: column;
+
+        .author-name {
+          display: flex;
+          gap: .6rem;
+
+          span {
+            color: $main;
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+
+          p {
+            color: $muted;
+            margin: 0;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .book-name {
+        font-weight: bold;
+      }
+    }
+
+    .content-price {
+      @extend %flex;
+      gap: .5rem;
+      @extend %border_tb;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      h5 {
+        margin: 0;
+        color: $secondary;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      s {
+        text-decoration: line-through;
+        color: $muted;
+        font-size: 1.2rem;
+      }
+    }
+
+    .about-book {
+      padding: 1.2rem 0;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      span {
+        color: $main;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      p {
+        color: $singleBlog;
+        font-size: 1.1rem;
+      }
+    }
+
+    .more-details {
+      @extend %flex_between;
+      text-align: center;
+      @extend %border_tb;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      h5 {
+        color: $main;
+        font-weight: bold;
+      }
+
+      span {
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    }
+
+    .add-cart {
+      @extend %flex;
+      gap: 1rem;
+      @extend %border_tb;
+      border-top: none;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      .controls {
+        width: 25%;
+        border: 1px solid $border;
+        border-radius: $brad;
+
+      }
+    }
+
+    .others {
+      @extend %flex;
+      gap: 1rem;
+      border-bottom: 1px solid $border;
+      padding: 1.2rem 0;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+
+      div {
+        @extend %flex;
+        gap: .8rem;
+
+        .btn {
+          @include circle($size: 40px, $font: 1rem, $color: $muted, $bg: $white);
+          padding: 0;
+        }
+
+        .fav-btn.active {
+          color: red;
+          border: none;
+        }
+
+        span {
+          font-weight: 500;
+          color: $singleBlog;
+        }
+      }
+    }
+  }
+}
+
+.s-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $black;
+  margin-bottom: 2rem;
+}
+
+.related-book {
+  .user-rate {
+    i {
+      color: #FFD500;
+      font-size: 1.2rem;
+    }
+  }
+
+  .books-relation {
+
+    .card {
+      @extend %flex;
+      gap: 1rem;
+      flex-direction: row;
+      border: none;
+
+      .card-img {
+        width: 200px;
+
+        img {
+          aspect-ratio: 3/4;
+        }
+      }
+
+
+
+      .card-content {
+        p {
+          margin-bottom: .5rem;
+        }
+
+        .card-title {
+          color: $black;
+          font-weight: bold;
+        }
+
+        .desc {
+          color: $muted;
+        }
+
+        .price {
+          color: $secondary;
+          font-weight: 500;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+
+.rates-number {
+  font-size: 1.1rem;
+  font-weight: 500;
+}

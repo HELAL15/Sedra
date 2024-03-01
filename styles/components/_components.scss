@@ -12,9 +12,20 @@
     align-items: center;
 }
 
+%border_tb {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    padding: 1.2rem 0;
+}
+
 %flex_between {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+%flex_b {
+    display: flex;
     justify-content: space-between;
 }
 

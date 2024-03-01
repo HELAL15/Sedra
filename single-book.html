@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="styles/plugin/animate.css" />
   <!-- nice-select link -->
   <link rel="stylesheet" href="styles/plugin/nice-select.css">
+  <!-- rateyo stars plugin -->
+  <link rel="stylesheet" href="styles/plugin/jquery.rateyo.min.css">
   <!-- custom css file link  -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -265,37 +267,47 @@
     <div class="container">
       <div class="row gy-4 align-items-center">
         <div class="col-md-4">
-          <div class="img book-img">
-            <img src="images/products.jpg" alt="">
+          <div class="owl-carousel owl-theme wow slideInRight">
+            <div class="item">
+              <div class="img book-img">
+                <img src="images/products.jpg" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="img book-img">
+                <img src="images/products.jpg" alt="">
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-8">
           <div class="content">
-            <div class="content-header">
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <h3 class="book-name">فتاة من الطراز القديم</h3>
-                  <h5 class="author-name">
-                    <span>بواسطة ( المؤلف ) :</span>
-                    <span> لويزا ماي إلكوت</span>
-                  </h5>
+            <div class="content-header d-flex justify-content-between align-items-center wow slideInLeft"
+              data-wow-delay=".2s">
+              <div class="heading">
+                <h4 class="book-name">فتاة من الطراز القديم</h4>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="Stars" style="--rating: 4;"></div>
+                  <span class="rates-number">4/5</span>
                 </div>
               </div>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="rates">4/5</div>
-                  <h5 class="home-post">
-                    <span>بواسطة ( دار النشر ) : </span>
-                    <span>ستيفن كينج</span>
-                  </h5>
+              <div class="heading gap-4">
+                <div class="author-name">
+                  <span>بواسطة ( المؤلف ) :</span>
+                  <p> لويزا ماي إلكوت</p>
+                </div>
+
+                <div class="author-name">
+                  <span>بواسطة ( دار النشر ) : </span>
+                  <p>ستيفن كينج</p>
                 </div>
               </div>
             </div>
-            <div class="content-price">
+            <div class="content-price wow slideInLeft" data-wow-delay=".3s">
               <h5>29 ريال سعودي</h5>
               <s>33 ريال سعودي</s>
             </div>
-            <div class="about-book">
+            <div class="about-book wow slideInLeft" data-wow-delay=".4s">
               <span>نبذة عن الكتاب</span>
               <p>تذهــب ”بولــي“ - تلــك الفتــاة الريفيــة - إلـى منـزل صديقتهـا المقربـة ابنـة المدينـة المغرمــة
                 بمجــاراة عالــم الموضــة. تتخبــط الفتـاة البسـيطة وسـط أمـواج هـذا العالـم ســريع اإليقــاع،وتقــع
@@ -304,32 +316,162 @@
                 وتقاليــد الريــف المتحفــظ التــي تجعلهــا محــور ســخرية اآلخريــن! أم تتمــرد علــى كل ذلــك حتــى ال
                 تبــدو فــي نظــر الجميــع أنهــا ”فتــاة مــن الطــراز القديــم</p>
             </div>
-            <div class="more-details">
-              <div class="page-numbers">
+            <div class="more-details wow slideInLeft" data-wow-delay=".5s">
+              <div class="page-numbers heading">
                 <h5>عدد صفحات الكتاب</h5>
                 <span>44</span>
               </div>
-              <div class="post-year">
+              <div class="post-year heading">
                 <h5>سنة النشر</h5>
                 <span>2024</span>
               </div>
-              <div class="international-id">
+              <div class="international-id heading">
                 <h5>رقم الكتاب المعيار الدولي</h5>
-                <span>ISBN: 978-9921-809-15-2</span>
+                <span><span>ISBN:</span> 978-9921-809-15-2</span>
               </div>
-              <div class="add-cart"></div>
-              <div class="share">
-                <div>
-                  <button class="btn">
-                    <i class="fas fa-heart"></i>
-                  </button>
-                  <span></span>
+            </div>
+            <div class="add-cart wow slideInLeft" data-wow-delay=".2s">
+              <div class="controls ">
+                <button class="btn plus-book "><i class="fas fa-plus"></i></button>
+                <input class="result-book  form-control" value='1' readonly type="number">
+                <button class="btn minus-book "><i class="fas fa-minus"></i></button>
+              </div>
+              <button class="btn main-btn">إضافة للسلة</button>
+            </div>
+            <div class="others wow slideInLeft" data-wow-delay=".3s">
+              <div>
+                <button class="btn fav-btn">
+                  <i class="bi bi-heart"></i>
+                </button>
+                <span>إضافة إلى المفضلة</span>
+              </div>
+              <div>
+                <button class="btn">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+                <span>مشاركة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="related-book comment">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-8">
+          <div class="rated">
+            <h5 class="title s-title">التقييمات</h5>
+            <div class="row gy-4">
+              <div class="col-md-12">
+                <div class="card wow slideInRight">
+                  <div class="card-header d-flex gap-2">
+                    <div class=" user-img">
+                      <img src="images/blog.png" alt="user image">
+                    </div>
+                    <div class="d-flex ">
+                      <div class="user d-flex align-items-center gap-2">
+                        <span class="name">احمد هلال</span>
+                        <div class="time">
+                          <span>4 فبراير 2024 في 15:35</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user-rate d-flex align-items-center gap-2">
+                      <i class="fas fa-star"></i>
+                      <span class="rates-number">4/5</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                      التركيز
+                      على الشكل الخارجي
+                      للنص أو شكل توضع الفقرات في الصفحة التي يقرأها هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى
+                      المقروء
+                      لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص </p>
+                  </div>
                 </div>
-                <div>
-                  <button class="btn">
-                    <i class="fas fa-heart"></i>
-                  </button>
-                  <span></span>
+              </div>
+              <div class="col-md-12">
+                <div class="card wow slideInRight">
+                  <div class="card-header d-flex gap-2">
+                    <div class=" user-img">
+                      <img src="images/blog.png" alt="user image">
+                    </div>
+                    <div class="d-flex ">
+                      <div class="user d-flex align-items-center gap-2">
+                        <span class="name">احمد هلال</span>
+                        <div class="time">
+                          <span>4 فبراير 2024 في 15:35</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user-rate d-flex align-items-center gap-2">
+                      <i class="fas fa-star"></i>
+                      <span class="rates-number">4/5</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                      التركيز
+                      على الشكل الخارجي
+                      للنص أو شكل توضع الفقرات في الصفحة التي يقرأها هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى
+                      المقروء
+                      لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 wow slideInRight">
+                <div class="d-flex align-items-center gap-2  mb-3">
+                  <h4 class="title m-0">أضف تقييمك</h4>
+                  <span id="rateYo"></span>
+                  <div class="counter"></div>
+                </div>
+                <textarea name="" class="form-control" id="" cols="30" rows="4"></textarea>
+              </div>
+              <div class="col-md-12 wow slideInRight">
+                <button class="btn ">ارسال</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="books-relation">
+            <h5 class="title s-title">كتب ذات صلة</h5>
+            <div class="row gy-4">
+              <div class="col-md-12">
+                <div class="card wow slideInLeft">
+                  <a href="#" class="link"></a>
+                  <div class="card-img">
+                    <img src="images/product.jpg" alt="">
+                  </div>
+                  <div class="card-content">
+                    <div class="details">
+                      <h5 class="card-title">A Novel Idea</h5>
+                      <p class="desc">بواسطة ستيفن كينج</p>
+                      <p class="price"><span>25</span><span>ريال سعودي</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="card wow slideInLeft">
+                  <a href="#" class="link"></a>
+                  <div class="card-img">
+                    <img src="images/product.jpg" alt="">
+                  </div>
+                  <div class="card-content">
+                    <div class="details">
+                      <h5 class="card-title">A Novel Idea</h5>
+                      <p class="desc">بواسطة ستيفن كينج</p>
+                      <p class="price"><span>25</span><span>ريال سعودي</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -342,7 +484,7 @@
 
   <section class="also-saw">
     <div class="container">
-      <h4 class="title mb-4 text-center">مستخدمون شاهدوا هذا ايضا</h4>
+      <h4 class="title s-title text-center">مستخدمون شاهدوا هذا ايضا</h4>
       <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4">
         <div class="col">
           <div class="card product-card">
@@ -600,7 +742,7 @@
   <!-- wow script -->
   <script src="js/wow.min.js"></script>
   <!-- rateyo script -->
-  <!-- <script src="js/jquery.rateyo.min.js"></script> -->
+  <script src="js/jquery.rateyo.min.js"></script>
   <!-- nice select script -->
   <script src="js/jquery.nice-select.min.js"></script>
   <!-- custom js file link  -->

@@ -216,7 +216,7 @@ ul {
 
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
-  font-size: 21px;
+  font-size: 2rem;
 }
 
 .Stars::before {

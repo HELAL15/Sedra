@@ -276,7 +276,7 @@
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                <h5 class="title">ترتيب حسب</h5>
+                <h6 class="title">ترتيب حسب</h6>
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
@@ -321,15 +321,30 @@
         </div>
       </div>
 
-      <div class="price">
-        <h5 class="title mb-3 mx-3">السعر</h5>
+      <div class="middle price">
+        <h6 class="title mb-3 mx-3">السعر</h6>
+        <div class="multi-range-slider">
+          <input type="range" id="input-left" min="0" max="100" value="25">
+          <input type="range" id="input-right" min="0" max="100" value="75">
+
+          <div class="slider">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+        <div class="prices">
+          <span class="price-to">400 ريال سعودي</span>
+          <span class="price-from">100 ريال سعودي</span>
+        </div>
       </div>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
-              <h5 class="title">الفئات</h5>
+              <h6 class="title">الفئات</h6>
             </button>
           </h2>
           <div id="collapsethree" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
@@ -375,7 +390,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h5 class="title">دار النشر</h5>
+              <h6 class="title">دار النشر</h6>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -421,7 +436,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <h5 class="title">اسم المؤلف</h5>
+              <h6 class="title">اسم المؤلف</h6>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -484,7 +499,7 @@
       </div>
       <div class="row gy-4">
         <div class="col-lg-5 ">
-          <div class="offers-main">
+          <div class="offers-main wow slideInDown">
             <div class="img">
               <img src="images/offers.jpg" alt="">
             </div>
@@ -498,8 +513,11 @@
         <div class="col-lg-7 ">
           <div class="row gy-4">
             <div class="col-md-4">
-              <div class="card product-card">
+              <div class="card product-card wow slideInDown" data-wow-delay=".2s">
                 <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
                   <div class="controls">
                     <button class="btn"><i class="bi bi-bag"></i></button>
                     <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -514,7 +532,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <a href="#" class="link"></a>
+                  <a href="single-book.html" class="link"></a>
                   <h4 class="title">a novel idea</h4>
                   <p class="desc">بواسطة ستيفن كينج</p>
                   <h5 class="price">29 ريال سعودي</h5>
@@ -522,8 +540,11 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card product-card">
+              <div class="card product-card wow slideInDown" data-wow-delay=".4s">
                 <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
                   <div class="controls">
                     <button class="btn"><i class="bi bi-bag"></i></button>
                     <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -538,7 +559,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <a href="#" class="link"></a>
+                  <a href="single-book.html" class="link"></a>
                   <h4 class="title">a novel idea</h4>
                   <p class="desc">بواسطة ستيفن كينج</p>
                   <h5 class="price">29 ريال سعودي</h5>
@@ -546,8 +567,11 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card product-card">
+              <div class="card product-card wow slideInDown" data-wow-delay=".6s">
                 <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
                   <div class="controls">
                     <button class="btn"><i class="bi bi-bag"></i></button>
                     <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -562,7 +586,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <a href="#" class="link"></a>
+                  <a href="single-book.html" class="link"></a>
                   <h4 class="title">a novel idea</h4>
                   <p class="desc">بواسطة ستيفن كينج</p>
                   <h5 class="price">29 ريال سعودي</h5>
@@ -574,8 +598,11 @@
       </div>
       <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4 mt-4">
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".2s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -590,7 +617,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -598,8 +625,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".3s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -614,7 +644,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -622,8 +652,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".4s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -638,7 +671,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -646,8 +679,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".5s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -662,7 +698,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -670,8 +706,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".6s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -686,7 +725,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -694,8 +733,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".2s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -710,7 +752,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -718,8 +760,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".3s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -734,7 +779,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -742,8 +787,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".4s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -758,7 +806,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -766,8 +814,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".5s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -782,7 +833,7 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
@@ -790,8 +841,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card product-card">
+          <div class="card product-card wow slideInDown" data-wow-delay=".6s">
             <div class="card-img">
+              <div class="has-offer">
+                <span>50%</span>
+              </div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-bag"></i></button>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
@@ -806,13 +860,14 @@
               </div>
             </div>
             <div class="card-body">
-              <a href="book-store.html" class="link"></a>
+              <a href="single-book.html" class="link"></a>
               <h4 class="title">a novel idea</h4>
               <p class="desc">بواسطة ستيفن كينج</p>
               <h5 class="price">29 ريال سعودي</h5>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>

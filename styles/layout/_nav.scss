@@ -202,8 +202,43 @@
 
 @media($s_mob) {
     .top-nav {
+        --bs-navbar-padding-y: 0.3rem;
+
         .container {
             justify-content: center !important;
+        }
+
+        .helper-pages {
+            display: none;
+        }
+
+        .icons {
+            width: 100%;
+            justify-content: space-between;
+
+            li {
+                flex: 5 0 0;
+                // background: $white;
+                -webkit-border-start: .5px solid $border;
+                border-inline-start: .5px solid $border;
+
+                &:nth-child(1) {
+                    border: none;
+                }
+
+                a {
+                    background-color: transparent;
+                    box-shadow: unset;
+                    width: 100%;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        -webkit-filter: brightness(2);
+                        filter: brightness(2);
+                    }
+                }
+            }
         }
     }
 

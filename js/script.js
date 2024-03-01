@@ -29,7 +29,18 @@ $(document).ready(function(){
       }
   });
 
-
+  $(function () {
+ 
+    $("#rateYo").rateYo({
+      normalFill: "#A7A7A7",
+    ratedFill: "#FFD500",
+      rating: 0,
+      onChange: function (rating, rateYoInstance) {
+        $(this).next().text(rating);
+      }
+    });
+   
+  });
     
     
     // loader
@@ -81,7 +92,23 @@ calcTotal()
 
 
 
+let plus = $(".plus-book");
+let minus = $(".minus-book");
 
+let numbers = 1
+
+if(plus.length > 0){
+  plus.click(function(){
+    numbers++;
+    $(this).siblings(".result-book").val(numbers);
+  })
+  minus.click(function(){
+    if(numbers > 0){
+      numbers--;
+      $(this).siblings(".result-book").val(numbers);
+    }
+  })
+}
 
 
 
@@ -220,7 +247,23 @@ if (play !== null) {
         dots: true,
         margin: 20
     });
-
+    $('.single-book .owl-carousel').owlCarousel({
+        rtl: dirAr,
+        loop:false,
+        margin:15,
+        dots: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+      })
 
     $('.categories .owl-carousel').owlCarousel({
       rtl: dirAr,
@@ -241,6 +284,13 @@ if (play !== null) {
           }
       }
     })
+
+
+
+
+
+
+
 
     $('.offers .owl-carousel').owlCarousel({
       rtl: dirAr,
@@ -301,7 +351,7 @@ $(".fav-btn").click(function() {
 
 let container_width = $('.container').width();
 let offers_body = $('.offers-body').width();
-let calc = (offers_body - container_width);
+let calc = (offers_body - container_width) - 24;
 $('.offers-body').css('margin-inline-start', calc);
 
 

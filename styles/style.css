@@ -3,22 +3,33 @@
 /*max-width*/
 /*min-width*/
 /*extend*/
-.pay .collected-items .items .item .img .count, .controls .btn, .rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
+.single-book .content .others div .btn, .pay .collected-items .items .item .img .count, .controls .btn, .rules .main-title i, .profile .user-info .profile-pic .user-img .overlay, .profile .profile-links .logout .logout-link i, .profile .profile-links .main-links .link-btn i, .about .our-story .video .overlay .btn, .about .our-story .video .overlay, .offcanvas.filter-canvas .offcanvas-header .close-filter, .blog .card .content .details, .offcanvas.cart .card .controls .btn, .offcanvas.cart .close-cart, .subscribe-mail .content .subscribtion-form .btn, footer .social li a:hover, footer .social li a, header .back .btn, header, .top-nav .icons a, .card.product-card .card-img .controls .btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pay .collected-items .items .item, .pay .save-info, .controls, .main-cart .total, .rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
+.related-book .books-relation .card, .single-book .content .others div, .single-book .content .others, .single-book .content .add-cart, .single-book .content .content-price, .pay .collected-items .items .item, .pay .save-info, .controls, .main-cart .total, .rules .main-title, .profile .user-info, .profile .profile-links .main-links .link-btn, .blog .card .content .details .date,
 .blog .card .content .details .comments, .top-seller .tops-cont .side-cards .card,
 .bokor-prize .tops-cont .side-cards .card, .offcanvas.cart .offcanvas-footer .group, .offcanvas.cart .card .controls, .offcanvas.cart .card, header.header-home .hero-title, header .back, .card.product-card .card-img .controls, .card.product-card {
   display: flex;
   align-items: center;
 }
 
-.pay .collected-items .full-prices, .pay .collected-items .prices .shipping-price, .pay .collected-items .prices .total-price, .offcanvas.filter-canvas .offcanvas-body .prices {
+.single-book .content .add-cart, .single-book .content .more-details, .single-book .content .content-price {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1.2rem 0;
+}
+
+.single-book .content .more-details, .pay .collected-items .full-prices, .pay .collected-items .prices .shipping-price, .pay .collected-items .prices .total-price, .offcanvas.filter-canvas .offcanvas-body .prices {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.single-book .content .content-header .heading {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -223,7 +234,7 @@ ul {
 
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
-  font-size: 21px;
+  font-size: 2rem;
 }
 
 .Stars::before {
@@ -829,8 +840,35 @@ section {
   }
 }
 @media (max-width : 575.8px) {
+  .top-nav {
+    --bs-navbar-padding-y: 0.3rem;
+  }
   .top-nav .container {
     justify-content: center !important;
+  }
+  .top-nav .helper-pages {
+    display: none;
+  }
+  .top-nav .icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .top-nav .icons li {
+    flex: 5 0 0;
+    border-inline-start: 0.5px solid #e6e6e6;
+  }
+  .top-nav .icons li:nth-child(1) {
+    border: none;
+  }
+  .top-nav .icons li a {
+    background-color: transparent;
+    box-shadow: unset;
+    width: 100%;
+  }
+  .top-nav .icons li a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(2);
   }
   .navbar.main-nav .nav-actions {
     width: 50% !important;
@@ -948,6 +986,11 @@ header.header-home .hero-desc {
     color: #646464;
     margin: 1.2rem 0;
     padding-inline-end: 1rem !important;
+  }
+}
+@media (max-width : 575.8px) {
+  header.header-home {
+    height: calc(100vh - 111px);
   }
 }
 footer {
@@ -1275,16 +1318,18 @@ html[dir=ltr] .offers .content {
 
 .has-offer {
   position: absolute;
-  height: 35px;
-  width: 65px;
   top: 5%;
   inset-inline-start: 0;
   z-index: 5;
+  width: 25%;
+  border-width: 15px;
+  border-color: #C0D98B #C0D98B #C0D98B transparent;
+  border-style: solid;
 }
 .has-offer span {
   position: absolute;
   top: 50%;
-  right: 50%;
+  right: 25%;
   transform: translate(50%, -50%);
   text-align: center;
   font-weight: bold;
@@ -2907,4 +2952,172 @@ input[type=range]::-webkit-slider-thumb {
     width: fit-content;
     margin: auto;
   }
+}
+.single-book .owl-carousel .owl-dots {
+  margin-top: 1rem !important;
+}
+.single-book .owl-carousel .owl-dots .owl-dot:nth-child(2) span {
+  margin-bottom: 1rem;
+}
+.single-book .owl-carousel .owl-dots .owl-dot.active span {
+  background-color: #9ad1a1;
+}
+.single-book .owl-carousel .img {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.single-book .owl-carousel .img img {
+  aspect-ratio: 3/4;
+}
+.single-book .content {
+  padding-top: 1rem;
+  border-inline-start: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+}
+.single-book .content .content-header {
+  padding-inline-start: 1rem;
+}
+.single-book .content .content-header .heading {
+  gap: 1rem;
+  flex-direction: column;
+}
+.single-book .content .content-header .heading .author-name {
+  display: flex;
+  gap: 0.6rem;
+}
+.single-book .content .content-header .heading .author-name span {
+  color: #9ad1a1;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.single-book .content .content-header .heading .author-name p {
+  color: #a8a8a8;
+  margin: 0;
+  font-size: 1.1rem;
+}
+.single-book .content .content-header .book-name {
+  font-weight: bold;
+}
+.single-book .content .content-price {
+  gap: 0.5rem;
+  padding-inline-start: 1rem;
+}
+.single-book .content .content-price h5 {
+  margin: 0;
+  color: #86876e;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.single-book .content .content-price s {
+  text-decoration: line-through;
+  color: #a8a8a8;
+  font-size: 1.2rem;
+}
+.single-book .content .about-book {
+  padding: 1.2rem 0;
+  padding-inline-start: 1rem;
+}
+.single-book .content .about-book span {
+  color: #9ad1a1;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.single-book .content .about-book p {
+  color: #707070;
+  font-size: 1.1rem;
+}
+.single-book .content .more-details {
+  text-align: center;
+  padding-inline-start: 1rem;
+}
+.single-book .content .more-details h5 {
+  color: #9ad1a1;
+  font-weight: bold;
+}
+.single-book .content .more-details span {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.single-book .content .add-cart {
+  gap: 1rem;
+  border-top: none;
+  padding-inline-start: 1rem;
+}
+.single-book .content .add-cart .controls {
+  width: 25%;
+  border: 1px solid #e6e6e6;
+  border-radius: 35px;
+}
+.single-book .content .others {
+  gap: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1.2rem 0;
+  padding-inline-start: 1rem;
+}
+.single-book .content .others div {
+  gap: 0.8rem;
+}
+.single-book .content .others div .btn {
+  width: 40px;
+  height: 40px;
+  color: #a8a8a8;
+  background: #fff;
+  font-size: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 50%;
+  padding: 0;
+}
+.single-book .content .others div .fav-btn.active {
+  color: red;
+  border: none;
+}
+.single-book .content .others div span {
+  font-weight: 500;
+  color: #707070;
+}
+
+.s-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.related-book .user-rate i {
+  color: #FFD500;
+  font-size: 1.2rem;
+}
+.related-book .books-relation .card {
+  gap: 1rem;
+  flex-direction: row;
+  border: none;
+}
+.related-book .books-relation .card .card-img {
+  width: 200px;
+}
+.related-book .books-relation .card .card-img img {
+  aspect-ratio: 3/4;
+}
+.related-book .books-relation .card .card-content p {
+  margin-bottom: 0.5rem;
+}
+.related-book .books-relation .card .card-content .card-title {
+  color: #000;
+  font-weight: bold;
+}
+.related-book .books-relation .card .card-content .desc {
+  color: #a8a8a8;
+}
+.related-book .books-relation .card .card-content .price {
+  color: #86876e;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.rates-number {
+  font-size: 1.1rem;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

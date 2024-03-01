@@ -131,3 +131,9 @@ header.header-home {
     padding-inline-end: 1rem !important;
   }
 }
+
+@media ($s_mob) {
+  header.header-home {
+    height: calc(100vh - 111px);
+  }
+}

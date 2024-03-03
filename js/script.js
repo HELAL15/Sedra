@@ -11,6 +11,16 @@ $(document).ready(function(){
       dirAr = false
     }
 
+
+
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('anim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '../js/animation/illustration.json'
+  })
+
     // $(".visacard-details").hide()
 
  $(".online-pay").change(function() {
@@ -29,18 +39,20 @@ $(document).ready(function(){
       }
   });
 
-  $(function () {
+  if($("#rateYo") !== null){
+    $(function () {
  
-    $("#rateYo").rateYo({
-      normalFill: "#A7A7A7",
-    ratedFill: "#FFD500",
-      rating: 0,
-      onChange: function (rating, rateYoInstance) {
-        $(this).next().text(rating);
-      }
+      $("#rateYo").rateYo({
+        normalFill: "#A7A7A7",
+      ratedFill: "#FFD500",
+        rating: 0,
+        onChange: function (rating, rateYoInstance) {
+          $(this).next().text(rating);
+        }
+      });
+     
     });
-   
-  });
+  }
     
     
     // loader
@@ -305,7 +317,7 @@ if (play !== null) {
               items:1.5
           },
           600:{
-              items:2.5
+              items:1.5
           },
           1000:{
               items:3.5

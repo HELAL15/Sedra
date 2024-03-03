@@ -40,11 +40,14 @@
     .content-header {
       -webkit-padding-start: 1rem;
       padding-inline-start: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
 
       .heading {
         @extend %flex_b;
         gap: 1rem;
         flex-direction: column;
+
 
         .author-name {
           display: flex;
@@ -113,6 +116,8 @@
       @extend %border_tb;
       -webkit-padding-start: 1rem;
       padding-inline-start: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
 
       h5 {
         color: $main;
@@ -234,4 +239,45 @@
 .rates-number {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+
+
+@media($s_mob) {
+  .single-book {
+    .content {
+      .more-details {
+        justify-content: space-evenly;
+      }
+
+      .add-cart {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .controls {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .related-book {
+    .rated {
+      .card {
+        .card-header {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    .books-relation {
+      .card {
+        .card-img {
+          width: 170px;
+        }
+      }
+    }
+  }
+
+
 }

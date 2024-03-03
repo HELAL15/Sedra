@@ -214,6 +214,11 @@ ul {
   font-size: 14px;
 }
 
+#anim {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
   font-size: 2rem;

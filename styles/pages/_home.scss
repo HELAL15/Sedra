@@ -487,8 +487,16 @@ html[dir='ltr'] {
 @media ($s_med) {
   .offers {
     .offers-main {
-      -webkit-margin-end: 1rem;
-      margin-inline-end: 1rem;
+      -webkit-margin-end: 0rem;
+      margin-inline-end: 0rem;
+
+      .content {
+        position: absolute;
+        width: 57%;
+        top: 35%;
+        inset-inline-end: 0%;
+        transform: translate(-0%, -35%);
+      }
     }
   }
 
@@ -497,6 +505,12 @@ html[dir='ltr'] {
       -webkit-margin-start: 0rem;
       margin-inline-start: 0rem;
     }
+
+  }
+
+  .has-offer {
+    width: 30%;
+    border-width: 13px;
   }
 
   .discover-offers.two {

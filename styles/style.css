@@ -232,6 +232,11 @@ ul {
   font-size: 14px;
 }
 
+#anim {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
   font-size: 2rem;
@@ -937,10 +942,9 @@ header.header-home .owl-theme .owl-dots .owl-dot:hover span {
   background: #9ad1a1;
 }
 header.header-home .background-img {
-  background: url("/images/fav.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   width: 80%;
   height: 80%;
   position: absolute;
@@ -1673,10 +1677,21 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
 
 @media (max-width : 991.8px) {
   .offers .offers-main {
-    margin-inline-end: 1rem;
+    margin-inline-end: 0rem;
+  }
+  .offers .offers-main .content {
+    position: absolute;
+    width: 57%;
+    top: 35%;
+    inset-inline-end: 0%;
+    transform: translate(0%, -35%);
   }
   .offers .offers-body {
     margin-inline-start: 0rem;
+  }
+  .has-offer {
+    width: 30%;
+    border-width: 13px;
   }
   .discover-offers.two .content {
     padding: 2rem 1rem;
@@ -2978,6 +2993,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 .single-book .content .content-header {
   padding-inline-start: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .single-book .content .content-header .heading {
   gap: 1rem;
@@ -3031,6 +3048,8 @@ input[type=range]::-webkit-slider-thumb {
 .single-book .content .more-details {
   text-align: center;
   padding-inline-start: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .single-book .content .more-details h5 {
   color: #9ad1a1;
@@ -3120,4 +3139,23 @@ input[type=range]::-webkit-slider-thumb {
 .rates-number {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+@media (max-width : 575.8px) {
+  .single-book .content .more-details {
+    justify-content: space-evenly;
+  }
+  .single-book .content .add-cart {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .single-book .content .add-cart .controls {
+    width: 100%;
+  }
+  .related-book .rated .card .card-header {
+    flex-wrap: wrap;
+  }
+  .related-book .books-relation .card .card-img {
+    width: 170px;
+  }
 }/*# sourceMappingURL=style.css.map */

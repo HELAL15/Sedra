@@ -872,8 +872,8 @@ section {
     width: 100%;
   }
   .top-nav .icons li a img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     filter: brightness(2);
   }
   .navbar.main-nav .nav-actions {
@@ -1759,6 +1759,15 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
   }
 }
 @media (max-width : 575.8px) {
+  .offers .offers-main {
+    margin-inline-end: 1rem;
+  }
+  .offers .offers-main .content {
+    position: absolute;
+    width: 90%;
+    inset-inline-end: 1%;
+    transform: translate(-1%, -35%);
+  }
   .discover-offers.one {
     padding-top: 3rem;
   }

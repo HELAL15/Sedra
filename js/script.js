@@ -363,7 +363,7 @@ $(".fav-btn").click(function() {
 
 let container_width = $('.container').width();
 let offers_body = $('.offers-body').width();
-let calc = (offers_body - container_width) - 24;
+let calc = (offers_body - container_width) - 29;
 $('.offers-body').css('margin-inline-start', calc);
 
 

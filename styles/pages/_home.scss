@@ -616,6 +616,20 @@ html[dir='ltr'] {
 
 @media ($s_mob) {
 
+  .offers {
+    .offers-main {
+      -webkit-margin-end: 1rem;
+      margin-inline-end: 1rem;
+
+      .content {
+        position: absolute;
+        width: 90%;
+        inset-inline-end: 1%;
+        transform: translate(-1%, -35%);
+      }
+    }
+  }
+
 
 
   .discover-offers.one {

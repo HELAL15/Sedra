@@ -1,4 +1,4 @@
-# rajaa-faidah website
+# Sedra website
 
 source : https://github.com/HELAL15/Sedra
 

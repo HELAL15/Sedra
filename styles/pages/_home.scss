@@ -376,7 +376,6 @@ html[dir='ltr'] {
         margin: 0.5rem 0;
       }
 
-      p {}
     }
   }
 
@@ -434,9 +433,15 @@ html[dir='ltr'] {
 
       .row {
         .col-md-12:nth-child(2) .card {
-          padding: 1.5rem 0;
+          padding: 1.5rem .5rem;
           border-bottom: 1px solid $border;
           border-top: 1px solid $border;
+        }
+
+        @media($s_med) {
+          .col-md-12:nth-child(2) .card {
+            padding: 1.5rem 0rem;
+          }
         }
       }
     }
@@ -455,6 +460,34 @@ html[dir='ltr'] {
         }
       }
     }
+
+    @media($s_med) {
+      .center {
+        padding: 0;
+        border: none;
+        order: 3;
+      }
+    }
+
+    @media($s_mob) {
+
+
+
+      .center {
+        order: unset;
+      }
+
+      .side-cards {
+        .card {
+          padding: 0;
+          gap: 0;
+          justify-content: space-between;
+        }
+      }
+
+
+
+    }
   }
 }
 
@@ -470,7 +503,29 @@ html[dir='ltr'] {
 
 
         @media($s_med) {
+
           flex-direction: column;
+
+          .card-img {
+            height: auto;
+            min-height: auto;
+            max-height: unset;
+            width: 180px;
+
+            img {
+              aspect-ratio: 3/4;
+            }
+          }
+        }
+
+        @media($s_mob) {
+
+
+
+          .card-img {
+            width: 100%;
+
+          }
         }
 
       }
@@ -479,6 +534,16 @@ html[dir='ltr'] {
         .col-md-12:nth-child(2) .card {
           padding: 0.5rem;
         }
+      }
+    }
+
+    @media($s_med) {
+
+
+
+      .side-cards {
+        padding: 0;
+        border: none;
       }
     }
   }

@@ -1374,7 +1374,6 @@ html[dir=ltr] .offers .content {
   padding-top: 7rem;
 }
 .discover-offers.one .content {
-  background: url("/images/disscover-one.png");
   border-radius: 25px;
 }
 .discover-offers.one .content .img {
@@ -1921,7 +1920,6 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
     width: 100%;
   }
   .discover-offers.one .content {
-    background: url("/images/disscover-one.png");
     border-radius: 25px;
   }
   .discover-offers.one .content .img {

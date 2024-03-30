@@ -159,7 +159,6 @@ html[dir='ltr'] {
   padding-top: 7rem;
 
   .content {
-    background: url('/images/disscover-one.png');
     @extend %background_fit;
     border-radius: 25px;
 
@@ -813,7 +812,6 @@ html[dir='ltr'] {
 
   .discover-offers.one {
     .content {
-      background: url('/images/disscover-one.png');
       @extend %background_fit;
       border-radius: 25px;
 

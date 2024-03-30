@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="styles/plugin/nice-select.css">
   <!-- rateyo stars plugin -->
   <link rel="stylesheet" href="styles/plugin/jquery.rateyo.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="styles/plugin/swiper.min.css">
   <!-- custom css file link  -->
   <link rel="stylesheet" href="styles/style.css">
   <style>
@@ -48,6 +50,17 @@
       <div id="anim"></div>
     </div>
   </div>
+
+
+  <!-- ========= whats-app icon (global) ========== -->
+
+  <a href="https:wa.me/+201222810589" class="whats-app" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+
+
   <!------------- nav section -------------->
   <div class="navs-container" id="nav">
     <nav class="navbar top-nav">
@@ -143,9 +156,9 @@
             <span>en</span>
             <i class="fa-solid fa-globe"></i>
           </a>
-          <form action="" class="form-group">
+          <form action="" class="form-group d-flex align-items-center">
             <input type="text" class="form-control">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="search-btn btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="m-0 d-flex align-items-center">
@@ -255,50 +268,64 @@
   </div>
 
 
-
+  <!-- limited offer -->
+  <!-- <div class="limited-offer">
+    <div class="container">
+      <marquee class="">
+        <div class="d-flex align-items-center justify-content-center gap-3">
+          <img src="images/limited-offer.png" alt="">
+          <p>عرض لفترة محدودة عند شراء كتابين تحصل على الثالث هدية</p>
+        </div>
+      </marquee>
+    </div>
+  </div> -->
   <!-- header section -->
   <header class="header-home">
     <div class="background-img" style="background: url('images/fav.svg');"></div>
-    <div class="container  z-3 position-relative">
+    <div class=" container z-3 position-relative ">
       <div class="row gy-4 align-items-center ">
         <div class="col-md-5">
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="hero-text">
-                <div class="hero-title">
-                  <span class="hero-name">سدرة</span>
-                  <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero-text">
+                  <div class="hero-title">
+                    <span class="hero-name">سدرة</span>
+                    <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+                  </div>
+                  <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
+                    ومثيرة
+                    في متجرنا اليوم</p>
+                  <a href="#" class="btn main-btn">متجر الكتب</a>
                 </div>
-                <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
-                  ومثيرة
-                  في متجرنا اليوم</p>
-                <a href="#" class="btn main-btn">متجر الكتب</a>
               </div>
-            </div>
-            <div class="item">
-              <div class="hero-text">
-                <div class="hero-title">
-                  <span class="hero-name">سدرة</span>
-                  <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+              <div class="swiper-slide">
+                <div class="hero-text">
+                  <div class="hero-title">
+                    <span class="hero-name">سدرة</span>
+                    <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+                  </div>
+                  <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
+                    ومثيرة
+                    في متجرنا اليوم</p>
+                  <a href="#" class="btn main-btn">متجر الكتب</a>
                 </div>
-                <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
-                  ومثيرة
-                  في متجرنا اليوم</p>
-                <a href="#" class="btn main-btn">متجر الكتب</a>
               </div>
-            </div>
-            <div class="item">
-              <div class="hero-text">
-                <div class="hero-title">
-                  <span class="hero-name">سدرة</span>
-                  <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+              <div class="swiper-slide">
+                <div class="hero-text">
+                  <div class="hero-title">
+                    <span class="hero-name">سدرة</span>
+                    <p class="m-0">اكتشف عالم الكتب الرائعة مع موقعنا</p>
+                  </div>
+                  <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
+                    ومثيرة
+                    في متجرنا اليوم</p>
+                  <a href="#" class="btn main-btn">متجر الكتب</a>
                 </div>
-                <p class="hero-desc">لا تفوت فرصة الاطلاع على أحدث الإصدارات والكتب الأكثر مبيعًا! اكتشف عناوين جديدة
-                  ومثيرة
-                  في متجرنا اليوم</p>
-                <a href="#" class="btn main-btn">متجر الكتب</a>
               </div>
+
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
         <div class="col-md-7">
@@ -307,108 +334,118 @@
           </div>
         </div>
       </div>
+
     </div>
   </header>
+
+
+
+
+
   <!-- category section -->
   <section class="categories">
     <div class="container">
-      <div class="owl-carousel owl-theme py-5">
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+      <div class="swiper">
+        <div class="swiper-wrapper py-5">
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <div class="card">
-              <div class="card-img">
-                <div class="img">
-                  <img src="images/category.png" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="card">
+                <div class="card-img">
+                  <div class="img">
+                    <img src="images/category.png" alt="">
+                  </div>
                 </div>
+                <h5 class="card-name">كتب ادبية</h5>
               </div>
-              <h5 class="card-name">كتب ادبية</h5>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
+        <div class="swiper-btn swiper-button-prev"><i class='fa-solid fa-arrow-right mx-2 rotation'></i></div>
+        <div class="swiper-btn swiper-button-next"><i class='fa-solid fa-arrow-left mx-2 rotation'></i></div>
       </div>
     </div>
   </section>
@@ -424,12 +461,13 @@
           <i class="fa-solid fa-chevron-left"></i>
         </a>
       </div>
-      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4">
+      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 gy-4">
         <div class="col">
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -443,33 +481,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card">
-            <div class="card-img">
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -492,9 +506,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -502,7 +516,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -516,9 +531,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -526,7 +541,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -540,9 +556,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -550,7 +566,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -564,9 +581,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -574,7 +591,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -588,9 +606,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -598,7 +616,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -612,9 +631,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -622,7 +641,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -636,9 +656,9 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -646,7 +666,8 @@
           <div class="card product-card">
             <div class="card-img">
               <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
                 <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -660,9 +681,34 @@
             </div>
             <div class="card-body">
               <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
+              <h5 class="title">a novel idea</h5>
               <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+              <p class="price">29 ريال سعودي</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="card-img">
+              <div class="controls">
+                <a class="btn fav-btn" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart"><i
+                    class="bi bi-bag"></i></a>
+                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+              </div>
+              <span class="overlay"></span>
+              <div class="img">
+                <img src="images/products.jpg" alt="">
+              </div>
+              <div class="img img-back">
+                <img src="images/product-back.jpg" alt="">
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="single-book.html" class="link"></a>
+              <h5 class="title">a novel idea</h5>
+              <p class="desc">بواسطة ستيفن كينج</p>
+              <p class="price">29 ريال سعودي</p>
             </div>
           </div>
         </div>
@@ -696,139 +742,114 @@
         </div>
       </div>
       <div class="col-lg-7 col-md-5">
-        <div class="owl-carousel owl-theme ">
-          <div class="item">
-            <div class="card product-card">
-              <div class="card-img">
-                <div class="has-offer">
-                  <span>50%</span>
+        <div class="swiper ">
+          <div class="swiper-wrapper" slides-per-view="2" grid-rows="1" mousewheel-force-to-axis="true">
+            <div class="swiper-slide">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
                 </div>
-                <div class="controls">
-                  <button class="btn"><i class="bi bi-bag"></i></button>
-                  <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                  <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h5 class="title">a novel idea</h5>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <p class="price">29 ريال سعودي</p>
                 </div>
-                <span class="overlay"></span>
-                <div class="img">
-                  <img src="images/products.jpg" alt="">
-                </div>
-                <div class="img img-back">
-                  <img src="images/product-back.jpg" alt="">
-                </div>
-              </div>
-              <div class="card-body">
-                <a href="single-book.html" class="link"></a>
-                <h4 class="title">a novel idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price">29 ريال سعودي</h5>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="card product-card">
-              <div class="card-img">
-                <div class="has-offer">
-                  <span>50%</span>
+            <div class="swiper-slide">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
                 </div>
-                <div class="controls">
-                  <button class="btn"><i class="bi bi-bag"></i></button>
-                  <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                  <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h5 class="title">a novel idea</h5>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <p class="price">29 ريال سعودي</p>
                 </div>
-                <span class="overlay"></span>
-                <div class="img">
-                  <img src="images/products.jpg" alt="">
-                </div>
-                <div class="img img-back">
-                  <img src="images/product-back.jpg" alt="">
-                </div>
-              </div>
-              <div class="card-body">
-                <a href="single-book.html" class="link"></a>
-                <h4 class="title">a novel idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price">29 ريال سعودي</h5>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="card product-card">
-              <div class="card-img">
-                <div class="has-offer">
-                  <span>50%</span>
+            <div class="swiper-slide">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
                 </div>
-                <div class="controls">
-                  <button class="btn"><i class="bi bi-bag"></i></button>
-                  <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                  <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h5 class="title">a novel idea</h5>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <p class="price">29 ريال سعودي</p>
                 </div>
-                <span class="overlay"></span>
-                <div class="img">
-                  <img src="images/products.jpg" alt="">
-                </div>
-                <div class="img img-back">
-                  <img src="images/product-back.jpg" alt="">
-                </div>
-              </div>
-              <div class="card-body">
-                <a href="single-book.html" class="link"></a>
-                <h4 class="title">a novel idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price">29 ريال سعودي</h5>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="card product-card">
-              <div class="card-img">
-                <div class="has-offer">
-                  <span>50%</span>
+            <div class="swiper-slide">
+              <div class="card product-card">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
                 </div>
-                <div class="controls">
-                  <button class="btn"><i class="bi bi-bag"></i></button>
-                  <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                  <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h5 class="title">a novel idea</h5>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <p class="price">29 ريال سعودي</p>
                 </div>
-                <span class="overlay"></span>
-                <div class="img">
-                  <img src="images/products.jpg" alt="">
-                </div>
-                <div class="img img-back">
-                  <img src="images/product-back.jpg" alt="">
-                </div>
-              </div>
-              <div class="card-body">
-                <a href="single-book.html" class="link"></a>
-                <h4 class="title">a novel idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price">29 ريال سعودي</h5>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card product-card">
-              <div class="card-img">
-                <div class="has-offer">
-                  <span>50%</span>
-                </div>
-                <div class="controls">
-                  <button class="btn"><i class="bi bi-bag"></i></button>
-                  <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                  <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-                </div>
-                <span class="overlay"></span>
-                <div class="img">
-                  <img src="images/products.jpg" alt="">
-                </div>
-                <div class="img img-back">
-                  <img src="images/product-back.jpg" alt="">
-                </div>
-              </div>
-              <div class="card-body">
-                <a href="single-book.html" class="link"></a>
-                <h4 class="title">a novel idea</h4>
-                <p class="desc">بواسطة ستيفن كينج</p>
-                <h5 class="price">29 ريال سعودي</h5>
               </div>
             </div>
           </div>
@@ -872,51 +893,78 @@
         </a>
       </div>
       <div class="tops-cont">
-        <div class="row gy-4  ">
+        <div class="row gy-4">
           <div class="col-lg-3 col-md-6 side-cards">
             <div class="row gy-3">
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
@@ -924,7 +972,7 @@
           </div>
           <div class="col-lg-6 col-md-12 center">
             <div class="row gy-4">
-              <div class="col-md-6">
+              <div class="col-6">
                 <div class="card product-card">
                   <div class="card-img">
                     <div class="controls">
@@ -942,13 +990,13 @@
                   </div>
                   <div class="card-body">
                     <a href="single-book.html" class="link"></a>
-                    <h4 class="title">a novel idea</h4>
+                    <h5 class="title">a novel idea</h5>
                     <p class="desc">بواسطة ستيفن كينج</p>
-                    <h5 class="price">29 ريال سعودي</h5>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-6">
                 <div class="card product-card">
                   <div class="card-img">
                     <div class="controls">
@@ -966,9 +1014,9 @@
                   </div>
                   <div class="card-body">
                     <a href="single-book.html" class="link"></a>
-                    <h4 class="title">a novel idea</h4>
+                    <h5 class="title">a novel idea</h5>
                     <p class="desc">بواسطة ستيفن كينج</p>
-                    <h5 class="price">29 ريال سعودي</h5>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
@@ -977,47 +1025,74 @@
           <div class="col-lg-3 col-md-6 side-cards">
             <div class="row gy-3">
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="card">
-                  <a href="single-book.html" class="link"></a>
+                <div class="card product-card">
                   <div class="card-img">
-                    <img src="images/product.jpg" alt="">
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
@@ -1028,184 +1103,6 @@
     </div>
   </section>
 
-
-  <!-- <style>
-    .test {
-      .test-cont {
-        display: flex;
-        align-items: stretch;
-
-        .side-cards {
-          flex: 1 0 0;
-        }
-
-        .center {
-          flex: 2 0 0;
-        }
-      }
-    }
-  </style>
-
-  <section class="test">
-    <div class="container">
-      <div class="sec-title mt-3 mb-5">
-        <h3 class="name">الكتب الأكثر مبيعا</h3>
-        <span class="line"></span>
-        <a href="" class="btn more-btn">
-          <span>المزيد</span>
-          <i class="fa-solid fa-chevron-left"></i>
-        </a>
-      </div>
-      <div class="test-cont">
-        <div class="row gy-4  ">
-        <div class=" side-cards">
-          <div class="row gy-3">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" center">
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div class="card product-card">
-                <div class="card-img">
-                  <div class="controls">
-                    <button class="btn"><i class="bi bi-bag"></i></button>
-                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-                  </div>
-                  <span class="overlay"></span>
-                  <div class="img">
-                    <img src="images/products.jpg" alt="">
-                  </div>
-                  <div class="img img-back">
-                    <img src="images/product-back.jpg" alt="">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="link"></a>
-                  <h4 class="title">a novel idea</h4>
-                  <p class="desc">بواسطة ستيفن كينج</p>
-                  <h5 class="price">29 ريال سعودي</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card product-card">
-                <div class="card-img">
-                  <div class="controls">
-                    <button class="btn"><i class="bi bi-bag"></i></button>
-                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-                  </div>
-                  <span class="overlay"></span>
-                  <div class="img">
-                    <img src="images/products.jpg" alt="">
-                  </div>
-                  <div class="img img-back">
-                    <img src="images/product-back.jpg" alt="">
-                  </div>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="link"></a>
-                  <h4 class="title">a novel idea</h4>
-                  <p class="desc">بواسطة ستيفن كينج</p>
-                  <h5 class="price">29 ريال سعودي</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" side-cards">
-          <div class="row gy-3">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-img">
-                  <img src="images/product.jpg" alt="">
-                </div>
-                <div class="card-content">
-                  <div class="details">
-                    <h5 class="title">A Novel Idea</h5>
-                    <p class="desc">بواسطة ستيفن كينج</p>
-                    <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- discover offers section  two -->
   <section class="discover-offers two">
@@ -1235,71 +1132,51 @@
         <div class="row gy-4  ">
           <div class="col-md-4 side-cards">
             <div class="row gy-3">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/blog.png" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
                     </div>
                   </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                    </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 center side-cards">
-            <div class="row gy-3">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
                     </div>
                   </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                    </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
@@ -1307,35 +1184,103 @@
           </div>
           <div class="col-md-4 side-cards">
             <div class="row gy-3">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/blog.png" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
                     </div>
                   </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
-                    </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="card-img">
-                      <img src="images/product.jpg" alt="">
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
                     </div>
                   </div>
-                  <div class="card-content">
-                    <div class="details">
-                      <h5 class="title">A Novel Idea</h5>
-                      <p class="desc">بواسطة ستيفن كينج</p>
-                      <h6 class="price"><span>29</span><span>ريال سعودي</span></h6>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 side-cards">
+            <div class="row gy-3">
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
                     </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/blog.png" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-6">
+                <div class="card product-card">
+                  <div class="card-img">
+                    <div class="controls">
+                      <button class="btn"><i class="bi bi-bag"></i></button>
+                      <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                      <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <span class="overlay"></span>
+                    <div class="img">
+                      <img src="images/products.jpg" alt="">
+                    </div>
+                    <div class="img img-back">
+                      <img src="images/product-back.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="single-book.html" class="link"></a>
+                    <h5 class="title">a novel idea</h5>
+                    <p class="desc">بواسطة ستيفن كينج</p>
+                    <p class="price">29 ريال سعودي</p>
                   </div>
                 </div>
               </div>
@@ -1345,6 +1290,9 @@
       </div>
     </div>
   </section>
+
+
+
 
   <!-- subscribe section -->
   <section class="subscribe-mail">
@@ -1401,7 +1349,7 @@
         </li>
       </ul>
       <!-- </div> -->
-      <div class="row gy-4">
+      <div class="row row-cols-3 gy-4">
         <div class="col-md-4">
           <div class="website-map">
             <h5 class="ul-name">خريطة الموقع</h5>
@@ -1483,6 +1431,10 @@
   <!-- loader animation file -->
   <script src="js/animation/lottie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+
   <!-- custom js file link  -->
   <script src="js/script.js"></script>
 

@@ -111,7 +111,7 @@
 
 
     .card-img {
-        height: $height;
+        // height: $height;
         width: $width;
         -o-object-fit: cover;
         object-fit: cover;
@@ -120,6 +120,7 @@
         img {
             -o-object-fit: cover;
             object-fit: cover;
+            aspect-ratio: 3/4;
         }
 
         .img {

@@ -39,6 +39,10 @@
 }
 
 .login {
+  input {
+    text-transform: lowercase;
+  }
+
   .verify {
     direction: ltr !important;
   }
@@ -111,24 +115,33 @@
       input {
         border: none;
         background: transparent;
-        color: $input;
+        color: $black;
         border-radius: 6px;
+
 
         &::-webkit-input-placeholder {
           color: $input;
         }
 
+
+
         &::-moz-placeholder {
           color: $input;
         }
+
+
 
         &:-ms-input-placeholder {
           color: $input;
         }
 
+
+
         &::-ms-input-placeholder {
           color: $input;
         }
+
+
 
         &::placeholder {
           color: $input;

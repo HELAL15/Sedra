@@ -47,6 +47,11 @@
     .navbar-brand {
         width: 75px;
         height: 75px;
+
+        img {
+            -o-object-fit: contain;
+            object-fit: contain !important;
+        }
     }
 
     .navbar-toggler,
@@ -85,13 +90,20 @@
         .form-group {
             position: relative;
 
-            i {
+            .form-control {
+                -webkit-padding-end: 3rem;
+                padding-inline-end: 3rem;
+            }
+
+            .search-btn {
                 position: absolute;
                 top: 50%;
+                inset-inline-end: 20px;
                 transform: translateY(-50%);
-                left: 20px;
                 cursor: pointer;
                 z-index: 2;
+                border: none !important;
+                padding: 0 !important;
             }
         }
 
@@ -243,7 +255,7 @@
 
     .navbar.main-nav {
         .nav-actions {
-            width: 50% !important;
+            width: 55% !important;
         }
     }
 

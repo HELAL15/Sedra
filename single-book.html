@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="styles/plugin/nice-select.css">
   <!-- rateyo stars plugin -->
   <link rel="stylesheet" href="styles/plugin/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- custom css file link  -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -137,9 +138,9 @@
             <span>en</span>
             <i class="fa-solid fa-globe"></i>
           </a>
-          <form action="" class="form-group">
+          <form action="" class="form-group d-flex align-items-center">
             <input type="text" class="form-control">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="search-btn btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="m-0 d-flex align-items-center">
@@ -266,18 +267,21 @@
   <section class="single-book">
     <div class="container">
       <div class="row gy-4 align-items-center">
-        <div class="col-md-4">
-          <div class="owl-carousel owl-theme wow slideInRight">
-            <div class="item">
-              <div class="img book-img">
-                <img src="images/products.jpg" alt="">
+        <div class="col-md-4 position-relative">
+          <div class="swiper wow slideInRight">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img book-img">
+                  <img src="images/products.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img book-img">
+                  <img src="images/products.jpg" alt="">
+                </div>
               </div>
             </div>
-            <div class="item">
-              <div class="img book-img">
-                <img src="images/products.jpg" alt="">
-              </div>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
         <div class="col-md-8">
@@ -748,8 +752,40 @@
   <!-- loader animation file -->
   <script src="js/animation/lottie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- custom js file link  -->
   <script src="js/script.js"></script>
+
+  <script>
+    const singleBookSwiper = new Swiper('.single-book .swiper', {
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
 
 </body>
 

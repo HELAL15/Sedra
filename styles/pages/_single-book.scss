@@ -1,17 +1,21 @@
 .single-book {
 
 
-  .owl-carousel {
-    .owl-dots {
-      margin-top: 1rem !important;
+  .swiper {
+    position: unset;
 
-      .owl-dot:nth-child(2) span {
-        margin-bottom: 1rem;
-      }
+    .swiper-pagination-bullets {
+      position: absolute;
+      bottom: -3rem;
 
-      .owl-dot.active span {
-        background-color: $main;
-      }
+    }
+
+    .swiper-pagination-bullet {
+      margin-bottom: 1rem;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $main;
     }
 
     .img {
@@ -22,6 +26,8 @@
 
       img {
         aspect-ratio: 3/4;
+        -o-object-fit: cover;
+        object-fit: cover;
       }
     }
   }
@@ -175,6 +181,32 @@
         }
       }
     }
+
+
+    #social-links {
+      ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          a {
+            color: $muted;
+            transition: .3s;
+            font-size: 2rem;
+          }
+
+          &:hover {
+            a {
+              span {
+                color: $main;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -206,6 +238,8 @@
 
         img {
           aspect-ratio: 3/4;
+          -o-object-fit: cover;
+          object-fit: cover;
         }
       }
 

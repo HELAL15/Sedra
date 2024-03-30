@@ -60,12 +60,12 @@
 
         <ul class="icons m-0 d-flex">
           <li>
-            <a href="compare.html">
+            <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="compare">
               <img src="images/icons/compare.svg" alt="">
             </a>
           </li>
           <li>
-            <a href="fav.html">
+            <a href="fav.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="favorite">
               <img src="images/icons/fav.svg" alt="">
             </a>
           </li>
@@ -76,7 +76,7 @@
           </li>
           <!-- if auth -->
           <li>
-            <a href="profile.html">
+            <a href="profile.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="your profile">
               <img src="images/icons/profile.svg" alt="">
             </a>
           </li>
@@ -85,7 +85,7 @@
               note: remove d-none
             -->
           <li class="d-non">
-            <a href="login.html">
+            <a href="login.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="login page">
               <img src="images/icons/login.svg" alt="">
             </a>
           </li>
@@ -108,7 +108,7 @@
               </div>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">الرئيسية</a>
+              <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">
@@ -121,7 +121,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="posts.html" class="nav-link active">
+              <a href="posts.html" class="nav-link">
                 دور النشر
               </a>
             </li>
@@ -137,9 +137,9 @@
             <span>en</span>
             <i class="fa-solid fa-globe"></i>
           </a>
-          <form action="" class="form-group">
+          <form action="" class="form-group d-flex align-items-center">
             <input type="text" class="form-control">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="search-btn btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="m-0 d-flex align-items-center">

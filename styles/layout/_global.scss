@@ -156,6 +156,21 @@ ul {
   width: 100%;
 }
 
+
+.extra-pages {
+  .img {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+
+
+.filter-sec {
+  background-color: $white;
+  color: $secondary;
+}
+
 .accordion-button:not(.collapsed)::after {
   -webkit-filter: brightness(0);
   filter: brightness(0);
@@ -167,6 +182,93 @@ ul {
   -webkit-margin-start: auto;
   margin-inline-start: auto;
 }
+
+
+.pagination {
+  .page-item {
+    .page-link {
+      color: $main;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &.active .page-link {
+      background-color: $main;
+      border-color: $main;
+      color: $black;
+    }
+
+    &:last-child .page-link {
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+    }
+
+    &:first-child .page-link {
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+    }
+  }
+
+}
+
+html[dir=ltr] {
+  .pagination {
+    .page-item {
+      &:last-child .page-link {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+      }
+
+      &:first-child .page-link {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.whats-app {
+  position: fixed !important;
+  bottom: 3rem;
+  /* right: 1rem; */
+  inset-inline-start: 3rem;
+  display: block;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 222;
+  background-color: #18BB1D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white) !important;
+  font-size: 1.5rem;
+
+  i {
+    color: $white ;
+  }
+}
+
+@media($s_mob) {
+  .whats-app {
+    bottom: 2rem;
+    inset-inline-start: 1rem;
+  }
+}
+
+
+
+
 
 .form-control {
   padding: 0.5rem 0.75rem;
@@ -183,6 +285,7 @@ ul {
   -moz-border-radius: 35px;
   -ms-border-radius: 35px;
   -o-border-radius: 35px;
+  text-transform: lowercase;
 }
 
 .form-control:focus {
@@ -217,7 +320,7 @@ ul {
 }
 
 #anim {
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -272,7 +375,15 @@ ul {
 img {
   width: 100%;
   height: 100%;
+  // object-fit: cover;
 }
+
+html[dir=ltr] {
+  .rotation {
+    transform: rotate(180deg);
+  }
+}
+
 
 // section{
 //   margin-top: 4rem;
@@ -309,12 +420,16 @@ img {
 }
 
 .recieved {
+  margin: auto;
   padding: 0.65rem 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 35px;
   font-size: 1rem;
   font-weight: 500;
-  background-color: $main;
-  color: $white;
+  background-color: #9ad1a1;
+  color: #fff;
 }
 
 @media($s_mob) {

@@ -21,7 +21,7 @@ $(document).ready(function(){
       path: '../js/animation/illustration.json'
   })
 
-    // $(".visacard-details").hide()
+    $(".visacard-details").hide()
 
  $(".online-pay").change(function() {
         if ($(this).is(":checked")) {
@@ -161,7 +161,6 @@ if (play !== null) {
 
 
 
-
     $(".show-pass").click(function () {
       $(this).find('i').toggleClass("bi-eye-slash bi-eye");
       var input = $($(this).attr("toggle"));
@@ -281,7 +280,7 @@ if (play !== null) {
       rtl: dirAr,
       loop:false,
       margin:15,
-      navText:["<i class='fa-solid fa-arrow-right mx-2'></i>", "<i class='fa-solid fa-arrow-left mx-2'></i>"],
+      navText:["<i class='fa-solid fa-arrow-right mx-2 rotation'></i>", "<i class='fa-solid fa-arrow-left mx-2 rotation'></i>"],
       nav:true,
       dots: false,
       responsive:{
@@ -300,6 +299,117 @@ if (play !== null) {
 
 
 
+    const headerSwiper = new Swiper('header .swiper', {
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+
+      // Autoplay settings
+      autoplay: {
+        delay: 3000, // Autoplay delay in milliseconds
+        disableOnInteraction: false, // Disable autoplay when user interacts with the slider
+      },
+
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+    const swiper = new Swiper('.offers .swiper', {
+      slidesPerView: 3.3,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.5,
+        },
+        640: {
+          slidesPerView: 2.2,
+        },
+        1024: {
+          slidesPerView: 3.3,
+        },
+      },
+      grid: {
+        rows: 1,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+
+
+
+
+
+    const categoriesSwiper = new Swiper('.categories .swiper', {
+      slidesPerView: 5,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+      grid: {
+        rows: 1,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });  
+  
 
 
 
@@ -309,7 +419,7 @@ if (play !== null) {
       loop:false,
       margin:10,
       autoplay:false,
-      navText:["<i class='fa-solid fa-arrow-right mx-2'></i>", "<i class='fa-solid fa-arrow-left mx-2'></i>"],
+      navText:["<i class='fa-solid fa-arrow-right mx-2 rotation'></i>", "<i class='fa-solid fa-arrow-left mx-2 rotation'></i>"],
       nav:false,
       dots: false,
       responsive:{
@@ -343,13 +453,13 @@ for (let i = 0; i < dots.length; i++) {
 
 
   // make category-img circle 
-  var categoryWidth = $('.categories .img').width();
-  $('.categories .img').height(categoryWidth)
+  // var categoryWidth = $('.categories .img').width();
+  // $('.categories .img').height(categoryWidth)
   // -- responsive --
-  $(window).resize(function(){
-    var categoryWidth = $('.categories .img').width();
-  $('.categories .img').height(categoryWidth)
-  })
+  // $(window).resize(function(){
+  //   var categoryWidth = $('.categories .img').width();
+  // $('.categories .img').height(categoryWidth)
+  // })
 
 
 

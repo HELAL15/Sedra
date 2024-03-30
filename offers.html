@@ -137,9 +137,9 @@
             <span>en</span>
             <i class="fa-solid fa-globe"></i>
           </a>
-          <form action="" class="form-group">
+          <form action="" class="form-group d-flex align-items-center">
             <input type="text" class="form-control">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="search-btn btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="m-0 d-flex align-items-center">
@@ -491,14 +491,16 @@
 
   <!-- offers section -->
   <section class="offers offers-page">
-    <div class="container">
-      <div class="sec-title mt-3 mb-4">
-        <h3 class="name">العروض</h3>
+    <div class=" filter-sec py-3 mt-2 mb-5">
+      <div class="container sec-title">
+        <h3 class="name m-0">العروض</h3>
         <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           <i class="fa-solid fa-sliders mx-2"></i>
           <span>عرض التصفية</span>
         </a>
       </div>
+    </div>
+    <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 ">
           <div class="offers-main wow slideInDown">
@@ -514,7 +516,7 @@
         </div>
         <div class="col-lg-7 ">
           <div class="row gy-4">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-6">
               <div class="card product-card wow slideInDown" data-wow-delay=".2s">
                 <div class="card-img">
                   <div class="has-offer">
@@ -541,7 +543,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-6">
               <div class="card product-card wow slideInDown" data-wow-delay=".4s">
                 <div class="card-img">
                   <div class="has-offer">
@@ -568,7 +570,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-6">
               <div class="card product-card wow slideInDown" data-wow-delay=".6s">
                 <div class="card-img">
                   <div class="has-offer">
@@ -597,280 +599,283 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 gy-4 mt-4">
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".2s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".3s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
+        <div class="col-lg-12">
+          <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 gy-4 mt-4">
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".2s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".4s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".5s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".3s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".6s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".2s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".4s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".3s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".4s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".5s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".5s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
-              </div>
-            </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card wow slideInDown" data-wow-delay=".6s">
-            <div class="card-img">
-              <div class="has-offer">
-                <span>50%</span>
-              </div>
-              <div class="controls">
-                <button class="btn"><i class="bi bi-bag"></i></button>
-                <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
-                <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
-              </div>
-              <span class="overlay"></span>
-              <div class="img">
-                <img src="images/products.jpg" alt="">
-              </div>
-              <div class="img img-back">
-                <img src="images/product-back.jpg" alt="">
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".6s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <a href="single-book.html" class="link"></a>
-              <h4 class="title">a novel idea</h4>
-              <p class="desc">بواسطة ستيفن كينج</p>
-              <h5 class="price">29 ريال سعودي</h5>
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".2s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".3s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".4s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".5s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card product-card wow slideInDown" data-wow-delay=".6s">
+                <div class="card-img">
+                  <div class="has-offer">
+                    <span>50%</span>
+                  </div>
+                  <div class="controls">
+                    <button class="btn"><i class="bi bi-bag"></i></button>
+                    <button class="btn fav-btn "><i class="bi bi-heart"></i></button>
+                    <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <span class="overlay"></span>
+                  <div class="img">
+                    <img src="images/products.jpg" alt="">
+                  </div>
+                  <div class="img img-back">
+                    <img src="images/product-back.jpg" alt="">
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="single-book.html" class="link"></a>
+                  <h4 class="title">a novel idea</h4>
+                  <p class="desc">بواسطة ستيفن كينج</p>
+                  <h5 class="price">29 ريال سعودي</h5>
+                </div>
+              </div>
+            </div>
 
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 

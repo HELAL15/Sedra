@@ -32,6 +32,7 @@
   <!-- rateyo stars plugin -->
   <link rel="stylesheet" href="styles/plugin/jquery.rateyo.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/plugin/swiper.min.css">
   <!-- custom css file link  -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -752,40 +753,13 @@
   <!-- loader animation file -->
   <script src="js/animation/lottie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="js/swiper-bundle.min.js"></script>
+
+
   <!-- custom js file link  -->
   <script src="js/script.js"></script>
 
-  <script>
-    const singleBookSwiper = new Swiper('.single-book .swiper', {
-      slidesPerView: 1,
-      grid: {
-        rows: 1,
-      },
-      mousewheel: {
-        forceToAxis: true,
-      },
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    });
-  </script>
 
 </body>
 

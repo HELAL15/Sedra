@@ -246,16 +246,18 @@ html[dir=ltr] {
   width: 50px !important;
   height: 50px !important;
   z-index: 222;
-  background-color: #18BB1D;
+  background-color: $white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white) !important;
   font-size: 1.5rem;
+  box-shadow: 0px 5px 10px #00000052;
 
-  i {
-    color: $white ;
+  img {
+    width: 55%;
+    height: 55%;
   }
 }
 
@@ -264,6 +266,94 @@ html[dir=ltr] {
     bottom: 2rem;
     inset-inline-start: 1rem;
   }
+}
+
+
+
+
+#bestBookModal {
+  .modal-dialog {
+    max-width: 45% !important;
+
+
+    .modal-header {
+      border: none;
+      display: flex;
+      justify-content: flex-end;
+      padding: .5rem 3rem 0 3rem;
+
+      .btn {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0;
+        border: none;
+
+
+      }
+    }
+
+    .modal-content {
+      background: #ffffff7c 0% 0% no-repeat padding-box;
+      border-color: transparent;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border-radius: 72px;
+
+
+
+      .modal-body {
+
+        .content {
+          margin: 0rem 5rem;
+
+
+          .img {
+            width: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+
+            img {
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media($s_med) {
+  #bestBookModal {
+    .modal-dialog {
+      max-width: 60% !important;
+    }
+
+    .modal-content {
+      .content {
+        margin: 0 3rem !important;
+      }
+    }
+  }
+
+}
+
+@media($s_mob) {
+  #bestBookModal {
+    .modal-dialog {
+      max-width: 100% !important;
+    }
+
+    .modal-content {
+      .content {
+        margin: 0 1rem !important;
+      }
+    }
+  }
+
 }
 
 
@@ -402,7 +492,7 @@ html[dir=ltr] {
 
 
 .btn {
-  padding: 0.65rem 2.5rem;
+  padding: 0.65rem 2rem;
   border-radius: 35px;
   font-size: 1rem;
   font-weight: 500;
@@ -439,6 +529,27 @@ html[dir=ltr] {
     padding: 0.65rem 1rem;
   }
 }
+
+
+.fav-btn {
+  background-color: transparent;
+  border-color: $main;
+  color: $main;
+  @include circle($size: 35px, $font: 1rem, $bx_sh: 0);
+  padding: 0;
+
+  &:hover {
+    border-color: $main;
+    color: $main;
+  }
+
+  &.active {
+    background-color: $main;
+    color: $white;
+    border-color: $main;
+  }
+}
+
 
 .secondary-btn {
   background-color: $secondary;
@@ -514,7 +625,7 @@ section {
     gap: .5rem;
 
     .name {
-      width: 30%;
+      width: 35%;
     }
 
 
@@ -527,6 +638,11 @@ section {
   @include btn_color($color: $white, $bg: $secondary);
   position: relative;
   transition: .3s;
+
+  @media($s_mob) {
+    padding: 0.5rem 1rem;
+
+  }
 
   &:hover {
     @include btn_color($color: $black, $bg: $main);
@@ -606,6 +722,57 @@ section {
 }
 
 
+// lang btn
+
+.lang {
+  color: $nav-link;
+  -webkit-border-start: 1px solid $nav-link;
+  border-inline-start: 1px solid $nav-link;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  -webkit-padding-end: 3rem;
+  padding-inline-end: 3rem;
+}
+
+
+
+
+
+/* Style the ribbon */
+.ribbon {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 4;
+}
+
+.ribbon__content {
+  left: -30px;
+  top: 30px;
+  transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 0px 0;
+  background-color: $secondary;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
 .card.product-card.active {
   .card-img {
     .overlay {
@@ -638,7 +805,7 @@ section {
 
 
   @include card($dir: column, $gap: .5rem, $border: 0, $rad: 10px, $width: 100%, $height: unset, $img_brdr: 1);
-  padding: .5rem;
+  padding: 0rem;
 
 
   text-align: center;
@@ -698,6 +865,7 @@ section {
 
   .card-body {
     position: relative;
+    padding: .5rem 0;
 
     .desc {
       margin-bottom: .5rem;
@@ -713,8 +881,8 @@ section {
       }
 
       .controls {
-        inset-inline-start: 5%;
-        transform: translate(-5%, -50%);
+        inset-inline-start: 50%;
+        transform: translate(50%, -50%);
       }
 
       .img-back {

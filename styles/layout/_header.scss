@@ -1,4 +1,5 @@
 header {
+  margin-top: 150px;
   height: 200px;
   background-color: $header;
   @extend %flex_center;
@@ -37,7 +38,7 @@ header {
 header.header-home {
   background-color: $header;
   // margin-top: 7.5rem;
-  height: calc(100vh - 122px);
+  height: calc(100vh - 150px);
   position: relative;
   display: flex;
   justify-content: center;
@@ -45,15 +46,14 @@ header.header-home {
   // margin-top: 2rem;
   // @extend %header_top;
 
-  .owl-carousel {
+  .swiper {
     position: unset !important;
   }
 
-  .owl-theme .owl-dots,
-  .owl-theme .owl-nav {
+  .swiper-pagination {
     position: absolute;
     right: 50%;
-    bottom: -30px;
+    bottom: 0px;
     transform: translate(50%, -50%) rotate(180deg);
   }
 
@@ -65,9 +65,15 @@ header.header-home {
     margin-left: 12px !important;
   }
 
-  .owl-theme .owl-dots .owl-dot.active span,
-  .owl-theme .owl-dots .owl-dot:hover span {
+  .swiper-pagination .swiper-pagination-bullet {
     background: $main;
+    opacity: .5;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+  .swiper-pagination .swiper-pagination-bullet:hover {
+    background: $main;
+    opacity: 1;
   }
 
   .background-img {
@@ -122,6 +128,14 @@ header.header-home {
 }
 
 @media ($s_med) {
+  header {
+    margin-top: 124px;
+  }
+
+  header.header-home {
+    height: 350px;
+  }
+
   .hero-desc {
     font-size: 1.2rem;
     font-weight: 500;
@@ -133,7 +147,11 @@ header.header-home {
 }
 
 @media ($s_mob) {
+  header {
+    margin-top: 118px;
+  }
+
   header.header-home {
-    height: calc(100vh - 111px);
+    height: 200px;
   }
 }

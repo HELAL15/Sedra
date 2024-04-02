@@ -64,13 +64,11 @@
       }
 
       .btn {
-        @include circle(
-          $size: 40px,
+        @include circle($size: 40px,
           $font: 1rem,
           $color: $white,
           $bg: $main,
-          $bx_sh: 0
-        );
+          $bx_sh: 0);
         padding: 0.65rem 0.5rem;
       }
     }
@@ -88,9 +86,85 @@
       padding-top: 1rem;
       width: 100%;
     }
+
     .img {
       margin: 2rem 0 -3rem 0;
       width: 100%;
     }
+  }
+}
+
+
+.content.mail {
+
+  width: 40%;
+  margin: 2rem auto;
+  text-align: center;
+
+  .title {
+    margin: 1.5rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .subscribtion-form {
+    background-color: $white;
+    border-radius: $brad;
+    border: 1px solid #9ad1a1;
+    padding: 0.2rem;
+
+    &:focus {
+      border-color: $main;
+    }
+
+    @include h_center($gap: 1rem);
+
+    .form-control {
+      width: calc(100% - 56px);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+
+      &::-webkit-input-placeholder {
+        color: black;
+      }
+
+      &::-moz-placeholder {
+        color: black;
+      }
+
+      &:-ms-input-placeholder {
+        color: black;
+      }
+
+      &::-ms-input-placeholder {
+        color: black;
+      }
+
+      &::placeholder {
+        color: black;
+      }
+    }
+
+    .btn {
+      @include circle($size: 40px,
+        $font: 1rem,
+        $color: $white,
+        $bg: $main,
+        $bx_sh: 0);
+      padding: 0.65rem 0.5rem;
+    }
+  }
+}
+
+
+@media($s_med) {
+  .content.mail {
+    width: 60%;
+  }
+}
+
+@media($s_mob) {
+  .content.mail {
+    width: 90%;
   }
 }

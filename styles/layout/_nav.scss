@@ -1,6 +1,5 @@
 .navs-container {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -37,12 +36,50 @@
             }
         }
     }
+
+    .form-group {
+        position: relative;
+        width: 40%;
+
+        @media($s_mob) {
+            width: 100%;
+        }
+
+        .form-control {
+            -webkit-padding-end: 3rem;
+            padding-inline-end: 3rem;
+        }
+
+        .search-btn {
+            position: absolute;
+            top: 50%;
+            inset-inline-end: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 2;
+            border: none !important;
+            padding: 0 !important;
+        }
+    }
 }
 
 
 
 .navbar.main-nav {
     background-color: $white;
+
+    .icons {
+        @include h_center($gap: 10px);
+
+        a {
+            @include circle($size: 35px, $font: 1rem, );
+            line-height: 0;
+
+            img {
+                @include size();
+            }
+        }
+    }
 
     .navbar-brand {
         width: 75px;
@@ -75,7 +112,14 @@
             a.nav-link {
                 font-size: 1rem;
                 padding: 0 .9rem;
-                font-weight: bold;
+                font-weight: 500;
+                color: $nav-link;
+
+                &.active {
+                    color: $secondary;
+                    font-weight: bolder;
+
+                }
             }
         }
     }
@@ -108,6 +152,16 @@
         }
 
 
+    }
+
+    @media($s_med) {
+        .nav-actions {
+            position: absolute;
+            top: 20%;
+            inset-inline-start: 50%;
+            transform: translate(50%, -20%);
+            z-index: 22;
+        }
     }
 
 

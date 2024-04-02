@@ -59,6 +59,10 @@ html[dir='ltr'] {
   .swiper {
     padding-top: 3rem;
 
+    @media($s_mob) {
+      padding-top: 0rem;
+    }
+
     .swiper-btn {
       background-color: transparent;
       color: $main;
@@ -144,12 +148,7 @@ html[dir='ltr'] {
     }
   }
 
-  @media($s_mob) {
-    .card {
-      margin: 3rem;
 
-    }
-  }
 }
 
 /*discover offers*/
@@ -483,14 +482,21 @@ html[dir='ltr'] {
 
 /*===== top seller =====*/
 .top-seller {
-  .side-cards {
-    .card {
-      .card-body {
-        padding: 0;
-        flex: 1 0 0 !important;
-      }
+
+  .main-cards .col:nth-child(n+2) {
+    -webkit-padding-start: .7rem;
+    padding-inline-start: .7rem;
+    -webkit-border-start: 1px solid $border;
+    border-inline-start: 1px solid $border;
+  }
+
+  .card {
+    .card-body {
+      padding: 0;
+      flex: 1 0 0 !important;
     }
   }
+
 
   .has-offer {
     position: absolute;
@@ -506,63 +512,27 @@ html[dir='ltr'] {
 
 
 
-  .center {
-    padding: 0 .5rem;
-    border-right: 1px solid $border;
-    border-left: 1px solid $border;
-  }
-
   @media($s_med) {
-    .side-cards {
-      .card {
-        flex-direction: row !important;
-        gap: .5rem !important;
-
-        .card-img {
-          width: 110px;
-        }
+    .card {
+      gap: .5rem !important;
 
 
 
-      }
+
+
     }
 
-    &:nth-child(3) {
-      order: 2 !important;
-    }
 
-    .center {
-      order: 3;
-      padding: .5rem 0;
-      border-right: unset;
-      border-left: unset;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
-    }
   }
 
   @media($s_mob) {
-    .side-cards {
-      .card {
-        flex-direction: row !important;
-        gap: .5rem !important;
+    .card {
+      gap: .5rem !important;
 
-        .card-img {
-          width: 110px;
-        }
 
-      }
 
-      &:nth-child(3) {
-        order: 3 !important;
-      }
     }
 
-
-
-    .center {
-      order: 2 !important;
-    }
   }
 }
 
@@ -570,83 +540,7 @@ html[dir='ltr'] {
 
 .top-seller,
 .bokor-prize {
-  // .tops-cont {
-  //   border-radius: $brad;
-  //   border: 1px solid $border;
-  //   margin-top: 1rem;
-  //   padding: 1rem;
 
-  //   .side-cards {
-  //     .card {
-  //       @include card($border: 0, $width: 120px, $height: 150px);
-  //       padding: 0.5rem;
-  //       border-radius: 0 !important;
-  //     }
-
-  //     .card.brdr {
-  //       padding: 1.5rem 0;
-  //       border-bottom: 1px solid $border;
-  //       border-top: 1px solid $border;
-  //     }
-
-  //     .row {
-  //       .col-md-12:nth-child(2) .card {
-  //         padding: 1.5rem .5rem;
-  //         border-bottom: 1px solid $border;
-  //         border-top: 1px solid $border;
-  //       }
-
-  //       @media($s_med) {
-  //         .col-md-12:nth-child(2) .card {
-  //           padding: 1.5rem 0rem;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .center {
-  //     padding: 0 0.5rem;
-  //     border-right: 1px solid $border;
-  //     border-left: 1px solid $border;
-  //     // margin: 2.8rem 0 1.2rem 0;
-
-  //     .product-card {
-  //       .card-img {
-  //         max-height: unset;
-  //         min-height: auto;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-
-  //   @media($s_med) {
-  //     .center {
-  //       padding: 0;
-  //       border: none;
-  //       order: 3;
-  //     }
-  //   }
-
-  //   @media($s_mob) {
-
-
-
-  //     .center {
-  //       order: unset;
-  //     }
-
-  //     .side-cards {
-  //       .card {
-  //         padding: 0;
-  //         gap: 0;
-  //         justify-content: space-between;
-  //       }
-  //     }
-
-
-
-  //   }
-  // }
   .card-body {
     flex: 1 0 0 !important;
   }
@@ -655,7 +549,15 @@ html[dir='ltr'] {
     border-radius: $brad;
     border: 1px solid $border;
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
+
+    @media($s_med) {
+      padding: 1rem .8rem;
+    }
+
+    @media($s_mob) {
+      padding: 1rem .5rem;
+    }
 
     .side-cards {
       .card {
@@ -702,23 +604,26 @@ html[dir='ltr'] {
   .tops-cont {
     border: none;
 
+    .col-md-4 {
+      flex: 1 0 0;
+    }
+
     .side-cards {
 
       .card {
-        @include card($border: 0, $width: 170px, $height: 200px);
+        @include card($border: 0, $width: 150px, $height: 200px);
         border: none !important;
         padding: 0.5rem;
 
+        .main-btn {
+          padding: .5rem 1rem !important;
+        }
 
         @media($s_med) {
 
           flex-direction: column;
 
           .card-img {
-            height: auto;
-            min-height: auto;
-            max-height: unset;
-            width: 180px;
 
             img {
               aspect-ratio: 3/4;
@@ -733,16 +638,15 @@ html[dir='ltr'] {
           .card-img {
             width: 100%;
 
+            img {
+              aspect-ratio: 3/4;
+            }
+
           }
         }
 
       }
 
-      // .row {
-      //   .col-md-12:nth-child(2) .card {
-      //     padding: 0.5rem;
-      //   }
-      // }
     }
 
 

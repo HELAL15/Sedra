@@ -146,6 +146,13 @@
     .price {
         color: $secondary;
         font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .old-price {
+        color: $muted;
+        text-decoration: line-through;
+        margin: .5rem 0 0 0;
     }
 
     @if($border ==1) {
@@ -153,6 +160,31 @@
     }
 
     border-radius: $brad;
+
+    .card-footer {
+        @extend %flex_between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0rem 0;
+        border: none;
+        background-color: transparent;
+        margin-top: 0 !important;
+
+        .main-btn {
+            padding: .5rem 2rem;
+        }
+
+        @media($s_mob) {
+            gap: .2rem;
+
+            .main-btn {
+                padding: .5rem .8rem;
+                font-size: .8rem;
+            }
+        }
+
+
+    }
 
 }
 

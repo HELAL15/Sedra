@@ -1,5 +1,6 @@
 
 
+
 $(document).ready(function(){
     // dir
     var bodyDir = $('body').css('direction')
@@ -10,6 +11,10 @@ $(document).ready(function(){
     else{
       dirAr = false
     }
+
+
+
+
 
 
 
@@ -247,60 +252,9 @@ if (play !== null) {
 
 
 
-    // owl carousel
-    $("header .owl-carousel").owlCarousel({
-        nav: false,
-        autoplay: false,
-        autoplayHoverPause: true,
-        responsiveClass: true,
-        items: 1,
-        rtl: dirAr,
-        dots: true,
-        margin: 20
-    });
-    $('.single-book .owl-carousel').owlCarousel({
-        rtl: dirAr,
-        loop:false,
-        margin:15,
-        dots: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-      })
-
-    $('.categories .owl-carousel').owlCarousel({
-      rtl: dirAr,
-      loop:false,
-      margin:15,
-      navText:["<i class='fa-solid fa-arrow-right mx-2 rotation'></i>", "<i class='fa-solid fa-arrow-left mx-2 rotation'></i>"],
-      nav:true,
-      dots: false,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:4
-          },
-          1000:{
-              items:6
-          }
-      }
-    })
-
-
-
-
     const headerSwiper = new Swiper('header .swiper', {
       slidesPerView: 1,
+      
       grid: {
         rows: 1,
       },
@@ -314,19 +268,20 @@ if (play !== null) {
 
       // Autoplay settings
       autoplay: {
-        delay: 3000, // Autoplay delay in milliseconds
-        disableOnInteraction: false, // Disable autoplay when user interacts with the slider
+        delay: 8000, 
+        disableOnInteraction: false, 
       },
 
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
       },
 
     });
-    const swiper = new Swiper('.offers .swiper', {
+
+    const offersSwiper = new Swiper('.offers .swiper', {
+      spaceBetween: 20 ,
       slidesPerView: 3.3,
       breakpoints: {
         320: {
@@ -349,38 +304,26 @@ if (play !== null) {
       direction: 'horizontal',
       loop: true,
 
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
+      // Autoplay settings
+      autoplay: {
+        delay: 2000, 
+        disableOnInteraction: false, 
       },
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
     });
 
-
-
-
-
     const categoriesSwiper = new Swiper('.categories .swiper', {
-      slidesPerView: 5,
+      slidesPerView: 6,
+      spaceBetween: 8,
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         640: {
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 6,
         },
       },
       grid: {
@@ -392,48 +335,48 @@ if (play !== null) {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
+      // Autoplay settings
+      autoplay: {
+        delay: 2500, 
+        disableOnInteraction: false, 
       },
+
 
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
     });  
   
 
+    const singleBookSwiper = new Swiper('.single-book .swiper', {
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+       // Autoplay settings
+      autoplay: {
+        delay: 2500, 
+        disableOnInteraction: false, 
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+    });
+  
 
 
-
-    $('.offers .owl-carousel').owlCarousel({
-      rtl: dirAr,
-      loop:false,
-      margin:10,
-      autoplay:false,
-      navText:["<i class='fa-solid fa-arrow-right mx-2 rotation'></i>", "<i class='fa-solid fa-arrow-left mx-2 rotation'></i>"],
-      nav:false,
-      dots: false,
-      responsive:{
-          0:{
-              items:1.5
-          },
-          600:{
-              items:1.5
-          },
-          1000:{
-              items:3.5
-          }
-      }
-    })
 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -441,7 +384,17 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 
 
-const dots = document.querySelectorAll(".header-home .owl-carousel .owl-dots .owl-dot span");
+var myModal = new bootstrap.Modal(document.getElementById('bestBookModal'));
+myModal.show();
+
+
+
+
+
+
+
+
+const dots = document.querySelectorAll(".header-home .swiper .swiper-pagination .swiper-pagination-bullet ");
 const angle = 90 / (dots.length - 1);
 for (let i = 0; i < dots.length; i++) {
   const margin = (Math.sin(angle * i) * 15) - 15;
@@ -452,14 +405,7 @@ for (let i = 0; i < dots.length; i++) {
 }
 
 
-  // make category-img circle 
-  // var categoryWidth = $('.categories .img').width();
-  // $('.categories .img').height(categoryWidth)
-  // -- responsive --
-  // $(window).resize(function(){
-  //   var categoryWidth = $('.categories .img').width();
-  // $('.categories .img').height(categoryWidth)
-  // })
+
 
 
 

@@ -60,34 +60,56 @@ footer {
     }
   }
 
-  .footer-links.link1,
-  .footer-links.link2 {
-    -moz-columns: 2;
-    columns: 2;
+  .footer-links-main {
+    background-color: $main;
+    padding: 3rem 0 2rem 0;
 
-    li {
-      margin-bottom: 1rem;
+    .footer-links.link1,
+    .footer-links.link2 {
+      -moz-columns: 2;
+      columns: 2;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .footer-links.link3 {
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+
+
+    .ul-name {
+      color: $white;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+
+
+    }
+
+    ul {
+      li {
+        a {
+          color: $white;
+          opacity: .8;
+
+          &.active {
+            opacity: 1;
+
+          }
+        }
+      }
+    }
+
+    .contacts-col {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
-  .footer-links.link3 {
-    li {
-      margin-bottom: 1rem;
-    }
-  }
 
-
-  .ul-name {
-    color: $secondary;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-  }
-
-
-  .contacts-col {
-    display: flex;
-    justify-content: flex-end;
-  }
 
 
 

@@ -613,7 +613,7 @@ html[dir='ltr'] {
       .card {
         @include card($border: 0, $width: 150px, $height: 200px);
         border: none !important;
-        padding: 0.5rem;
+        padding: 0rem;
 
         .main-btn {
           padding: .5rem 1rem !important;

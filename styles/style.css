@@ -1029,15 +1029,79 @@ section {
 .navbar.main-nav .navbar-nav .nav-header-mobile {
   display: none;
 }
-.navbar.main-nav .navbar-nav .nav-item a.nav-link {
+.navbar.main-nav .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar.main-nav .navbar-nav .nav-item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+.navbar.main-nav .navbar-nav .nav-item .nav-link {
   font-size: 1rem;
   padding: 0 0.9rem;
   font-weight: 500;
   color: #919191;
 }
-.navbar.main-nav .navbar-nav .nav-item a.nav-link.active {
+.navbar.main-nav .navbar-nav .nav-item .nav-link.active {
   color: #86876e;
   font-weight: bolder;
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-trigger {
+  position: relative;
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-trigger:focus + .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu {
+  background-color: #fff;
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  top: 2rem;
+  left: -350%;
+  display: none;
+  width: 80vw;
+  z-index: 333;
+  border: none;
+  padding: 2rem !important;
+  border-radius: 35px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2588235294);
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu .form-control,
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu .form-select {
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu a {
+  color: #fff;
+}
+@media (max-width : 991.8px) {
+  .navbar.main-nav .navbar-nav .nav-item .dropdown-menu {
+    background-color: #fff;
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    top: -14rem;
+    height: 350px;
+    overflow: auto;
+    left: -50%;
+    display: none;
+    width: 80vw;
+    z-index: 333;
+    border: none;
+    padding: 2rem !important;
+    border-radius: 35px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2588235294);
+  }
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu-item {
+  cursor: pointer;
+  padding: 1em;
+  text-align: center;
+}
+.navbar.main-nav .navbar-nav .nav-item .dropdown-menu-item:hover {
+  background-color: #eb272d;
 }
 .navbar.main-nav .nav-actions {
   display: flex;
@@ -1069,7 +1133,7 @@ section {
     top: 20%;
     inset-inline-start: 50%;
     transform: translate(50%, -20%);
-    z-index: 22;
+    z-index: 20;
   }
 }
 
@@ -1115,7 +1179,7 @@ section {
     opacity: 0.5;
   }
   .navbar-nav {
-    z-index: 22;
+    z-index: 18;
     background-color: #fff;
     width: 100%;
     height: 100%;
@@ -2151,7 +2215,7 @@ html[dir=ltr] .offcanvas.cart .offcanvas-footer .group .btn {
   text-align: center;
   border-radius: 35px;
   border: none !important;
-  padding: 0.5rem;
+  padding: 0rem;
 }
 .bokor-prize .tops-cont .side-cards .card .card-img {
   width: 150px;

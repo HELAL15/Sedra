@@ -109,7 +109,14 @@
         }
 
         .nav-item {
-            a.nav-link {
+            position: relative;
+
+            &:hover>.dropdown-menu {
+                display: block;
+                opacity: 1;
+            }
+
+            .nav-link {
                 font-size: 1rem;
                 padding: 0 .9rem;
                 font-weight: 500;
@@ -120,7 +127,77 @@
                     font-weight: bolder;
 
                 }
+
+
             }
+
+            .dropdown-trigger {
+                position: relative;
+
+                &:focus+.dropdown-menu {
+                    display: block;
+                    opacity: 1;
+                }
+
+            }
+
+
+            .dropdown-menu {
+                background-color: $white;
+                display: inline-block;
+                text-align: right;
+                position: absolute;
+                top: 2rem;
+                left: -350%;
+                display: none;
+                width: 80vw;
+                z-index: 333;
+                border: none;
+                padding: 2rem !important;
+                border-radius: $brad;
+                box-shadow: 0px 0px 20px #00000042;
+
+                .form-control,
+                .form-select {
+                    padding: .9rem;
+                    border-radius: 10px;
+                }
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            @media($s_med) {
+                .dropdown-menu {
+                    background-color: #fff;
+                    display: inline-block;
+                    text-align: right;
+                    position: absolute;
+                    top: -14rem;
+                    height: 350px;
+                    overflow: auto;
+                    left: -50%;
+                    display: none;
+                    width: 80vw;
+                    z-index: 333;
+                    border: none;
+                    padding: 2rem !important;
+                    border-radius: 35px;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2588235294);
+                }
+            }
+
+            .dropdown-menu-item {
+                cursor: pointer;
+                padding: 1em;
+                text-align: center;
+
+                &:hover {
+                    background-color: darken(#ED3E44, 5%);
+                }
+            }
+
         }
     }
 
@@ -160,7 +237,7 @@
             top: 20%;
             inset-inline-start: 50%;
             transform: translate(50%, -20%);
-            z-index: 22;
+            z-index: 20;
         }
     }
 
@@ -244,7 +321,7 @@
     }
 
     .navbar-nav {
-        z-index: 22;
+        z-index: 18;
         background-color: $white;
         width: 100%;
         height: 100%;

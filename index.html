@@ -156,10 +156,38 @@
                 مقترح النشر
               </a>
             </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">
-                تواصل معنا
-              </a>
+
+            <li class="nav-item nav-item-dropdown position-relative">
+              <a class="dropdown-trigger nav-link" href="#">تواصل معنا</a>
+              <ul class="dropdown-menu">
+                <form action="" class="form">
+                  <div class="row gy-4">
+                    <div class="col-md-12">
+                      <input type="text" class="form-control" placeholder="الإسم">
+                    </div>
+                    <div class="col-md-12">
+                      <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                    </div>
+                    <div class="col-md-12">
+                      <input type="tel" class="form-control" placeholder="الجوال">
+                    </div>
+                    <div class="col-md-12">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected disabled>الموضوع</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="الرسالة"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="btn main-btn">ارسال</button>
+                    </div>
+                  </div>
+                </form>
+              </ul>
             </li>
             <li>
               <a href="#" class="lang d-flex align-items-center gap-1">
@@ -198,7 +226,7 @@
                     else 
                     note: remove d-none
                   -->
-              <li class="d-none">
+              <li class="d-non">
                 <a href="login.html" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="login page">
                   <img src="images/icons/login.svg" alt="">
                 </a>
@@ -332,7 +360,6 @@
   </div> -->
   <!-- header section -->
   <header class="header-home">
-    <!-- <div class="background-img" style="background: url('images/fav.svg');"></div> -->
     <div class="swiper h-100">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -355,39 +382,6 @@
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     </div>
-    <!-- <div class=" container z-3 position-relative ">
-      <div class="row gy-4 align-items-center ">
-        <div class="col-md-12">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="hero-img">
-                  <img src="images/hero.png" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="hero-img">
-                  <img src="images/hero.png" alt="">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="hero-img">
-                  <img src="images/hero.png" alt="">
-                </div>
-              </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="hero-img">
-            <img src="images/hero.png" alt="">
-          </div>
-        </div>
-      </div>
-
-    </div> -->
   </header>
 
 
@@ -521,6 +515,7 @@
         <div class="col">
           <div class="card product-card">
             <div class="card-img">
+              <div class="ribbon"><span class="ribbon__content">جديد</span></div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -705,6 +700,7 @@
         <div class="col">
           <div class="card product-card">
             <div class="card-img">
+              <div class="ribbon"><span class="ribbon__content">جديد</span></div>
               <div class="controls">
                 <button class="btn"><i class="bi bi-arrow-left-right"></i></button>
               </div>
@@ -1111,27 +1107,6 @@
     </div>
   </section>
 
-  <!-- discover offers section one -->
-  <section class="discover-offers one ">
-    <div class="container">
-      <div class="content" style="background:url('images/disscover-one.png');">
-        <div class="row gy-4 align-items-center">
-          <div class="col-md-5">
-            <div class="text">
-              <span>احصل على كتبك المفضلة بأسعار مذهلة الآن</span>
-              <p>لا تفوت الفرصة لامتلاك نسختك من الكتب المفضلة لديك</p>
-              <a href="" class="btn">اكتشف عروضنا</a>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="img">
-              <img src="images/girl-reading.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- top seller section -->
@@ -1276,6 +1251,7 @@
       </div>
     </div>
   </section>
+
 
 
   <!-- recently posted section -->
@@ -1433,6 +1409,39 @@
       </div>
     </div>
   </section>
+
+
+
+  <!-- discover offers section one -->
+  <section class="discover-offers one ">
+    <div class="container">
+      <div class="content" style="background:url('images/disscover-one.png');">
+        <div class="row gy-4 align-items-center">
+          <div class="col-md-5">
+            <div class="text">
+              <span>احصل على كتبك المفضلة بأسعار مذهلة الآن</span>
+              <p>لا تفوت الفرصة لامتلاك نسختك من الكتب المفضلة لديك</p>
+              <a href="" class="btn">اكتشف عروضنا</a>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="img">
+              <img src="images/girl-reading.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
 
 
   <!-- has bokor prize section -->
